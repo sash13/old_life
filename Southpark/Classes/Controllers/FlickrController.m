@@ -25,25 +25,17 @@
 
 //@synthesize navigationController;
 
-- (id)init
-{
-    if (self = [super initWithNibName:nil bundle:nil]) 
-    {
-		rss = [[RSS alloc] init];
-		rss.delegate = self;
-		NSURL *url = [[NSURL alloc] initWithString:@"http://openidev.ru/smotri/demo.php"];
-		rss.url = url;
-		[url release];
-    }
-    return self;
-}
 
 
 
 - (void)viewDidLoad {
 
  self.title = @"Flickr RSS Feed";
-	
+	rss = [[RSS alloc] init];
+	rss.delegate = self;
+	NSURL *url = [[NSURL alloc] initWithString:@"http://openidev.ru/smotri/demo.php"];
+	rss.url = url;
+	[url release];
  UIBarButtonItem *reloadButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
  target:self 
  action:@selector(reloadFeed)];

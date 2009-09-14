@@ -9,9 +9,9 @@
 	};
 	1D3623250D0F684500981E51 /* SouthparkAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1049, 884}}";
-			sepNavSelRange = "{795, 0}";
-			sepNavVisRange = "{0, 1504}";
+			sepNavIntBoundsRect = "{{0, 0}, {1049, 806}}";
+			sepNavSelRange = "{797, 0}";
+			sepNavVisRange = "{0, 1506}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* Southpark */ = {
@@ -91,106 +91,46 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 274651808;
-			PBXWorkspaceStateSaveDate = 274651808;
+			PBXPerProjectTemplateStateSaveDate = 274652353;
+			PBXWorkspaceStateSaveDate = 274652353;
 		};
 		perUserProjectItems = {
-			D922200E105EDAB000A5A980 /* PBXTextBookmark */ = D922200E105EDAB000A5A980 /* PBXTextBookmark */;
-			D9222013105EDAD200A5A980 /* XCBuildMessageTextBookmark */ = D9222013105EDAD200A5A980 /* XCBuildMessageTextBookmark */;
-			D9222014105EDAD200A5A980 /* PBXTextBookmark */ = D9222014105EDAD200A5A980 /* PBXTextBookmark */;
-			D9222015105EDAD700A5A980 /* PBXTextBookmark */ = D9222015105EDAD700A5A980 /* PBXTextBookmark */;
-			D9222016105EDAD700A5A980 /* XCBuildMessageTextBookmark */ = D9222016105EDAD700A5A980 /* XCBuildMessageTextBookmark */;
-			D9222017105EDAD700A5A980 /* PBXTextBookmark */ = D9222017105EDAD700A5A980 /* PBXTextBookmark */;
-			D9222024105EDB4900A5A980 /* PBXTextBookmark */ = D9222024105EDB4900A5A980 /* PBXTextBookmark */;
-			D9222036105EDB5700A5A980 /* PBXTextBookmark */ = D9222036105EDB5700A5A980 /* PBXTextBookmark */;
+			D9222015105EDAD700A5A980 = D9222015105EDAD700A5A980 /* PBXTextBookmark */;
+			D9222016105EDAD700A5A980 = D9222016105EDAD700A5A980 /* PBXTextBookmark */;
+			D9222051105EDC9400A5A980 = D9222051105EDC9400A5A980 /* PBXTextBookmark */;
 			D983707F105C2E7700943965 = D983707F105C2E7700943965 /* PBXTextBookmark */;
 			D9837082105C2E7700943965 = D9837082105C2E7700943965 /* PBXTextBookmark */;
 			D9837086105C2E7700943965 = D9837086105C2E7700943965 /* PBXTextBookmark */;
-			D98371CC105C3CAD00943965 = D98371CC105C3CAD00943965 /* PBXTextBookmark */;
 			D98371CE105C3CAD00943965 = D98371CE105C3CAD00943965 /* PBXTextBookmark */;
-			D9B010F1105E706B00D23672 = D9B010F1105E706B00D23672 /* PBXTextBookmark */;
-			D9B01174105E7CAE00D23672 = D9B01174105E7CAE00D23672 /* PBXTextBookmark */;
 			D9B011B9105E805100D23672 = D9B011B9105E805100D23672 /* PBXTextBookmark */;
 			D9B011BA105E805100D23672 = D9B011BA105E805100D23672 /* PBXTextBookmark */;
 			D9B011D4105E823700D23672 = D9B011D4105E823700D23672 /* PBXTextBookmark */;
 			D9B011D5105E823700D23672 = D9B011D5105E823700D23672 /* PBXTextBookmark */;
 			D9B011F0105E833000D23672 = D9B011F0105E833000D23672 /* PBXTextBookmark */;
-			D9B011F1105E833000D23672 = D9B011F1105E833000D23672 /* PBXTextBookmark */;
-			D9B011F4105E87C600D23672 = D9B011F4105E87C600D23672 /* PBXTextBookmark */;
 		};
 		sourceControlManager = D9837025105C2BD900943965 /* Source Control */;
 		userBuildSettings = {
 		};
-	};
-	D922200E105EDAB000A5A980 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D9837040105C2C7F00943965 /* FlickrController.m */;
-		name = "FlickrController.m: 36";
-		rLen = 0;
-		rLoc = 900;
-		rType = 0;
-		vrLen = 1299;
-		vrLoc = 5555;
-	};
-	D9222013105EDAD200A5A980 /* XCBuildMessageTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "RSSDelegate.h: No such file or directory";
-		fRef = D983703F105C2C7F00943965 /* FlickrController.h */;
-		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 9;
-		rType = 1;
-	};
-	D9222014105EDAD200A5A980 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D983703F105C2C7F00943965 /* FlickrController.h */;
-		name = "FlickrController.h: 10";
-		rLen = 0;
-		rLoc = 164;
-		rType = 0;
-		vrLen = 532;
-		vrLoc = 0;
 	};
 	D9222015105EDAD700A5A980 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D9837040105C2C7F00943965 /* FlickrController.m */;
 		name = "FlickrController.m: 36";
 		rLen = 0;
-		rLoc = 900;
+		rLoc = 655;
 		rType = 0;
 		vrLen = 1299;
 		vrLoc = 5555;
 	};
-	D9222016105EDAD700A5A980 /* XCBuildMessageTextBookmark */ = {
+	D9222016105EDAD700A5A980 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		comments = "RSSDelegate.h: No such file or directory";
 		fRef = D983703F105C2C7F00943965 /* FlickrController.h */;
-		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
 		rLoc = 9;
 		rType = 1;
 	};
-	D9222017105EDAD700A5A980 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D983703F105C2C7F00943965 /* FlickrController.h */;
-		name = "FlickrController.h: 10";
-		rLen = 0;
-		rLoc = 164;
-		rType = 0;
-		vrLen = 532;
-		vrLoc = 0;
-	};
-	D9222024105EDB4900A5A980 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D983703F105C2C7F00943965 /* FlickrController.h */;
-		name = "FlickrController.h: 10";
-		rLen = 0;
-		rLoc = 164;
-		rType = 0;
-		vrLen = 532;
-		vrLoc = 0;
-	};
-	D9222036105EDB5700A5A980 /* PBXTextBookmark */ = {
+	D9222051105EDC9400A5A980 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D983703F105C2C7F00943965 /* FlickrController.h */;
 		name = "FlickrController.h: 10";
@@ -266,7 +206,7 @@
 	D983703F105C2C7F00943965 /* FlickrController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1049, 660}}";
-			sepNavSelRange = "{164, 0}";
+			sepNavSelRange = "{256, 0}";
 			sepNavVisRange = "{0, 532}";
 		};
 	};
@@ -275,32 +215,6 @@
 			sepNavIntBoundsRect = "{{0, 0}, {1049, 3432}}";
 			sepNavSelRange = "{900, 0}";
 			sepNavVisRange = "{5555, 1299}";
-		};
-	};
-	D983704A105C2D6C00943965 /* RSS.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = RSS.m;
-		path = "/Users/sasha/Work/SVN/southpark/not my/akosma-async-uitableview-5a64401eb30c01c7a9a81c9ded09c4ca056288de/Classes/Helpers/RSS.m";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1049, 2327}}";
-			sepNavSelRange = "{4602, 12}";
-			sepNavVisRange = "{3035, 1885}";
-		};
-	};
-	D983704B105C2D6C00943965 /* RSSDelegate.h */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.h;
-		name = RSSDelegate.h;
-		path = "/Users/sasha/Work/SVN/southpark/not my/akosma-async-uitableview-5a64401eb30c01c7a9a81c9ded09c4ca056288de/Classes/Helpers/RSSDelegate.h";
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1029, 637}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 331}";
 		};
 	};
 	D983707F105C2E7700943965 /* PBXTextBookmark */ = {
@@ -333,16 +247,6 @@
 		vrLen = 798;
 		vrLoc = 652;
 	};
-	D98371CC105C3CAD00943965 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D983704B105C2D6C00943965 /* RSSDelegate.h */;
-		name = "RSSDelegate.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 331;
-		vrLoc = 0;
-	};
 	D98371CE105C3CAD00943965 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 1D3623240D0F684500981E51 /* SouthparkAppDelegate.h */;
@@ -352,26 +256,6 @@
 		rType = 0;
 		vrLen = 841;
 		vrLoc = 0;
-	};
-	D9B010F1105E706B00D23672 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D983703F105C2C7F00943965 /* FlickrController.h */;
-		name = "FlickrController.h: 25";
-		rLen = 0;
-		rLoc = 506;
-		rType = 0;
-		vrLen = 532;
-		vrLoc = 0;
-	};
-	D9B01174105E7CAE00D23672 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D983704A105C2D6C00943965 /* RSS.m */;
-		name = "RSS.m: 148";
-		rLen = 12;
-		rLoc = 4602;
-		rType = 0;
-		vrLen = 1885;
-		vrLoc = 3035;
 	};
 	D9B011B9105E805100D23672 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -432,29 +316,9 @@
 		fRef = 1D3623250D0F684500981E51 /* SouthparkAppDelegate.m */;
 		name = "SouthparkAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 795;
+		rLoc = 797;
 		rType = 0;
 		vrLen = 1504;
 		vrLoc = 0;
-	};
-	D9B011F1105E833000D23672 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D9837040105C2C7F00943965 /* FlickrController.m */;
-		name = "FlickrController.m: 36";
-		rLen = 0;
-		rLoc = 900;
-		rType = 0;
-		vrLen = 1066;
-		vrLoc = 364;
-	};
-	D9B011F4105E87C600D23672 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D9837040105C2C7F00943965 /* FlickrController.m */;
-		name = "FlickrController.m: 36";
-		rLen = 0;
-		rLoc = 900;
-		rType = 0;
-		vrLen = 1293;
-		vrLoc = 5561;
 	};
 }
