@@ -33,7 +33,7 @@
  self.title = @"Flickr RSS Feed";
 	rss = [[RSS alloc] init];
 	rss.delegate = self;
-	NSURL *url = [[NSURL alloc] initWithString:@"http://openidev.ru/smotri/demo.php"];
+	NSURL *url = [[NSURL alloc] initWithString:@"http://api.flickr.com/services/feeds/photos_public.gne?format=rss2"];
 	rss.url = url;
 	[url release];
  UIBarButtonItem *reloadButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
@@ -41,7 +41,7 @@
  action:@selector(reloadFeed)];
  self.navigationItem.rightBarButtonItem = reloadButton;
  [reloadButton release];
-//[self reloadFeed];
+[self reloadFeed];
 	[super viewDidLoad];
 }
 
@@ -65,7 +65,7 @@
     // Check if the remote server is available
     Reachability *reachManager = [Reachability sharedReachability];
     SouthparkAppDelegate *appDelegate = [SouthparkAppDelegate sharedAppDelegate];
-    [reachManager setHostName:@"www.flickr.com"];
+    [reachManager setHostName:@"openidev.ru"];
     NetworkStatus remoteHostStatus = [reachManager remoteHostStatus];
     if (remoteHostStatus == NotReachable)
     {
