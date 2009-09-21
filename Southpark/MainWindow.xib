@@ -55,7 +55,7 @@
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<object class="IBUINavigationController" key="IBUISelectedViewController" id="166068100">
 					<object class="IBUITabBarItem" key="IBUITabBarItem" id="191032783">
-						<string key="IBUITitle">First</string>
+						<string key="IBUITitle">Seasons</string>
 						<reference key="IBUITabBar"/>
 					</object>
 					<reference key="IBUIToolbarItems" ref="0"/>
@@ -83,7 +83,7 @@
 							<reference key="IBUIToolbarItems" ref="0"/>
 							<object class="IBUINavigationItem" key="IBUINavigationItem" id="777266151">
 								<reference key="IBUINavigationBar"/>
-								<string key="IBUITitle">Item</string>
+								<string key="IBUITitle">Seasons</string>
 							</object>
 							<reference key="IBUIParentViewController" ref="166068100"/>
 						</object>

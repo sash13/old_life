@@ -27,7 +27,8 @@
 		D9837066105C2E3A00943965 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9837065105C2E3A00943965 /* CFNetwork.framework */; };
 		D983706A105C2E4500943965 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9837069105C2E4500943965 /* SystemConfiguration.framework */; };
 		D983706E105C2E5B00943965 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D983706D105C2E5B00943965 /* libz.1.2.3.dylib */; };
-		D9B011C3105E80E500D23672 /* untitled.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B011C2105E80E500D23672 /* untitled.m */; };
+		D9BE3C121067A35200191D80 /* SeasonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BE3C111067A35200191D80 /* SeasonItem.m */; };
+		D9BE3C181067A46200191D80 /* SeasonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BE3C171067A46200191D80 /* SeasonCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,8 +69,10 @@
 		D9837065105C2E3A00943965 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D9837069105C2E4500943965 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D983706D105C2E5B00943965 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
-		D9B011C1105E80E500D23672 /* untitled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = untitled.h; sourceTree = "<group>"; };
-		D9B011C2105E80E500D23672 /* untitled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = untitled.m; sourceTree = "<group>"; };
+		D9BE3C101067A35200191D80 /* SeasonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeasonItem.h; sourceTree = "<group>"; };
+		D9BE3C111067A35200191D80 /* SeasonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeasonItem.m; sourceTree = "<group>"; };
+		D9BE3C161067A46200191D80 /* SeasonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeasonCell.h; sourceTree = "<group>"; };
+		D9BE3C171067A46200191D80 /* SeasonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeasonCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +103,6 @@
 				28216C960DB411BC00E5133A /* FirstViewController.m */,
 				1D3623240D0F684500981E51 /* SouthparkAppDelegate.h */,
 				1D3623250D0F684500981E51 /* SouthparkAppDelegate.m */,
-				D9B011C1105E80E500D23672 /* untitled.h */,
-				D9B011C2105E80E500D23672 /* untitled.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -174,6 +175,8 @@
 				D922201D105EDB0700A5A980 /* FlickrItem.h */,
 				D922201E105EDB0700A5A980 /* FlickrItem.m */,
 				D922201F105EDB0700A5A980 /* FlickrItemDelegate.h */,
+				D9BE3C101067A35200191D80 /* SeasonItem.h */,
+				D9BE3C111067A35200191D80 /* SeasonItem.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,6 +222,8 @@
 				D983703E105C2C7F00943965 /* FlickrCellDelegate.h */,
 				D983703F105C2C7F00943965 /* FlickrController.h */,
 				D9837040105C2C7F00943965 /* FlickrController.m */,
+				D9BE3C161067A46200191D80 /* SeasonCell.h */,
+				D9BE3C171067A46200191D80 /* SeasonCell.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -287,9 +292,10 @@
 				D983703A105C2C5400943965 /* Reachability.m in Sources */,
 				D9837043105C2C7F00943965 /* FlickrCell.m in Sources */,
 				D9837044105C2C7F00943965 /* FlickrController.m in Sources */,
-				D9B011C3105E80E500D23672 /* untitled.m in Sources */,
 				D9222020105EDB0700A5A980 /* RSS.m in Sources */,
 				D9222021105EDB0700A5A980 /* FlickrItem.m in Sources */,
+				D9BE3C121067A35200191D80 /* SeasonItem.m in Sources */,
+				D9BE3C181067A46200191D80 /* SeasonCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

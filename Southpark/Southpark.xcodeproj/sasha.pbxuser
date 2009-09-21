@@ -91,8 +91,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 274712770;
-			PBXWorkspaceStateSaveDate = 274712770;
+			PBXPerProjectTemplateStateSaveDate = 275226841;
+			PBXWorkspaceStateSaveDate = 275226841;
 		};
 		perUserProjectItems = {
 			D983707F105C2E7700943965 = D983707F105C2E7700943965 /* PBXTextBookmark */;
@@ -101,18 +101,38 @@
 			D98371CE105C3CAD00943965 = D98371CE105C3CAD00943965 /* PBXTextBookmark */;
 			D99CB2D4105EE44E00C1EF42 = D99CB2D4105EE44E00C1EF42 /* PBXTextBookmark */;
 			D99CB2D5105EE44E00C1EF42 = D99CB2D5105EE44E00C1EF42 /* PBXTextBookmark */;
-			D99CB2D7105EE44E00C1EF42 = D99CB2D7105EE44E00C1EF42 /* PBXTextBookmark */;
 			D9B011B9105E805100D23672 = D9B011B9105E805100D23672 /* PBXTextBookmark */;
 			D9B011BA105E805100D23672 = D9B011BA105E805100D23672 /* PBXTextBookmark */;
 			D9B011D4105E823700D23672 = D9B011D4105E823700D23672 /* PBXTextBookmark */;
 			D9B011D5105E823700D23672 = D9B011D5105E823700D23672 /* PBXTextBookmark */;
+			D9BE3BFB1067A0DE00191D80 /* PBXTextBookmark */ = D9BE3BFB1067A0DE00191D80 /* PBXTextBookmark */;
+			D9BE3C041067A18700191D80 /* PBXTextBookmark */ = D9BE3C041067A18700191D80 /* PBXTextBookmark */;
 			D9D16AF0105FC566009627C9 = D9D16AF0105FC566009627C9 /* PBXTextBookmark */;
-			D9D16B01105FC8D1009627C9 /* PBXTextBookmark */ = D9D16B01105FC8D1009627C9 /* PBXTextBookmark */;
-			D9D16B09105FC8F7009627C9 /* PBXTextBookmark */ = D9D16B09105FC8F7009627C9 /* PBXTextBookmark */;
-			D9D16B14105FC942009627C9 /* PBXTextBookmark */ = D9D16B14105FC942009627C9 /* PBXTextBookmark */;
+			D9D16B15105FD5CB009627C9 = D9D16B15105FD5CB009627C9 /* PBXTextBookmark */;
 		};
 		sourceControlManager = D9837025105C2BD900943965 /* Source Control */;
 		userBuildSettings = {
+		};
+	};
+	D922201D105EDB0700A5A980 /* FlickrItem.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1049, 660}}";
+			sepNavSelRange = "{134, 899}";
+			sepNavVisRange = "{0, 1034}";
+		};
+	};
+	D922201E105EDB0700A5A980 /* FlickrItem.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1049, 1339}}";
+			sepNavSelRange = "{1815, 0}";
+			sepNavVisRange = "{815, 1396}";
+		};
+	};
+	D922201F105EDB0700A5A980 /* FlickrItemDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1049, 660}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 440}";
 		};
 	};
 	D983700F105C2BB600943965 /* Southpark */ = {
@@ -159,7 +179,7 @@
 	};
 	D983703C105C2C7F00943965 /* FlickrCell.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1049, 637}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1049, 660}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 640}";
 		};
@@ -168,7 +188,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1049, 1859}}";
 			sepNavSelRange = "{2017, 0}";
-			sepNavVisRange = "{2503, 1287}";
+			sepNavVisRange = "{2456, 1334}";
 		};
 	};
 	D983703E105C2C7F00943965 /* FlickrCellDelegate.h */ = {
@@ -187,9 +207,9 @@
 	};
 	D9837040105C2C7F00943965 /* FlickrController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1049, 3289}}";
-			sepNavSelRange = "{877, 0}";
-			sepNavVisRange = "{0, 1219}";
+			sepNavIntBoundsRect = "{{0, 0}, {1049, 3237}}";
+			sepNavSelRange = "{658, 0}";
+			sepNavVisRange = "{0, 1298}";
 		};
 	};
 	D983707F105C2E7700943965 /* PBXTextBookmark */ = {
@@ -252,16 +272,6 @@
 		vrLen = 1506;
 		vrLoc = 0;
 	};
-	D99CB2D7105EE44E00C1EF42 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D9837040105C2C7F00943965 /* FlickrController.m */;
-		name = "FlickrController.m: 27";
-		rLen = 0;
-		rLoc = 655;
-		rType = 0;
-		vrLen = 1680;
-		vrLoc = 656;
-	};
 	D9B011B9105E805100D23672 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D983703C105C2C7F00943965 /* FlickrCell.h */;
@@ -283,6 +293,12 @@
 		vrLoc = 2503;
 	};
 	D9B011C1105E80E500D23672 /* untitled.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = untitled.h;
+		path = /Users/sasha/Work/SVN/southpark/trunk/Southpark/Classes/untitled.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1049, 660}}";
 			sepNavSelRange = "{0, 0}";
@@ -290,6 +306,12 @@
 		};
 	};
 	D9B011C2105E80E500D23672 /* untitled.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = untitled.m;
+		path = /Users/sasha/Work/SVN/southpark/trunk/Southpark/Classes/untitled.m;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1146, 806}}";
 			sepNavSelRange = "{807, 20}";
@@ -316,6 +338,40 @@
 		vrLen = 1321;
 		vrLoc = 0;
 	};
+	D9BE3BFB1067A0DE00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9837040105C2C7F00943965 /* FlickrController.m */;
+		name = "FlickrController.m: 36";
+		rLen = 0;
+		rLoc = 879;
+		rType = 0;
+		vrLen = 1284;
+		vrLoc = 0;
+	};
+	D9BE3C041067A18700191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9837040105C2C7F00943965 /* FlickrController.m */;
+		name = "FlickrController.m: 33";
+		rLen = 0;
+		rLoc = 685;
+		rType = 0;
+		vrLen = 1081;
+		vrLoc = 338;
+	};
+	D9BE3C101067A35200191D80 /* SeasonItem.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1049, 660}}";
+			sepNavSelRange = "{222, 0}";
+			sepNavVisRange = "{0, 1055}";
+		};
+	};
+	D9BE3C111067A35200191D80 /* SeasonItem.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1049, 1482}}";
+			sepNavSelRange = "{289, 0}";
+			sepNavVisRange = "{0, 889}";
+		};
+	};
 	D9D16AF0105FC566009627C9 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D9837040105C2C7F00943965 /* FlickrController.m */;
@@ -326,34 +382,14 @@
 		vrLen = 1536;
 		vrLoc = 4724;
 	};
-	D9D16B01105FC8D1009627C9 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D9837040105C2C7F00943965 /* FlickrController.m */;
-		name = "FlickrController.m: 27";
-		rLen = 0;
-		rLoc = 655;
-		rType = 0;
-		vrLen = 1657;
-		vrLoc = 3951;
-	};
-	D9D16B09105FC8F7009627C9 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D9837040105C2C7F00943965 /* FlickrController.m */;
-		name = "FlickrController.m: 44";
-		rLen = 0;
-		rLoc = 1156;
-		rType = 0;
-		vrLen = 1201;
-		vrLoc = 542;
-	};
-	D9D16B14105FC942009627C9 /* PBXTextBookmark */ = {
+	D9D16B15105FD5CB009627C9 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D9837040105C2C7F00943965 /* FlickrController.m */;
 		name = "FlickrController.m: 36";
 		rLen = 0;
-		rLoc = 877;
+		rLoc = 879;
 		rType = 0;
-		vrLen = 1219;
+		vrLen = 1284;
 		vrLoc = 0;
 	};
 }

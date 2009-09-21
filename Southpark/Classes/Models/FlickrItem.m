@@ -89,6 +89,7 @@
 
 - (void)loadURL:(NSURL *)url
 {
+	//NSLog(@"%@", url);
     ASIHTTPRequest *request = [[ASIHTTPRequest alloc] initWithURL:url];
     [request setDelegate:self];
     [request setDidFinishSelector:@selector(requestDone:)];

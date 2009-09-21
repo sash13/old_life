@@ -30,17 +30,17 @@
 
 - (void)viewDidLoad {
 
- self.title = @"Flickr RSS Feed";
+ //self.title = @"Flickr RSS Feed";
 	rss = [[RSS alloc] init];
 	rss.delegate = self;
 	NSURL *url = [[NSURL alloc] initWithString:@"http://api.flickr.com/services/feeds/photos_public.gne?format=rss2"];
 	rss.url = url;
 	[url release];
- UIBarButtonItem *reloadButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
- target:self 
- action:@selector(reloadFeed)];
- self.navigationItem.rightBarButtonItem = reloadButton;
- [reloadButton release];
+ //UIBarButtonItem *reloadButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
+ ////target:self 
+ //action:@selector(reloadFeed)];
+ //self.navigationItem.rightBarButtonItem = reloadButton;
+ //[reloadButton release];
 [self reloadFeed];
 	[super viewDidLoad];
 }
