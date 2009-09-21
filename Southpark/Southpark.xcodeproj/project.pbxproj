@@ -29,6 +29,7 @@
 		D983706E105C2E5B00943965 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D983706D105C2E5B00943965 /* libz.1.2.3.dylib */; };
 		D9BE3C121067A35200191D80 /* SeasonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BE3C111067A35200191D80 /* SeasonItem.m */; };
 		D9BE3C181067A46200191D80 /* SeasonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BE3C171067A46200191D80 /* SeasonCell.m */; };
+		D9BE3C1B1067A70F00191D80 /* SeasonsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,10 @@
 		D9BE3C111067A35200191D80 /* SeasonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeasonItem.m; sourceTree = "<group>"; };
 		D9BE3C161067A46200191D80 /* SeasonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeasonCell.h; sourceTree = "<group>"; };
 		D9BE3C171067A46200191D80 /* SeasonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeasonCell.m; sourceTree = "<group>"; };
+		D9BE3C191067A70F00191D80 /* SeasonsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeasonsController.h; sourceTree = "<group>"; };
+		D9BE3C1A1067A70F00191D80 /* SeasonsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeasonsController.m; sourceTree = "<group>"; };
+		D9BE3C271067A93800191D80 /* SeasonCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeasonCellDelegate.h; sourceTree = "<group>"; };
+		D9BE3C3A1067AAC200191D80 /* SeasonItemDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeasonItemDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +182,7 @@
 				D922201F105EDB0700A5A980 /* FlickrItemDelegate.h */,
 				D9BE3C101067A35200191D80 /* SeasonItem.h */,
 				D9BE3C111067A35200191D80 /* SeasonItem.m */,
+				D9BE3C3A1067AAC200191D80 /* SeasonItemDelegate.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -224,6 +230,9 @@
 				D9837040105C2C7F00943965 /* FlickrController.m */,
 				D9BE3C161067A46200191D80 /* SeasonCell.h */,
 				D9BE3C171067A46200191D80 /* SeasonCell.m */,
+				D9BE3C191067A70F00191D80 /* SeasonsController.h */,
+				D9BE3C1A1067A70F00191D80 /* SeasonsController.m */,
+				D9BE3C271067A93800191D80 /* SeasonCellDelegate.h */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -296,6 +305,7 @@
 				D9222021105EDB0700A5A980 /* FlickrItem.m in Sources */,
 				D9BE3C121067A35200191D80 /* SeasonItem.m in Sources */,
 				D9BE3C181067A46200191D80 /* SeasonCell.m in Sources */,
+				D9BE3C1B1067A70F00191D80 /* SeasonsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

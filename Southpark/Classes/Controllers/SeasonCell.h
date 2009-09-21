@@ -6,11 +6,26 @@
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "SeasonCellDelegate.h"
+#import "SeasonItemDelegate.h"
 
+@class SeasonItem;
 
-@interface SeasonCell : NSObject {
-
+@interface SeasonCell : UITableViewCell <SeasonItemDelegate>
+{
+@private
+    UILabel *textLabel;
+    SeasonItem *item;
+    ///UIImageView *photo;
+   // UIActivityIndicatorView *scrollingWheel;
+    NSObject<SeasonItemDelegate> *delegate;
 }
+
+@property (nonatomic, retain) SeasonItem *item;
+@property (nonatomic, assign) NSObject<SeasonItemDelegate> *delegate;
+
+//- (void)loadImage;
+//- (void)toggleImage;
 
 @end

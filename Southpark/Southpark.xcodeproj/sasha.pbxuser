@@ -107,6 +107,68 @@
 			D9B011D5105E823700D23672 = D9B011D5105E823700D23672 /* PBXTextBookmark */;
 			D9BE3BFB1067A0DE00191D80 /* PBXTextBookmark */ = D9BE3BFB1067A0DE00191D80 /* PBXTextBookmark */;
 			D9BE3C041067A18700191D80 /* PBXTextBookmark */ = D9BE3C041067A18700191D80 /* PBXTextBookmark */;
+			D9BE3C231067A90D00191D80 /* PBXTextBookmark */ = D9BE3C231067A90D00191D80 /* PBXTextBookmark */;
+			D9BE3C241067A90D00191D80 /* PBXTextBookmark */ = D9BE3C241067A90D00191D80 /* PBXTextBookmark */;
+			D9BE3C251067A90D00191D80 /* XCBuildMessageTextBookmark */ = D9BE3C251067A90D00191D80 /* XCBuildMessageTextBookmark */;
+			D9BE3C261067A90D00191D80 /* PBXTextBookmark */ = D9BE3C261067A90D00191D80 /* PBXTextBookmark */;
+			D9BE3C2E1067AA4C00191D80 /* PBXTextBookmark */ = D9BE3C2E1067AA4C00191D80 /* PBXTextBookmark */;
+			D9BE3C2F1067AA4C00191D80 /* XCBuildMessageTextBookmark */ = D9BE3C2F1067AA4C00191D80 /* XCBuildMessageTextBookmark */;
+			D9BE3C301067AA4C00191D80 /* PBXTextBookmark */ = D9BE3C301067AA4C00191D80 /* PBXTextBookmark */;
+			D9BE3C331067AAA900191D80 /* PBXTextBookmark */ = D9BE3C331067AAA900191D80 /* PBXTextBookmark */;
+			D9BE3C341067AAA900191D80 /* PBXTextBookmark */ = D9BE3C341067AAA900191D80 /* PBXTextBookmark */;
+			D9BE3C351067AAA900191D80 /* PBXTextBookmark */ = D9BE3C351067AAA900191D80 /* PBXTextBookmark */;
+			D9BE3C371067AAA900191D80 /* PBXTextBookmark */ = D9BE3C371067AAA900191D80 /* PBXTextBookmark */;
+			D9BE3C3F1067AB7E00191D80 /* PBXTextBookmark */ = D9BE3C3F1067AB7E00191D80 /* PBXTextBookmark */;
+			D9BE3C401067AB7E00191D80 /* XCBuildMessageTextBookmark */ = D9BE3C401067AB7E00191D80 /* XCBuildMessageTextBookmark */;
+			D9BE3C411067AB7E00191D80 /* PBXTextBookmark */ = D9BE3C411067AB7E00191D80 /* PBXTextBookmark */;
+			D9BE3C421067AB7E00191D80 /* PBXTextBookmark */ = D9BE3C421067AB7E00191D80 /* PBXTextBookmark */;
+			D9BE3C471067AC4800191D80 /* PBXTextBookmark */ = D9BE3C471067AC4800191D80 /* PBXTextBookmark */;
+			D9BE3C481067AC4800191D80 /* XCBuildMessageTextBookmark */ = D9BE3C481067AC4800191D80 /* XCBuildMessageTextBookmark */;
+			D9BE3C491067AC4800191D80 /* PBXTextBookmark */ = D9BE3C491067AC4800191D80 /* PBXTextBookmark */;
+			D9BE3C4A1067AC4800191D80 /* PBXTextBookmark */ = D9BE3C4A1067AC4800191D80 /* PBXTextBookmark */;
+			D9BE3C4D1067AC8F00191D80 /* PBXTextBookmark */ = D9BE3C4D1067AC8F00191D80 /* PBXTextBookmark */;
+			D9BE3C4E1067AC8F00191D80 /* XCBuildMessageTextBookmark */ = D9BE3C4E1067AC8F00191D80 /* XCBuildMessageTextBookmark */;
+			D9BE3C4F1067AC8F00191D80 /* PBXTextBookmark */ = D9BE3C4F1067AC8F00191D80 /* PBXTextBookmark */;
+			D9BE3C501067AC8F00191D80 /* PBXTextBookmark */ = D9BE3C501067AC8F00191D80 /* PBXTextBookmark */;
+			D9BE3C531067ACD200191D80 /* PBXTextBookmark */ = D9BE3C531067ACD200191D80 /* PBXTextBookmark */;
+			D9BE3C541067ACD200191D80 /* XCBuildMessageTextBookmark */ = D9BE3C541067ACD200191D80 /* XCBuildMessageTextBookmark */;
+			D9BE3C551067ACD200191D80 /* PBXTextBookmark */ = D9BE3C551067ACD200191D80 /* PBXTextBookmark */;
+			D9BE3C561067ACD200191D80 /* PBXTextBookmark */ = D9BE3C561067ACD200191D80 /* PBXTextBookmark */;
+			D9BE3C5B1067AD3600191D80 /* PBXTextBookmark */ = D9BE3C5B1067AD3600191D80 /* PBXTextBookmark */;
+			D9BE3C5C1067AD3600191D80 /* XCBuildMessageTextBookmark */ = D9BE3C5C1067AD3600191D80 /* XCBuildMessageTextBookmark */;
+			D9BE3C5D1067AD3600191D80 /* PBXTextBookmark */ = D9BE3C5D1067AD3600191D80 /* PBXTextBookmark */;
+			D9BE3C5E1067AD3600191D80 /* PBXTextBookmark */ = D9BE3C5E1067AD3600191D80 /* PBXTextBookmark */;
+			D9BE3C611067AD7800191D80 /* PBXTextBookmark */ = D9BE3C611067AD7800191D80 /* PBXTextBookmark */;
+			D9BE3C621067AD7800191D80 /* XCBuildMessageTextBookmark */ = D9BE3C621067AD7800191D80 /* XCBuildMessageTextBookmark */;
+			D9BE3C631067AD7800191D80 /* PBXTextBookmark */ = D9BE3C631067AD7800191D80 /* PBXTextBookmark */;
+			D9BE3C641067AD7800191D80 /* PBXTextBookmark */ = D9BE3C641067AD7800191D80 /* PBXTextBookmark */;
+			D9BE3C671067ADE300191D80 /* PBXTextBookmark */ = D9BE3C671067ADE300191D80 /* PBXTextBookmark */;
+			D9BE3C681067ADE300191D80 /* PBXTextBookmark */ = D9BE3C681067ADE300191D80 /* PBXTextBookmark */;
+			D9BE3C691067ADE300191D80 /* PBXTextBookmark */ = D9BE3C691067ADE300191D80 /* PBXTextBookmark */;
+			D9BE3C6A1067ADE300191D80 /* PBXTextBookmark */ = D9BE3C6A1067ADE300191D80 /* PBXTextBookmark */;
+			D9BE3C6B1067ADE300191D80 /* PBXTextBookmark */ = D9BE3C6B1067ADE300191D80 /* PBXTextBookmark */;
+			D9BE3C6C1067ADE300191D80 /* PBXTextBookmark */ = D9BE3C6C1067ADE300191D80 /* PBXTextBookmark */;
+			D9BE3C6D1067ADE300191D80 /* PBXTextBookmark */ = D9BE3C6D1067ADE300191D80 /* PBXTextBookmark */;
+			D9BE3C6E1067ADE300191D80 /* PBXTextBookmark */ = D9BE3C6E1067ADE300191D80 /* PBXTextBookmark */;
+			D9BE3C6F1067ADE300191D80 /* PBXTextBookmark */ = D9BE3C6F1067ADE300191D80 /* PBXTextBookmark */;
+			D9BE3C701067ADE300191D80 /* PBXTextBookmark */ = D9BE3C701067ADE300191D80 /* PBXTextBookmark */;
+			D9BE3C711067ADE300191D80 /* PBXTextBookmark */ = D9BE3C711067ADE300191D80 /* PBXTextBookmark */;
+			D9BE3C721067ADE300191D80 /* PBXTextBookmark */ = D9BE3C721067ADE300191D80 /* PBXTextBookmark */;
+			D9BE3C731067ADE300191D80 /* PBXTextBookmark */ = D9BE3C731067ADE300191D80 /* PBXTextBookmark */;
+			D9BE3C741067ADE300191D80 /* PBXTextBookmark */ = D9BE3C741067ADE300191D80 /* PBXTextBookmark */;
+			D9BE3C751067ADE300191D80 /* PBXTextBookmark */ = D9BE3C751067ADE300191D80 /* PBXTextBookmark */;
+			D9BE3C761067ADE300191D80 /* PBXTextBookmark */ = D9BE3C761067ADE300191D80 /* PBXTextBookmark */;
+			D9BE3C771067ADE300191D80 /* PBXTextBookmark */ = D9BE3C771067ADE300191D80 /* PBXTextBookmark */;
+			D9BE3C781067AE0200191D80 /* PBXTextBookmark */ = D9BE3C781067AE0200191D80 /* PBXTextBookmark */;
+			D9BE3C791067AE0200191D80 /* PBXTextBookmark */ = D9BE3C791067AE0200191D80 /* PBXTextBookmark */;
+			D9BE3C7C1067AE1E00191D80 /* PBXTextBookmark */ = D9BE3C7C1067AE1E00191D80 /* PBXTextBookmark */;
+			D9BE3C7D1067AE1E00191D80 /* PBXTextBookmark */ = D9BE3C7D1067AE1E00191D80 /* PBXTextBookmark */;
+			D9BE3C7E1067AE1E00191D80 /* PBXTextBookmark */ = D9BE3C7E1067AE1E00191D80 /* PBXTextBookmark */;
+			D9BE3C831067AE4E00191D80 /* PBXTextBookmark */ = D9BE3C831067AE4E00191D80 /* PBXTextBookmark */;
+			D9BE3C861067AE7A00191D80 /* PBXTextBookmark */ = D9BE3C861067AE7A00191D80 /* PBXTextBookmark */;
+			D9BE3C871067AE9900191D80 /* PBXTextBookmark */ = D9BE3C871067AE9900191D80 /* PBXTextBookmark */;
+			D9BE3C881067AE9900191D80 /* PBXTextBookmark */ = D9BE3C881067AE9900191D80 /* PBXTextBookmark */;
+			D9BE3C891067AE9E00191D80 /* PBXTextBookmark */ = D9BE3C891067AE9E00191D80 /* PBXTextBookmark */;
 			D9D16AF0105FC566009627C9 = D9D16AF0105FC566009627C9 /* PBXTextBookmark */;
 			D9D16B15105FD5CB009627C9 = D9D16B15105FD5CB009627C9 /* PBXTextBookmark */;
 		};
@@ -117,7 +179,7 @@
 	D922201D105EDB0700A5A980 /* FlickrItem.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1049, 660}}";
-			sepNavSelRange = "{134, 899}";
+			sepNavSelRange = "{328, 0}";
 			sepNavVisRange = "{0, 1034}";
 		};
 	};
@@ -125,13 +187,13 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1049, 1339}}";
 			sepNavSelRange = "{1815, 0}";
-			sepNavVisRange = "{815, 1396}";
+			sepNavVisRange = "{0, 862}";
 		};
 	};
 	D922201F105EDB0700A5A980 /* FlickrItemDelegate.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1049, 660}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavSelRange = "{440, 0}";
 			sepNavVisRange = "{0, 440}";
 		};
 	};
@@ -180,36 +242,36 @@
 	D983703C105C2C7F00943965 /* FlickrCell.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1049, 660}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavSelRange = "{523, 69}";
 			sepNavVisRange = "{0, 640}";
 		};
 	};
 	D983703D105C2C7F00943965 /* FlickrCell.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1049, 1859}}";
-			sepNavSelRange = "{2017, 0}";
+			sepNavSelRange = "{815, 0}";
 			sepNavVisRange = "{2456, 1334}";
 		};
 	};
 	D983703E105C2C7F00943965 /* FlickrCellDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {680, 456}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1049, 660}}";
+			sepNavSelRange = "{298, 0}";
 			sepNavVisRange = "{0, 299}";
 		};
 	};
 	D983703F105C2C7F00943965 /* FlickrController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1049, 660}}";
-			sepNavSelRange = "{256, 0}";
+			sepNavSelRange = "{343, 0}";
 			sepNavVisRange = "{0, 532}";
 		};
 	};
 	D9837040105C2C7F00943965 /* FlickrController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1049, 3237}}";
-			sepNavSelRange = "{658, 0}";
-			sepNavVisRange = "{0, 1298}";
+			sepNavIntBoundsRect = "{{0, 0}, {930, 3107}}";
+			sepNavSelRange = "{1276, 11}";
+			sepNavVisRange = "{915, 604}";
 		};
 	};
 	D983707F105C2E7700943965 /* PBXTextBookmark */ = {
@@ -361,16 +423,679 @@
 	D9BE3C101067A35200191D80 /* SeasonItem.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1049, 660}}";
-			sepNavSelRange = "{222, 0}";
-			sepNavVisRange = "{0, 1055}";
+			sepNavSelRange = "{998, 0}";
+			sepNavVisRange = "{0, 1048}";
 		};
 	};
 	D9BE3C111067A35200191D80 /* SeasonItem.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1049, 1482}}";
-			sepNavSelRange = "{289, 0}";
-			sepNavVisRange = "{0, 889}";
+			sepNavIntBoundsRect = "{{0, 0}, {1049, 1326}}";
+			sepNavSelRange = "{471, 0}";
+			sepNavVisRange = "{0, 885}";
 		};
+	};
+	D9BE3C161067A46200191D80 /* SeasonCell.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1049, 660}}";
+			sepNavSelRange = "{584, 0}";
+			sepNavVisRange = "{0, 648}";
+		};
+	};
+	D9BE3C171067A46200191D80 /* SeasonCell.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1049, 1105}}";
+			sepNavSelRange = "{226, 0}";
+			sepNavVisRange = "{0, 1589}";
+		};
+	};
+	D9BE3C191067A70F00191D80 /* SeasonsController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1031, 403}}";
+			sepNavSelRange = "{233, 0}";
+			sepNavVisRange = "{0, 532}";
+		};
+	};
+	D9BE3C1A1067A70F00191D80 /* SeasonsController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1049, 2782}}";
+			sepNavSelRange = "{379, 0}";
+			sepNavVisRange = "{4578, 1300}";
+		};
+	};
+	D9BE3C231067A90D00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C161067A46200191D80 /* SeasonCell.h */;
+		name = "SeasonCell.h: 24";
+		rLen = 0;
+		rLoc = 596;
+		rType = 0;
+		vrLen = 569;
+		vrLoc = 0;
+	};
+	D9BE3C241067A90D00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C171067A46200191D80 /* SeasonCell.m */;
+		name = "SeasonCell.m: 84";
+		rLen = 0;
+		rLoc = 2417;
+		rType = 0;
+		vrLen = 808;
+		vrLoc = 1660;
+	};
+	D9BE3C251067A90D00191D80 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Request for member 'delegate' in something not a structure or union";
+		fRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 165;
+		rType = 1;
+	};
+	D9BE3C261067A90D00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */;
+		name = "SeasonsController.m: 163";
+		rLen = 0;
+		rLoc = 4732;
+		rType = 0;
+		vrLen = 931;
+		vrLoc = 3793;
+	};
+	D9BE3C271067A93800191D80 /* SeasonCellDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1049, 660}}";
+			sepNavSelRange = "{224, 0}";
+			sepNavVisRange = "{0, 298}";
+		};
+	};
+	D9BE3C2E1067AA4C00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C191067A70F00191D80 /* SeasonsController.h */;
+		name = "SeasonsController.h: 14";
+		rLen = 0;
+		rLoc = 219;
+		rType = 0;
+		vrLen = 400;
+		vrLoc = 0;
+	};
+	D9BE3C2F1067AA4C00191D80 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'item' undeclared (first use in this function)";
+		fRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 158;
+		rType = 1;
+	};
+	D9BE3C301067AA4C00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */;
+		name = "SeasonsController.m: 156";
+		rLen = 0;
+		rLoc = 4336;
+		rType = 0;
+		vrLen = 931;
+		vrLoc = 3793;
+	};
+	D9BE3C331067AAA900191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */;
+		name = "SeasonsController.m: 156";
+		rLen = 0;
+		rLoc = 4336;
+		rType = 0;
+		vrLen = 931;
+		vrLoc = 3793;
+	};
+	D9BE3C341067AAA900191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D983703F105C2C7F00943965 /* FlickrController.h */;
+		name = "FlickrController.h: 19";
+		rLen = 11;
+		rLoc = 357;
+		rType = 0;
+		vrLen = 527;
+		vrLoc = 0;
+	};
+	D9BE3C351067AAA900191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C361067AAA900191D80 /* FlickrController.m */;
+		rLen = 11;
+		rLoc = 1276;
+		rType = 0;
+	};
+	D9BE3C361067AAA900191D80 /* FlickrController.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = FlickrController.m;
+		path = /Users/sasha/Work/SVN/southpark/trunk/Southpark/Classes/Controllers/FlickrController.m;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {930, 3107}}";
+			sepNavSelRange = "{1276, 11}";
+			sepNavVisRange = "{915, 556}";
+		};
+	};
+	D9BE3C371067AAA900191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9837040105C2C7F00943965 /* FlickrController.m */;
+		name = "FlickrController.m: 51";
+		rLen = 11;
+		rLoc = 1276;
+		rType = 0;
+		vrLen = 604;
+		vrLoc = 915;
+	};
+	D9BE3C3A1067AAC200191D80 /* SeasonItemDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1049, 660}}";
+			sepNavSelRange = "{390, 0}";
+			sepNavVisRange = "{0, 439}";
+		};
+	};
+	D9BE3C3F1067AB7E00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */;
+		name = "SeasonsController.m: 156";
+		rLen = 0;
+		rLoc = 4336;
+		rType = 0;
+		vrLen = 931;
+		vrLoc = 3793;
+	};
+	D9BE3C401067AB7E00191D80 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Cannot find protocol declaration for 'SeasonCellDelegate'";
+		fRef = D9BE3C191067A70F00191D80 /* SeasonsController.h */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 0;
+		rLoc = 11;
+		rType = 1;
+	};
+	D9BE3C411067AB7E00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C191067A70F00191D80 /* SeasonsController.h */;
+		name = "SeasonsController.h: 14";
+		rLen = 0;
+		rLoc = 219;
+		rType = 0;
+		vrLen = 400;
+		vrLoc = 0;
+	};
+	D9BE3C421067AB7E00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C361067AAA900191D80 /* FlickrController.m */;
+		name = "FlickrController.m: 51";
+		rLen = 11;
+		rLoc = 1276;
+		rType = 0;
+		vrLen = 604;
+		vrLoc = 915;
+	};
+	D9BE3C471067AC4800191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C191067A70F00191D80 /* SeasonsController.h */;
+		name = "SeasonsController.h: 14";
+		rLen = 0;
+		rLoc = 219;
+		rType = 0;
+		vrLen = 400;
+		vrLoc = 0;
+	};
+	D9BE3C481067AC4800191D80 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'item' undeclared (first use in this function)";
+		fRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 158;
+		rType = 1;
+	};
+	D9BE3C491067AC4800191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */;
+		name = "SeasonsController.m: 156";
+		rLen = 0;
+		rLoc = 4336;
+		rType = 0;
+		vrLen = 931;
+		vrLoc = 3793;
+	};
+	D9BE3C4A1067AC4800191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C361067AAA900191D80 /* FlickrController.m */;
+		name = "FlickrController.m: 51";
+		rLen = 11;
+		rLoc = 1276;
+		rType = 0;
+		vrLen = 604;
+		vrLoc = 915;
+	};
+	D9BE3C4D1067AC8F00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C191067A70F00191D80 /* SeasonsController.h */;
+		name = "SeasonsController.h: 15";
+		rLen = 0;
+		rLoc = 233;
+		rType = 0;
+		vrLen = 532;
+		vrLoc = 0;
+	};
+	D9BE3C4E1067AC8F00191D80 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'seasonItem' undeclared (first use in this function)";
+		fRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 48;
+		rType = 1;
+	};
+	D9BE3C4F1067AC8F00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */;
+		name = "SeasonsController.m: 46";
+		rLen = 0;
+		rLoc = 1120;
+		rType = 0;
+		vrLen = 792;
+		vrLoc = 450;
+	};
+	D9BE3C501067AC8F00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C361067AAA900191D80 /* FlickrController.m */;
+		name = "FlickrController.m: 51";
+		rLen = 11;
+		rLoc = 1276;
+		rType = 0;
+		vrLen = 604;
+		vrLoc = 915;
+	};
+	D9BE3C531067ACD200191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C191067A70F00191D80 /* SeasonsController.h */;
+		name = "SeasonsController.h: 15";
+		rLen = 0;
+		rLoc = 233;
+		rType = 0;
+		vrLen = 532;
+		vrLoc = 0;
+	};
+	D9BE3C541067ACD200191D80 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'item' undeclared (first use in this function)";
+		fRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 158;
+		rType = 1;
+	};
+	D9BE3C551067ACD200191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */;
+		name = "SeasonsController.m: 156";
+		rLen = 0;
+		rLoc = 4336;
+		rType = 0;
+		vrLen = 938;
+		vrLoc = 3790;
+	};
+	D9BE3C561067ACD200191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C361067AAA900191D80 /* FlickrController.m */;
+		name = "FlickrController.m: 51";
+		rLen = 11;
+		rLoc = 1276;
+		rType = 0;
+		vrLen = 604;
+		vrLoc = 915;
+	};
+	D9BE3C5B1067AD3600191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C191067A70F00191D80 /* SeasonsController.h */;
+		name = "SeasonsController.h: 15";
+		rLen = 0;
+		rLoc = 233;
+		rType = 0;
+		vrLen = 532;
+		vrLoc = 0;
+	};
+	D9BE3C5C1067AD3600191D80 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Class 'SeasonsController' does not implement the 'SeasonItemDelegate' protocol";
+		fRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 165;
+		rType = 1;
+	};
+	D9BE3C5D1067AD3600191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */;
+		name = "SeasonsController.m: 163";
+		rLen = 0;
+		rLoc = 4732;
+		rType = 0;
+		vrLen = 937;
+		vrLoc = 3790;
+	};
+	D9BE3C5E1067AD3600191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C361067AAA900191D80 /* FlickrController.m */;
+		name = "FlickrController.m: 51";
+		rLen = 11;
+		rLoc = 1276;
+		rType = 0;
+		vrLen = 604;
+		vrLoc = 915;
+	};
+	D9BE3C611067AD7800191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */;
+		name = "SeasonsController.m: 166";
+		rLen = 0;
+		rLoc = 4732;
+		rType = 0;
+		vrLen = 1009;
+		vrLoc = 3753;
+	};
+	D9BE3C621067AD7800191D80 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Cannot find protocol declaration for 'SeasonCellDelegate'";
+		fRef = D9BE3C191067A70F00191D80 /* SeasonsController.h */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 14;
+		rType = 1;
+	};
+	D9BE3C631067AD7800191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C191067A70F00191D80 /* SeasonsController.h */;
+		name = "SeasonsController.h: 15";
+		rLen = 0;
+		rLoc = 233;
+		rType = 0;
+		vrLen = 532;
+		vrLoc = 0;
+	};
+	D9BE3C641067AD7800191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C361067AAA900191D80 /* FlickrController.m */;
+		name = "FlickrController.m: 51";
+		rLen = 11;
+		rLoc = 1276;
+		rType = 0;
+		vrLen = 604;
+		vrLoc = 915;
+	};
+	D9BE3C671067ADE300191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C171067A46200191D80 /* SeasonCell.m */;
+		name = "SeasonCell.m: 7";
+		rLen = 0;
+		rLoc = 131;
+		rType = 0;
+		vrLen = 1619;
+		vrLoc = 20;
+	};
+	D9BE3C681067ADE300191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D922201D105EDB0700A5A980 /* FlickrItem.h */;
+		name = "FlickrItem.h: 18";
+		rLen = 0;
+		rLoc = 328;
+		rType = 0;
+		vrLen = 1034;
+		vrLoc = 0;
+	};
+	D9BE3C691067ADE300191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C101067A35200191D80 /* SeasonItem.h */;
+		name = "SeasonItem.h: 36";
+		rLen = 0;
+		rLoc = 998;
+		rType = 0;
+		vrLen = 1048;
+		vrLoc = 0;
+	};
+	D9BE3C6A1067ADE300191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C111067A35200191D80 /* SeasonItem.m */;
+		name = "SeasonItem.m: 27";
+		rLen = 0;
+		rLoc = 471;
+		rType = 0;
+		vrLen = 885;
+		vrLoc = 0;
+	};
+	D9BE3C6B1067ADE300191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D922201E105EDB0700A5A980 /* FlickrItem.m */;
+		name = "FlickrItem.m: 92";
+		rLen = 0;
+		rLoc = 1815;
+		rType = 0;
+		vrLen = 862;
+		vrLoc = 0;
+	};
+	D9BE3C6C1067ADE300191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D983703D105C2C7F00943965 /* FlickrCell.m */;
+		name = "FlickrCell.m: 30";
+		rLen = 0;
+		rLoc = 815;
+		rType = 0;
+		vrLen = 1334;
+		vrLoc = 2456;
+	};
+	D9BE3C6D1067ADE300191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D983703C105C2C7F00943965 /* FlickrCell.h */;
+		name = "FlickrCell.h: 26";
+		rLen = 69;
+		rLoc = 523;
+		rType = 0;
+		vrLen = 640;
+		vrLoc = 0;
+	};
+	D9BE3C6E1067ADE300191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C161067A46200191D80 /* SeasonCell.h */;
+		name = "SeasonCell.h: 26";
+		rLen = 0;
+		rLoc = 584;
+		rType = 0;
+		vrLen = 648;
+		vrLoc = 0;
+	};
+	D9BE3C6F1067ADE300191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D983703E105C2C7F00943965 /* FlickrCellDelegate.h */;
+		name = "FlickrCellDelegate.h: 18";
+		rLen = 0;
+		rLoc = 298;
+		rType = 0;
+		vrLen = 299;
+		vrLoc = 0;
+	};
+	D9BE3C701067ADE300191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D922201F105EDB0700A5A980 /* FlickrItemDelegate.h */;
+		name = "FlickrItemDelegate.h: 21";
+		rLen = 0;
+		rLoc = 440;
+		rType = 0;
+		vrLen = 440;
+		vrLoc = 0;
+	};
+	D9BE3C711067ADE300191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C3A1067AAC200191D80 /* SeasonItemDelegate.h */;
+		name = "SeasonItemDelegate.h: 18";
+		rLen = 0;
+		rLoc = 390;
+		rType = 0;
+		vrLen = 439;
+		vrLoc = 0;
+	};
+	D9BE3C721067ADE300191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D983703F105C2C7F00943965 /* FlickrController.h */;
+		name = "FlickrController.h: 18";
+		rLen = 0;
+		rLoc = 343;
+		rType = 0;
+		vrLen = 532;
+		vrLoc = 0;
+	};
+	D9BE3C731067ADE300191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C361067AAA900191D80 /* FlickrController.m */;
+		name = "FlickrController.m: 24";
+		rLen = 0;
+		rLoc = 598;
+		rType = 0;
+		vrLen = 1324;
+		vrLoc = 578;
+	};
+	D9BE3C741067ADE300191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */;
+		name = "SeasonsController.m: 17";
+		rLen = 0;
+		rLoc = 379;
+		rType = 0;
+		vrLen = 1300;
+		vrLoc = 4578;
+	};
+	D9BE3C751067ADE300191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C191067A70F00191D80 /* SeasonsController.h */;
+		name = "SeasonsController.h: 11";
+		rLen = 0;
+		rLoc = 188;
+		rType = 0;
+		vrLen = 532;
+		vrLoc = 0;
+	};
+	D9BE3C761067ADE300191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C271067A93800191D80 /* SeasonCellDelegate.h */;
+		name = "SeasonCellDelegate.h: 13";
+		rLen = 0;
+		rLoc = 210;
+		rType = 0;
+		vrLen = 284;
+		vrLoc = 0;
+	};
+	D9BE3C771067ADE300191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C271067A93800191D80 /* SeasonCellDelegate.h */;
+		name = "SeasonCellDelegate.h: 13";
+		rLen = 0;
+		rLoc = 224;
+		rType = 0;
+		vrLen = 298;
+		vrLoc = 0;
+	};
+	D9BE3C781067AE0200191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C191067A70F00191D80 /* SeasonsController.h */;
+		name = "SeasonsController.h: 15";
+		rLen = 0;
+		rLoc = 233;
+		rType = 0;
+		vrLen = 532;
+		vrLoc = 0;
+	};
+	D9BE3C791067AE0200191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C361067AAA900191D80 /* FlickrController.m */;
+		name = "FlickrController.m: 51";
+		rLen = 11;
+		rLoc = 1276;
+		rType = 0;
+		vrLen = 604;
+		vrLoc = 915;
+	};
+	D9BE3C7C1067AE1E00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C271067A93800191D80 /* SeasonCellDelegate.h */;
+		name = "SeasonCellDelegate.h: 13";
+		rLen = 0;
+		rLoc = 224;
+		rType = 0;
+		vrLen = 298;
+		vrLoc = 0;
+	};
+	D9BE3C7D1067AE1E00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C161067A46200191D80 /* SeasonCell.h */;
+		name = "SeasonCell.h: 26";
+		rLen = 0;
+		rLoc = 584;
+		rType = 0;
+		vrLen = 648;
+		vrLoc = 0;
+	};
+	D9BE3C7E1067AE1E00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C171067A46200191D80 /* SeasonCell.m */;
+		name = "SeasonCell.m: 52";
+		rLen = 0;
+		rLoc = 1593;
+		rType = 0;
+		vrLen = 1567;
+		vrLoc = 207;
+	};
+	D9BE3C831067AE4E00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C171067A46200191D80 /* SeasonCell.m */;
+		name = "SeasonCell.m: 52";
+		rLen = 0;
+		rLoc = 1593;
+		rType = 0;
+		vrLen = 1487;
+		vrLoc = 817;
+	};
+	D9BE3C861067AE7A00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C171067A46200191D80 /* SeasonCell.m */;
+		name = "SeasonCell.m: 15";
+		rLen = 0;
+		rLoc = 226;
+		rType = 0;
+		vrLen = 1541;
+		vrLoc = 0;
+	};
+	D9BE3C871067AE9900191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C191067A70F00191D80 /* SeasonsController.h */;
+		name = "SeasonsController.h: 15";
+		rLen = 0;
+		rLoc = 233;
+		rType = 0;
+		vrLen = 532;
+		vrLoc = 0;
+	};
+	D9BE3C881067AE9900191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C361067AAA900191D80 /* FlickrController.m */;
+		name = "FlickrController.m: 51";
+		rLen = 11;
+		rLoc = 1276;
+		rType = 0;
+		vrLen = 556;
+		vrLoc = 915;
+	};
+	D9BE3C891067AE9E00191D80 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D9BE3C171067A46200191D80 /* SeasonCell.m */;
+		name = "SeasonCell.m: 15";
+		rLen = 0;
+		rLoc = 226;
+		rType = 0;
+		vrLen = 1589;
+		vrLoc = 0;
 	};
 	D9D16AF0105FC566009627C9 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
