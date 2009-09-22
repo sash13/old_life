@@ -17,11 +17,12 @@
 @private
     RSS *rss;
     NSArray *flickrItems;
+	NSString *selectedSeas;
    // UINavigationController *navigationController;
 }
 
 //@property (nonatomic, readonly) UINavigationController *navigationController;
-
+@property (nonatomic, retain) NSString *selectedSeas;
 - (void)reloadFeed;
 
 @end

@@ -13,7 +13,7 @@
 #import "SeasonCell.h"
 #import "SouthparkAppDelegate.h"
 #import "Reachability.h"
-
+#import "FlickrController.h"
 @interface SeasonsController (Private)
 - (void)loadContentForVisibleCells;
 @end
@@ -178,7 +178,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 {
    // FlickrCell *cell = (FlickrCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-    //[cell toggleImage];
+	// FlickrItemController *controller = [[FlickrItemController alloc] init];
+    //controller.item = item;
+    //controller.title = item.title;
+    //[self.navigationController pushViewController:controller animated:YES];
+    //[controller release];  
+	NSString *selected = [seasonItems objectAtIndex:indexPath.row];
+	FlickrController *dvController = [[FlickrController alloc] initWithNibName:nil bundle:[NSBundle mainBundle]];
+	dvController.selectedSeas = selected;
+	NSLog(@"%@", selected);
+	[self.navigationController pushViewController:dvController animated:YES];
+	[dvController release];
 }
 
 #pragma mark -
