@@ -23,17 +23,17 @@
     {
         self.backgroundColor = [UIColor blackColor];
         
-        textLabel = [[UILabel alloc] initWithFrame:CGRectMake(80.0, 5.0, 290.0, 70.0)];
-        textLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:18.0];
+        textLabel = [[UILabel alloc] initWithFrame:CGRectMake(110.0, 5.0, 220.0, 12.0)];
+        textLabel.font = [UIFont fontWithName:@"American Typewriter" size:14.0];
         textLabel.contentMode = UIViewContentModeScaleToFill;
         [self.contentView addSubview:textLabel];
         
-        photo = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 75.0, 75.0)];
+        photo = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 100.0, 75.0)];
         photo.contentMode = UIViewContentModeScaleAspectFill;
         photo.clipsToBounds = YES;
         [self.contentView addSubview:photo];
         
-        scrollingWheel = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(27.0, 27.0, 20.0, 20.0)];
+        scrollingWheel = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(42.0, 27.0, 20.0, 20.0)];
         scrollingWheel.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
         scrollingWheel.hidesWhenStopped = YES;
         [scrollingWheel stopAnimating];
@@ -89,15 +89,15 @@
 
 - (void)toggleImage
 {
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.5];
-    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:photo cache:YES];
-    [UIView setAnimationDelegate:self];
-    [UIView setAnimationDidStopSelector:@selector(animationFinished)];
+   // [UIView beginAnimations:nil context:NULL];
+   // [UIView setAnimationDuration:0.5];
+   // [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:photo cache:YES];
+   // [UIView setAnimationDelegate:self];
+    //[UIView setAnimationDidStopSelector:@selector(animationFinished)];
     
     photo.image = item.thumbnail;
     
-    [UIView commitAnimations];
+    //[UIView commitAnimations];
 }
 
 - (void)loadImage

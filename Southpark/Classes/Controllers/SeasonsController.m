@@ -161,7 +161,7 @@
     SeasonCell *cell = (SeasonCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) 
     {
-        CGRect rect = CGRectMake(0.0, 0.0, 320.0, 75.0);
+        CGRect rect = CGRectMake(0.0, 0.0, 320.0, 43.0);
         cell = [[[SeasonCell alloc] initWithFrame:rect reuseIdentifier:identifier] autorelease];
         cell.delegate = self;
     }
@@ -210,7 +210,7 @@
 
 - (void)viewWillAppear:(BOOL)animated 
 {
-    self.tableView.rowHeight = 76.0;
+    self.tableView.rowHeight = 44.0;
 	
 	[self.tableView reloadData];
 	
