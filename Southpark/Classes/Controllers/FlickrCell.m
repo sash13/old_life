@@ -24,7 +24,7 @@
         self.backgroundColor = [UIColor blackColor];
         
         textLabel = [[UILabel alloc] initWithFrame:CGRectMake(110.0, 5.0, 220.0, 12.0)];
-        textLabel.font = [UIFont fontWithName:@"American Typewriter" size:14.0];
+        textLabel.font = [UIFont fontWithName:@"American Typewriter" size:12.0];
         textLabel.contentMode = UIViewContentModeScaleToFill;
         [self.contentView addSubview:textLabel];
         

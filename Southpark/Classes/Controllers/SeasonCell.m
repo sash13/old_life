@@ -24,17 +24,17 @@
         self.backgroundColor = [UIColor blackColor];
         
         textLabel = [[UILabel alloc] initWithFrame:CGRectMake(230.0, 10.0, 80.0, 10.0)];
-        textLabel.font = [UIFont fontWithName:@"Courier-Bold" size:14.0];
+        textLabel.font = [UIFont fontWithName:@"American Typewriter" size:12.0];
         textLabel.contentMode = UIViewContentModeScaleToFill;
         [self.contentView addSubview:textLabel];
         
 		textdescription = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 10.0, 100.0, 10.0)];
-        textdescription.font = [UIFont fontWithName:@"Courier-Bold" size:14.0];
+        textdescription.font = [UIFont fontWithName:@"American Typewriter" size:12.0];
         textdescription.contentMode = UIViewContentModeScaleToFill;
         [self.contentView addSubview:textdescription];
 		
 		textcoll = [[UILabel alloc] initWithFrame:CGRectMake(153.0, 30.0, 120.0, 10.0)];
-        textcoll.font = [UIFont fontWithName:@"Courier-Bold" size:14.0];
+        textcoll.font = [UIFont fontWithName:@"American Typewriter" size:12.0];
         textcoll.contentMode = UIViewContentModeScaleToFill;
         [self.contentView addSubview:textcoll];
 		

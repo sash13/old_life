@@ -27,6 +27,8 @@
 		D9837066105C2E3A00943965 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9837065105C2E3A00943965 /* CFNetwork.framework */; };
 		D983706A105C2E4500943965 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9837069105C2E4500943965 /* SystemConfiguration.framework */; };
 		D983706E105C2E5B00943965 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D983706D105C2E5B00943965 /* libz.1.2.3.dylib */; };
+		D999F6D710690CF700773A0A /* MyMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D999F6D610690CF700773A0A /* MyMovieViewController.m */; };
+		D999F6DA10690D0000773A0A /* MyOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = D999F6D910690D0000773A0A /* MyOverlayView.m */; };
 		D9BE3C121067A35200191D80 /* SeasonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BE3C111067A35200191D80 /* SeasonItem.m */; };
 		D9BE3C181067A46200191D80 /* SeasonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BE3C171067A46200191D80 /* SeasonCell.m */; };
 		D9BE3C1B1067A70F00191D80 /* SeasonsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BE3C1A1067A70F00191D80 /* SeasonsController.m */; };
@@ -70,6 +72,10 @@
 		D9837065105C2E3A00943965 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D9837069105C2E4500943965 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D983706D105C2E5B00943965 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		D999F6D510690CF700773A0A /* MyMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMovieViewController.h; sourceTree = "<group>"; };
+		D999F6D610690CF700773A0A /* MyMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMovieViewController.m; sourceTree = "<group>"; };
+		D999F6D810690D0000773A0A /* MyOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOverlayView.h; sourceTree = "<group>"; };
+		D999F6D910690D0000773A0A /* MyOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOverlayView.m; sourceTree = "<group>"; };
 		D9BE3C101067A35200191D80 /* SeasonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeasonItem.h; sourceTree = "<group>"; };
 		D9BE3C111067A35200191D80 /* SeasonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeasonItem.m; sourceTree = "<group>"; };
 		D9BE3C161067A46200191D80 /* SeasonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeasonCell.h; sourceTree = "<group>"; };
@@ -100,6 +106,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D999F6D410690CDF00773A0A /* Player */,
 				D9222018105EDB0700A5A980 /* Helpers */,
 				D922201C105EDB0700A5A980 /* Models */,
 				D983703B105C2C7F00943965 /* Controllers */,
@@ -237,6 +244,17 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		D999F6D410690CDF00773A0A /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				D999F6D810690D0000773A0A /* MyOverlayView.h */,
+				D999F6D910690D0000773A0A /* MyOverlayView.m */,
+				D999F6D510690CF700773A0A /* MyMovieViewController.h */,
+				D999F6D610690CF700773A0A /* MyMovieViewController.m */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,6 +324,8 @@
 				D9BE3C121067A35200191D80 /* SeasonItem.m in Sources */,
 				D9BE3C181067A46200191D80 /* SeasonCell.m in Sources */,
 				D9BE3C1B1067A70F00191D80 /* SeasonsController.m in Sources */,
+				D999F6D710690CF700773A0A /* MyMovieViewController.m in Sources */,
+				D999F6DA10690D0000773A0A /* MyOverlayView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
