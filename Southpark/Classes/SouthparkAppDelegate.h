@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@class FlickrController;
+#import "MyMovieViewController.h"
 
+@class FlickrController;
 @interface SouthparkAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
 @private
 	IBOutlet UIWindow *window;
@@ -17,6 +18,7 @@
     //UITabBarController *tabBarController;
 	FlickrController *controller;
 	NSOperationQueue *downloadQueue;
+	MPMoviePlayerController *moviePlayer;
     UIView *loadingView;
 }
 
@@ -24,7 +26,9 @@
 //@property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 
 @property (nonatomic, retain) NSOperationQueue *downloadQueue;
-
+@property (readwrite, retain) MPMoviePlayerController *moviePlayer;
+-(void)initAndPlayMovie:(NSURL *)movieURL;
+-(void)setMoviePlayerUserSettings;
 + (SouthparkAppDelegate *)sharedAppDelegate;
 
 - (void)showLoadingView;

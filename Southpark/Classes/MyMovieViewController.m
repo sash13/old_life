@@ -48,7 +48,7 @@ file that contains its view.
  */
 
 #import "MyMovieViewController.h"
-#import "iPocketTvAppDelegate.h"
+#import "SouthparkAppDelegate.h"
 
 NSString * const OverlayViewTouchNotification = @"overlayViewTouch";
 
@@ -59,7 +59,7 @@ NSString * const OverlayViewTouchNotification = @"overlayViewTouch";
 
 -(IBAction)playMovieButtonPressed:(id)sender
 {
-    iPocketTvAppDelegate *appDelegate = (iPocketTvAppDelegate *)[[UIApplication sharedApplication] delegate];
+    SouthparkAppDelegate *appDelegate = (SouthparkAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	// initialize a new MPMoviePlayerController object with the specified URL, and
 	// play the movie
