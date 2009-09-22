@@ -183,12 +183,16 @@
     //controller.title = item.title;
     //[self.navigationController pushViewController:controller animated:YES];
     //[controller release];  
-	NSString *selected = [seasonItems objectAtIndex:indexPath.row];
-	FlickrController *dvController = [[FlickrController alloc] initWithNibName:nil bundle:[NSBundle mainBundle]];
-	dvController.selectedSeas = selected;
-	NSLog(@"%@", selected);
-	[self.navigationController pushViewController:dvController animated:YES];
-	[dvController release];
+	
+	SeasonItem *item = [seasonItems objectAtIndex:indexPath.row];
+    FlickrController *controller = [[FlickrController alloc] init];
+    controller.item = item;
+    controller.title = item.title;
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];    
+	
+	//NSLog(@"%@", selected);
+
 }
 
 #pragma mark -

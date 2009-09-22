@@ -276,7 +276,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>22</integer>
+									<integer>18</integer>
 									<integer>13</integer>
 									<integer>1</integer>
 									<integer>0</integer>
@@ -320,7 +320,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>SeasonsController.m</string>
+								<string>FlickrController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -328,11 +328,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>SeasonsController.m</string>
+										<string>FlickrController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D999F6331068F2A800773A0A</string>
+										<string>D999F6481068F52E00773A0A</string>
 										<key>history</key>
 										<array>
 											<string>D983707F105C2E7700943965</string>
@@ -348,13 +348,13 @@
 											<string>D9BE3C6F1067ADE300191D80</string>
 											<string>D9BE3C701067ADE300191D80</string>
 											<string>D9BE3C711067ADE300191D80</string>
-											<string>D9BE3C721067ADE300191D80</string>
 											<string>D9BE3C7C1067AE1E00191D80</string>
 											<string>D9BE3C7D1067AE1E00191D80</string>
 											<string>D9BE3C8A1067B1D200191D80</string>
-											<string>D9BE3C8B1067B1D200191D80</string>
 											<string>D999F62A1068F1EB00773A0A</string>
-											<string>D999F62B1068F1EB00773A0A</string>
+											<string>D999F6451068F52E00773A0A</string>
+											<string>D999F6461068F52E00773A0A</string>
+											<string>D999F6471068F52E00773A0A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -554,8 +554,8 @@
 	<array>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>D9837062105C2E2300943965</string>
 		<string>/Users/sasha/Work/SVN/southpark/trunk/Southpark/Southpark.xcodeproj</string>
+		<string>D9837062105C2E2300943965</string>
 	</array>
 	<key>WindowString</key>
 	<string>66 195 1525 773 0 0 1680 1028 </string>
@@ -650,7 +650,7 @@
 			<key>WindowToolGUID</key>
 			<string>D9837062105C2E2300943965</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

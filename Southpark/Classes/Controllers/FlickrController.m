@@ -15,6 +15,7 @@
 //#import "FlickrItemController.h"
 #import "SouthparkAppDelegate.h"
 #import "Reachability.h"
+#import "SeasonItem.h"
 
 @interface FlickrController (Private)
 - (void)loadContentForVisibleCells;
@@ -24,13 +25,13 @@
 @implementation FlickrController
 
 //@synthesize navigationController;
-
+@synthesize item;
 
 
 
 - (void)viewDidLoad {
 
- //self.title = @"Flickr RSS Feed";
+ self.title = item.title;
 	rss = [[RSS alloc] init];
 	rss.delegate = self;
 	NSURL *url = [[NSURL alloc] initWithString:@"http://api.flickr.com/services/feeds/photos_public.gne?format=rss2"];
@@ -49,6 +50,9 @@
 {
    // [navigationController release];
     [flickrItems release];
+	[item setDelegate:nil];
+    [item release];
+	
     [rss setDelegate:nil];
     [rss release];
     [super dealloc];
@@ -56,6 +60,23 @@
 
 #pragma mark -
 #pragma mark Public methods
+
+- (void)setItem:(SeasonItem *)newItem
+{
+    if (item != newItem)
+    {
+        [item setDelegate:nil];
+        [item release];
+        item = nil;
+        item = [newItem retain];
+        
+        if (item != nil)
+        {
+            item.delegate = self;
+        }
+    }
+}
+
 
 - (void)reloadFeed
 {
