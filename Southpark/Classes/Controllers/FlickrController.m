@@ -34,7 +34,7 @@
  self.title = item.title;
 	rss = [[RSS alloc] init];
 	rss.delegate = self;
-	NSURL *url = [[NSURL alloc] initWithString:@"http://api.flickr.com/services/feeds/photos_public.gne?format=rss2"];
+	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://zefir.kiev.ua/spark/southpgodn.php?status=%@",item.title]];
 	rss.url = url;
 	[url release];
  //UIBarButtonItem *reloadButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 

@@ -31,7 +31,7 @@
 	//self.title = @"Flickr RSS Feed";
 	rss = [[RSS alloc] init];
 	rss.delegate = self;
-	NSURL *url = [[NSURL alloc] initWithString:@"http://api.flickr.com/services/feeds/photos_public.gne?format=rss2"];
+	NSURL *url = [[NSURL alloc] initWithString:@"http://zefir.kiev.ua/spark/demo1.php"];
 	rss.url = url;
 	[url release];
 	//UIBarButtonItem *reloadButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 

@@ -332,7 +332,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D999F6481068F52E00773A0A</string>
+										<string>D999F65B1068FCF300773A0A</string>
 										<key>history</key>
 										<array>
 											<string>D983707F105C2E7700943965</string>
@@ -352,9 +352,9 @@
 											<string>D9BE3C7D1067AE1E00191D80</string>
 											<string>D9BE3C8A1067B1D200191D80</string>
 											<string>D999F62A1068F1EB00773A0A</string>
-											<string>D999F6451068F52E00773A0A</string>
-											<string>D999F6461068F52E00773A0A</string>
-											<string>D999F6471068F52E00773A0A</string>
+											<string>D999F6531068FC7D00773A0A</string>
+											<string>D999F6591068FCF300773A0A</string>
+											<string>D999F65A1068FCF300773A0A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -554,8 +554,8 @@
 	<array>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>/Users/sasha/Work/SVN/southpark/trunk/Southpark/Southpark.xcodeproj</string>
 		<string>D9837062105C2E2300943965</string>
+		<string>/Users/sasha/Work/SVN/southpark/trunk/Southpark/Southpark.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>66 195 1525 773 0 0 1680 1028 </string>
@@ -650,7 +650,7 @@
 			<key>WindowToolGUID</key>
 			<string>D9837062105C2E2300943965</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
