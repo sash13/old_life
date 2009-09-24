@@ -14,12 +14,16 @@
 @interface FilmView : UIViewController <FlickrItemDelegate> {
 	
 	IBOutlet UIImageView *playView;
+	IBOutlet UIImageView *goView;
 	IBOutlet UILabel *textLabel;
 	FlickrItem *item;
+		NSDictionary *jsonItem;
 	
 
 }
 @property (nonatomic, retain) FlickrItem *item;
+@property (nonatomic, retain) UIImageView *goView;
+@property (nonatomic, retain) NSDictionary *jsonItem;
 -(IBAction)play:(id)sender;
 
 

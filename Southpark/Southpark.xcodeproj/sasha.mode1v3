@@ -269,6 +269,7 @@
 								<string>D9222018105EDB0700A5A980</string>
 								<string>D922201C105EDB0700A5A980</string>
 								<string>D983703B105C2C7F00943965</string>
+								<string>D9837029105C2C5400943965</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -277,7 +278,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>37</integer>
+									<integer>31</integer>
+									<integer>20</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -302,7 +304,7 @@
 							<real>278</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>102 236 1316 759 0 0 1680 1028 </string>
+						<string>83 154 1316 759 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -320,7 +322,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>SouthparkAppDelegate.m</string>
+								<string>FilmView.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -328,11 +330,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>SouthparkAppDelegate.m</string>
+										<string>FilmView.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D989577B106BB451001E5E92</string>
+										<string>D989580B106BBBCF001E5E92</string>
 										<key>history</key>
 										<array>
 											<string>D983707F105C2E7700943965</string>
@@ -357,11 +359,11 @@
 											<string>D9895735106BAFA2001E5E92</string>
 											<string>D989573E106BB072001E5E92</string>
 											<string>D989573F106BB072001E5E92</string>
-											<string>D9895740106BB072001E5E92</string>
 											<string>D989575A106BB318001E5E92</string>
 											<string>D989576E106BB3D6001E5E92</string>
-											<string>D9895779106BB451001E5E92</string>
-											<string>D989577A106BB451001E5E92</string>
+											<string>D98957E5106BB9BE001E5E92</string>
+											<string>D9895801106BBB7F001E5E92</string>
+											<string>D9895802106BBB7F001E5E92</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -375,7 +377,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1016, 713}}</string>
 								<key>RubberWindowFrame</key>
-								<string>102 236 1316 759 0 0 1680 1028 </string>
+								<string>83 154 1316 759 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -395,7 +397,7 @@
 								<key>Frame</key>
 								<string>{{0, 718}, {1016, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>102 236 1316 759 0 0 1680 1028 </string>
+								<string>83 154 1316 759 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -565,7 +567,7 @@
 		<string>/Users/sasha/Work/SVN/southpark/trunk/Southpark/Southpark.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>102 236 1316 759 0 0 1680 1028 </string>
+	<string>83 154 1316 759 0 0 1680 1028 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -586,7 +588,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FlickrController.m</string>
+								<string>FilmView.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

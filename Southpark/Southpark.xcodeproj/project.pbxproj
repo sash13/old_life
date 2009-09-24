@@ -32,6 +32,12 @@
 		D989571B106BAB6B001E5E92 /* Playnew.png in Resources */ = {isa = PBXBuildFile; fileRef = D989571A106BAB6B001E5E92 /* Playnew.png */; };
 		D9895721106BAD23001E5E92 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D9895720106BAD23001E5E92 /* Default.png */; };
 		D989573B106BB00E001E5E92 /* NSString+trim.m in Sources */ = {isa = PBXBuildFile; fileRef = D989573A106BB00E001E5E92 /* NSString+trim.m */; };
+		D98957D8106BB94F001E5E92 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D98957CD106BB94F001E5E92 /* NSObject+SBJSON.m */; };
+		D98957D9106BB94F001E5E92 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D98957CF106BB94F001E5E92 /* NSString+SBJSON.m */; };
+		D98957DA106BB94F001E5E92 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D98957D1106BB94F001E5E92 /* SBJSON.m */; };
+		D98957DB106BB94F001E5E92 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = D98957D3106BB94F001E5E92 /* SBJsonBase.m */; };
+		D98957DC106BB94F001E5E92 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D98957D5106BB94F001E5E92 /* SBJsonParser.m */; };
+		D98957DD106BB94F001E5E92 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = D98957D7106BB94F001E5E92 /* SBJsonWriter.m */; };
 		D999F6D710690CF700773A0A /* MyMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D999F6D610690CF700773A0A /* MyMovieViewController.m */; };
 		D999F6DA10690D0000773A0A /* MyOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = D999F6D910690D0000773A0A /* MyOverlayView.m */; };
 		D999F6E710690DD900773A0A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D999F6E610690DD900773A0A /* MediaPlayer.framework */; };
@@ -85,6 +91,19 @@
 		D9895720106BAD23001E5E92 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D9895739106BB00E001E5E92 /* NSString+trim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+trim.h"; sourceTree = "<group>"; };
 		D989573A106BB00E001E5E92 /* NSString+trim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+trim.m"; sourceTree = "<group>"; };
+		D98957CB106BB94F001E5E92 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		D98957CC106BB94F001E5E92 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		D98957CD106BB94F001E5E92 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		D98957CE106BB94F001E5E92 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		D98957CF106BB94F001E5E92 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		D98957D0106BB94F001E5E92 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		D98957D1106BB94F001E5E92 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		D98957D2106BB94F001E5E92 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		D98957D3106BB94F001E5E92 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		D98957D4106BB94F001E5E92 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		D98957D5106BB94F001E5E92 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		D98957D6106BB94F001E5E92 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		D98957D7106BB94F001E5E92 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		D999F6D510690CF700773A0A /* MyMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMovieViewController.h; sourceTree = "<group>"; };
 		D999F6D610690CF700773A0A /* MyMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMovieViewController.m; sourceTree = "<group>"; };
 		D999F6D810690D0000773A0A /* MyOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOverlayView.h; sourceTree = "<group>"; };
@@ -218,6 +237,7 @@
 		D9837029105C2C5400943965 /* Externals */ = {
 			isa = PBXGroup;
 			children = (
+				D98957CA106BB94F001E5E92 /* JSON */,
 				D983702A105C2C5400943965 /* ASIHTTPRequest */,
 				D9837033105C2C5400943965 /* Reachability */,
 			);
@@ -265,6 +285,26 @@
 				D98956C5106BA0EB001E5E92 /* FilmView.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D98957CA106BB94F001E5E92 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				D98957CB106BB94F001E5E92 /* JSON.h */,
+				D98957CC106BB94F001E5E92 /* NSObject+SBJSON.h */,
+				D98957CD106BB94F001E5E92 /* NSObject+SBJSON.m */,
+				D98957CE106BB94F001E5E92 /* NSString+SBJSON.h */,
+				D98957CF106BB94F001E5E92 /* NSString+SBJSON.m */,
+				D98957D0106BB94F001E5E92 /* SBJSON.h */,
+				D98957D1106BB94F001E5E92 /* SBJSON.m */,
+				D98957D2106BB94F001E5E92 /* SBJsonBase.h */,
+				D98957D3106BB94F001E5E92 /* SBJsonBase.m */,
+				D98957D4106BB94F001E5E92 /* SBJsonParser.h */,
+				D98957D5106BB94F001E5E92 /* SBJsonParser.m */,
+				D98957D6106BB94F001E5E92 /* SBJsonWriter.h */,
+				D98957D7106BB94F001E5E92 /* SBJsonWriter.m */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		D999F6D410690CDF00773A0A /* Player */ = {
@@ -354,6 +394,12 @@
 				D999F6DA10690D0000773A0A /* MyOverlayView.m in Sources */,
 				D98956C7106BA0EB001E5E92 /* FilmView.m in Sources */,
 				D989573B106BB00E001E5E92 /* NSString+trim.m in Sources */,
+				D98957D8106BB94F001E5E92 /* NSObject+SBJSON.m in Sources */,
+				D98957D9106BB94F001E5E92 /* NSString+SBJSON.m in Sources */,
+				D98957DA106BB94F001E5E92 /* SBJSON.m in Sources */,
+				D98957DB106BB94F001E5E92 /* SBJsonBase.m in Sources */,
+				D98957DC106BB94F001E5E92 /* SBJsonParser.m in Sources */,
+				D98957DD106BB94F001E5E92 /* SBJsonWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

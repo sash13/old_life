@@ -13,10 +13,11 @@
 @implementation FilmView
 
 @synthesize item;
-
+@synthesize jsonItem, goView;
 
 
 - (void)dealloc {
+	[goView dealloc];
 	[textLabel release];
 	[item setDelegate:nil];
     [item release];
@@ -56,6 +57,26 @@
 - (void)viewDidLoad {
 	playView.image = item.thumbnail;
 	textLabel.text = item.title;
+	
+	NSURL *jsonURL = [NSURL URLWithString:@"http://openidev.ru/jdi.php"];
+	
+	NSString *jsonData = [[NSString alloc] initWithContentsOfURL:jsonURL];
+	
+	if (jsonData == nil) {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Webservice Down" message:@"The webservice you are accessing is down. Please try again later."  delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+		[alert show];	
+		[alert release];
+	}
+	else {
+		self.jsonItem = [jsonData JSONValue]; 
+		
+		// setting up the title
+		//self.jsonLabel.text = [self.jsonItem objectForKey:@"title"];
+		
+		// setting up the image now
+		self.goView.image = [UIImage imageWithData: [NSData dataWithContentsOfURL: [NSURL URLWithString: [self.jsonItem objectForKey:@"img"]]]];
+	}
+	
 	
     [super viewDidLoad];
 }
