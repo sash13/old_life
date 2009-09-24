@@ -277,14 +277,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>30</integer>
-									<integer>18</integer>
+									<integer>37</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {278, 683}}</string>
+							<string>{{0, 22}, {278, 700}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -296,14 +295,14 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {295, 701}}</string>
+						<string>{{0, 0}, {295, 718}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
 							<real>278</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>31 260 1142 742 0 0 1680 1028 </string>
+						<string>102 236 1316 759 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -321,7 +320,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FilmView.m</string>
+								<string>SouthparkAppDelegate.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,38 +328,40 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FilmView.m</string>
+										<string>SouthparkAppDelegate.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D9895718106BA85B001E5E92</string>
+										<string>D989577B106BB451001E5E92</string>
 										<key>history</key>
 										<array>
 											<string>D983707F105C2E7700943965</string>
 											<string>D9837086105C2E7700943965</string>
-											<string>D9BE3C681067ADE300191D80</string>
 											<string>D9BE3C6F1067ADE300191D80</string>
 											<string>D9BE3C701067ADE300191D80</string>
 											<string>D9BE3C711067ADE300191D80</string>
 											<string>D9BE3C7C1067AE1E00191D80</string>
-											<string>D999F696106907EC00773A0A</string>
 											<string>D999F697106907EC00773A0A</string>
 											<string>D999F698106907EC00773A0A</string>
-											<string>D999F699106907EC00773A0A</string>
 											<string>D999F69A106907EC00773A0A</string>
-											<string>D999F69B106907EC00773A0A</string>
-											<string>D999F6C210690BFC00773A0A</string>
 											<string>D999F6EC10690F8F00773A0A</string>
 											<string>D999F6ED10690F8F00773A0A</string>
-											<string>D999F6EE10690F8F00773A0A</string>
-											<string>D98956C9106BA0FB001E5E92</string>
 											<string>D98956CF106BA160001E5E92</string>
 											<string>D98956D0106BA160001E5E92</string>
 											<string>D98956D1106BA160001E5E92</string>
 											<string>D98956FA106BA693001E5E92</string>
-											<string>D9895705106BA76E001E5E92</string>
-											<string>D9895706106BA76E001E5E92</string>
-											<string>D9895707106BA76E001E5E92</string>
+											<string>D9895731106BAFA2001E5E92</string>
+											<string>D9895732106BAFA2001E5E92</string>
+											<string>D9895733106BAFA2001E5E92</string>
+											<string>D9895734106BAFA2001E5E92</string>
+											<string>D9895735106BAFA2001E5E92</string>
+											<string>D989573E106BB072001E5E92</string>
+											<string>D989573F106BB072001E5E92</string>
+											<string>D9895740106BB072001E5E92</string>
+											<string>D989575A106BB318001E5E92</string>
+											<string>D989576E106BB3D6001E5E92</string>
+											<string>D9895779106BB451001E5E92</string>
+											<string>D989577A106BB451001E5E92</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -372,14 +373,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {842, 696}}</string>
+								<string>{{0, 0}, {1016, 713}}</string>
 								<key>RubberWindowFrame</key>
-								<string>31 260 1142 742 0 0 1680 1028 </string>
+								<string>102 236 1316 759 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>696pt</string>
+							<string>713pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -392,9 +393,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 701}, {842, 0}}</string>
+								<string>{{0, 718}, {1016, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>31 260 1142 742 0 0 1680 1028 </string>
+								<string>102 236 1316 759 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -403,7 +404,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>842pt</string>
+					<string>1016pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -564,7 +565,7 @@
 		<string>/Users/sasha/Work/SVN/southpark/trunk/Southpark/Southpark.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>31 260 1142 742 0 0 1680 1028 </string>
+	<string>102 236 1316 759 0 0 1680 1028 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -580,8 +581,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -604,6 +603,8 @@
 							<string>438pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

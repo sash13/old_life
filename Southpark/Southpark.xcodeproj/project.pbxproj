@@ -31,6 +31,7 @@
 		D98956C8106BA0EB001E5E92 /* FilmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98956C6106BA0EB001E5E92 /* FilmView.xib */; };
 		D989571B106BAB6B001E5E92 /* Playnew.png in Resources */ = {isa = PBXBuildFile; fileRef = D989571A106BAB6B001E5E92 /* Playnew.png */; };
 		D9895721106BAD23001E5E92 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D9895720106BAD23001E5E92 /* Default.png */; };
+		D989573B106BB00E001E5E92 /* NSString+trim.m in Sources */ = {isa = PBXBuildFile; fileRef = D989573A106BB00E001E5E92 /* NSString+trim.m */; };
 		D999F6D710690CF700773A0A /* MyMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D999F6D610690CF700773A0A /* MyMovieViewController.m */; };
 		D999F6DA10690D0000773A0A /* MyOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = D999F6D910690D0000773A0A /* MyOverlayView.m */; };
 		D999F6E710690DD900773A0A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D999F6E610690DD900773A0A /* MediaPlayer.framework */; };
@@ -82,6 +83,8 @@
 		D98956C6106BA0EB001E5E92 /* FilmView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FilmView.xib; path = Classes/Controllers/FilmView.xib; sourceTree = "<group>"; };
 		D989571A106BAB6B001E5E92 /* Playnew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Playnew.png; sourceTree = "<group>"; };
 		D9895720106BAD23001E5E92 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D9895739106BB00E001E5E92 /* NSString+trim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+trim.h"; sourceTree = "<group>"; };
+		D989573A106BB00E001E5E92 /* NSString+trim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+trim.m"; sourceTree = "<group>"; };
 		D999F6D510690CF700773A0A /* MyMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMovieViewController.h; sourceTree = "<group>"; };
 		D999F6D610690CF700773A0A /* MyMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMovieViewController.m; sourceTree = "<group>"; };
 		D999F6D810690D0000773A0A /* MyOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOverlayView.h; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 		D9222018105EDB0700A5A980 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D9895739106BB00E001E5E92 /* NSString+trim.h */,
+				D989573A106BB00E001E5E92 /* NSString+trim.m */,
 				D9222019105EDB0700A5A980 /* RSS.h */,
 				D922201A105EDB0700A5A980 /* RSS.m */,
 				D922201B105EDB0700A5A980 /* RSSDelegate.h */,
@@ -348,6 +353,7 @@
 				D999F6D710690CF700773A0A /* MyMovieViewController.m in Sources */,
 				D999F6DA10690D0000773A0A /* MyOverlayView.m in Sources */,
 				D98956C7106BA0EB001E5E92 /* FilmView.m in Sources */,
+				D989573B106BB00E001E5E92 /* NSString+trim.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

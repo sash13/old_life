@@ -8,7 +8,7 @@
 
 #import "FilmView.h"
 #import "FlickrItem.h"
-
+#import "NSString+trim.h"
 
 @implementation FilmView
 
@@ -63,7 +63,27 @@
 
 -(IBAction)play:(id)sender
 {
-	NSLog(@"play");
+	NSString * trimmed = [NSString trim:item.link];
+	NSString * urlMovi = [NSString stringWithFormat:@"http://zefir.kiev.ua/spark/%@.M4V", trimmed];
+	//NSString * trimmed = [NSString trim:urlMovi];
+	
+	NSLog(@"play %@", urlMovi);
+	
+
+		NSURL *movieURL = [NSURL URLWithString:urlMovi];
+		if (movieURL)
+		{
+			if ([movieURL scheme])	// sanity check on the URL
+			{
+				SouthparkAppDelegate *appDelegate = (SouthparkAppDelegate *)[[UIApplication sharedApplication] delegate];
+				
+				// initialize a new MPMoviePlayerController object with the specified URL, and
+				// play the movie
+				[appDelegate initAndPlayMovie:movieURL];
+				[appDelegate showPlayView];
+			}
+		}
+	
 	
 }
 

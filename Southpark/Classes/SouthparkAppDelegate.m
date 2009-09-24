@@ -95,6 +95,7 @@
 //  Notification called when the movie finished playing.
 - (void) moviePlayBackDidFinish:(NSNotification*)notification
 {
+	[playView removeFromSuperview];
     /*     
 	 < add your code here >
 	 
@@ -138,6 +139,30 @@
 - (void)hideLoadingView
 {
     [loadingView removeFromSuperview];
+}
+
+- (void)showPlayView
+{
+    if (playView == nil)
+    {
+        playView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 480.0)];
+        playView.opaque = NO;
+        playView.backgroundColor = [UIColor blackColor];
+        playView.alpha = 1.0;
+		NSLog(@"showPlayView");
+        UIActivityIndicatorView *spinningWheel = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(142.0, 222.0, 37.0, 37.0)];
+        [spinningWheel startAnimating];
+        spinningWheel.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+        [playView addSubview:spinningWheel];
+        [spinningWheel release];
+    }
+    
+    [window addSubview:playView];
+}
+
+- (void)hidePlayView
+{
+    [playView removeFromSuperview];
 }
 
 

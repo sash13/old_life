@@ -20,6 +20,7 @@
 	NSOperationQueue *downloadQueue;
 	MPMoviePlayerController *moviePlayer;
     UIView *loadingView;
+	UIView *playView;
 }
 
 //@property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -33,5 +34,8 @@
 
 - (void)showLoadingView;
 - (void)hideLoadingView;
+
+- (void)showPlayView;
+- (void)hidePlayView;
 
 @end

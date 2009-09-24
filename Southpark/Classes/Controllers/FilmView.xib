@@ -40,7 +40,7 @@
 				<int key="NSvFlags">292</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="IBUIImageView" id="669451455">
+					<object class="IBUIImageView" id="136559732">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{0, -43}, {320, 460}}</string>
@@ -54,7 +54,7 @@
 							<string key="NSResourceName">Default.png</string>
 						</object>
 					</object>
-					<object class="IBUIImageView" id="814317969">
+					<object class="IBUIImageView" id="757189230">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{40, 91}, {240, 177}}</string>
@@ -64,7 +64,7 @@
 						<int key="IBUIContentMode">4</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 					</object>
-					<object class="IBUILabel" id="522682082">
+					<object class="IBUILabel" id="684725877">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{93, 343}, {126, 41}}</string>
@@ -83,10 +83,10 @@
 						<int key="IBUINumberOfLines">3</int>
 						<int key="IBUITextAlignment">1</int>
 					</object>
-					<object class="IBUIButton" id="67041271">
+					<object class="IBUIButton" id="1031507075">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{119, 142}, {74, 75}}</string>
+						<string key="NSFrame">{{123, 142}, {74, 75}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -142,7 +142,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">textLabel</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="522682082"/>
+						<reference key="destination" ref="684725877"/>
 					</object>
 					<int key="connectionID">7</int>
 				</object>
@@ -150,14 +150,14 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">playView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="814317969"/>
+						<reference key="destination" ref="757189230"/>
 					</object>
 					<int key="connectionID">9</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">play:</string>
-						<reference key="source" ref="67041271"/>
+						<reference key="source" ref="1031507075"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -178,10 +178,10 @@
 						<reference key="object" ref="191373211"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="522682082"/>
-							<reference ref="669451455"/>
-							<reference ref="814317969"/>
-							<reference ref="67041271"/>
+							<reference ref="684725877"/>
+							<reference ref="136559732"/>
+							<reference ref="757189230"/>
+							<reference ref="1031507075"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -198,22 +198,22 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">5</int>
-						<reference key="object" ref="522682082"/>
+						<reference key="object" ref="684725877"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">8</int>
-						<reference key="object" ref="814317969"/>
+						<reference key="object" ref="757189230"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">12</int>
-						<reference key="object" ref="669451455"/>
+						<reference key="object" ref="136559732"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">10</int>
-						<reference key="object" ref="67041271"/>
+						<reference key="object" ref="1031507075"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</object>

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FlickrItemDelegate.h"
-
+#import "SouthparkAppDelegate.h"
 @class FlickrItem;
 
 @interface FilmView : UIViewController <FlickrItemDelegate> {
