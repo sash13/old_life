@@ -16,6 +16,8 @@
 #import "SouthparkAppDelegate.h"
 #import "Reachability.h"
 #import "SeasonItem.h"
+#import "FilmView.h"
+
 
 @interface FlickrController (Private)
 - (void)loadContentForVisibleCells;
@@ -225,6 +227,14 @@
 {
     FlickrCell *cell = (FlickrCell *)[self.tableView cellForRowAtIndexPath:indexPath];
     [cell toggleImage];
+	
+	FlickrItem *item = [flickrItems objectAtIndex:indexPath.row];
+    FilmView *controllers = [[FilmView alloc] init];
+    controllers.item = item;
+    controllers.title = item.title;
+    [self.navigationController pushViewController:controllers animated:YES];
+    [controllers release]; 
+	
 }
 
 #pragma mark -

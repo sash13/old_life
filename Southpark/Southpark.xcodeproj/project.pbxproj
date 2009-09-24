@@ -27,6 +27,10 @@
 		D9837066105C2E3A00943965 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9837065105C2E3A00943965 /* CFNetwork.framework */; };
 		D983706A105C2E4500943965 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9837069105C2E4500943965 /* SystemConfiguration.framework */; };
 		D983706E105C2E5B00943965 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D983706D105C2E5B00943965 /* libz.1.2.3.dylib */; };
+		D98956C7106BA0EB001E5E92 /* FilmView.m in Sources */ = {isa = PBXBuildFile; fileRef = D98956C5106BA0EB001E5E92 /* FilmView.m */; };
+		D98956C8106BA0EB001E5E92 /* FilmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D98956C6106BA0EB001E5E92 /* FilmView.xib */; };
+		D989571B106BAB6B001E5E92 /* Playnew.png in Resources */ = {isa = PBXBuildFile; fileRef = D989571A106BAB6B001E5E92 /* Playnew.png */; };
+		D9895721106BAD23001E5E92 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D9895720106BAD23001E5E92 /* Default.png */; };
 		D999F6D710690CF700773A0A /* MyMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D999F6D610690CF700773A0A /* MyMovieViewController.m */; };
 		D999F6DA10690D0000773A0A /* MyOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = D999F6D910690D0000773A0A /* MyOverlayView.m */; };
 		D999F6E710690DD900773A0A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D999F6E610690DD900773A0A /* MediaPlayer.framework */; };
@@ -73,6 +77,11 @@
 		D9837065105C2E3A00943965 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D9837069105C2E4500943965 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D983706D105C2E5B00943965 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		D98956C4106BA0EB001E5E92 /* FilmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmView.h; sourceTree = "<group>"; };
+		D98956C5106BA0EB001E5E92 /* FilmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmView.m; sourceTree = "<group>"; };
+		D98956C6106BA0EB001E5E92 /* FilmView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FilmView.xib; path = Classes/Controllers/FilmView.xib; sourceTree = "<group>"; };
+		D989571A106BAB6B001E5E92 /* Playnew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Playnew.png; sourceTree = "<group>"; };
+		D9895720106BAD23001E5E92 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D999F6D510690CF700773A0A /* MyMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMovieViewController.h; sourceTree = "<group>"; };
 		D999F6D610690CF700773A0A /* MyMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMovieViewController.m; sourceTree = "<group>"; };
 		D999F6D810690D0000773A0A /* MyOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOverlayView.h; sourceTree = "<group>"; };
@@ -158,6 +167,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D9895720106BAD23001E5E92 /* Default.png */,
+				D989571A106BAB6B001E5E92 /* Playnew.png */,
+				D98956C6106BA0EB001E5E92 /* FilmView.xib */,
 				282CCBFD0DB6C98000C4EA27 /* SecondView.xib */,
 				28AD73870D9D96C1002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Southpark-Info.plist */,
@@ -244,6 +256,8 @@
 				D9BE3C191067A70F00191D80 /* SeasonsController.h */,
 				D9BE3C1A1067A70F00191D80 /* SeasonsController.m */,
 				D9BE3C271067A93800191D80 /* SeasonCellDelegate.h */,
+				D98956C4106BA0EB001E5E92 /* FilmView.h */,
+				D98956C5106BA0EB001E5E92 /* FilmView.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -303,6 +317,9 @@
 			files = (
 				28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */,
 				282CCBFE0DB6C98000C4EA27 /* SecondView.xib in Resources */,
+				D98956C8106BA0EB001E5E92 /* FilmView.xib in Resources */,
+				D989571B106BAB6B001E5E92 /* Playnew.png in Resources */,
+				D9895721106BAD23001E5E92 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +347,7 @@
 				D9BE3C1B1067A70F00191D80 /* SeasonsController.m in Sources */,
 				D999F6D710690CF700773A0A /* MyMovieViewController.m in Sources */,
 				D999F6DA10690D0000773A0A /* MyOverlayView.m in Sources */,
+				D98956C7106BA0EB001E5E92 /* FilmView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
