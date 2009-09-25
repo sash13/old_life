@@ -10,7 +10,7 @@
 #import "FlickrItemDelegate.h"
 #import "SouthparkAppDelegate.h"
 @class FlickrItem;
-
+@class ASINetworkQueue;
 @interface FilmView : UIViewController <FlickrItemDelegate> {
 	
 	IBOutlet UIImageView *playView;
@@ -18,13 +18,16 @@
 	IBOutlet UILabel *textLabel;
 	FlickrItem *item;
 		NSDictionary *jsonItem;
-	
+	ASINetworkQueue *downloadQueue;
+	UIActivityIndicatorView *progressView;
+  
+	//IBOutlet UIButton *go;
 
 }
 @property (nonatomic, retain) FlickrItem *item;
 @property (nonatomic, retain) UIImageView *goView;
 @property (nonatomic, retain) NSDictionary *jsonItem;
 -(IBAction)play:(id)sender;
-
+-(IBAction)go:(id)sender;
 
 @end

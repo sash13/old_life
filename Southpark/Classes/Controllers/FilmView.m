@@ -9,22 +9,33 @@
 #import "FilmView.h"
 #import "FlickrItem.h"
 #import "NSString+trim.h"
+#import "ASIHTTPRequest.h"
+
+#import "ASINetworkQueue.h"
 
 @implementation FilmView
 
 @synthesize item;
-@synthesize jsonItem, goView;
+@synthesize jsonItem;
 
 
 - (void)dealloc {
-	[goView dealloc];
+	//[goView dealloc];
+	[downloadQueue release];
 	[textLabel release];
 	[item setDelegate:nil];
     [item release];
     [super dealloc];
 }
 
-
+- (id)init
+{
+    if (self = [super initWithNibName:@"FilmView" bundle:nil]) 
+    {
+        downloadQueue = [[ASINetworkQueue alloc] init];
+    }
+    return self;
+}
 
 - (void)setItem:(FlickrItem *)newItem
 {
@@ -61,9 +72,12 @@
 	NSURL *jsonURL = [NSURL URLWithString:@"http://openidev.ru/jdi.php"];
 	
 	NSString *jsonData = [[NSString alloc] initWithContentsOfURL:jsonURL];
+
+	
+
 	
 	if (jsonData == nil) {
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Webservice Down" message:@"The webservice you are accessing is down. Please try again later."  delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Webservice Down" message:@"The webservice of reclam you are accessing is down. Please try again later."  delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
 		[alert show];	
 		[alert release];
 	}
@@ -74,13 +88,18 @@
 		//self.jsonLabel.text = [self.jsonItem objectForKey:@"title"];
 		
 		// setting up the image now
-		self.goView.image = [UIImage imageWithData: [NSData dataWithContentsOfURL: [NSURL URLWithString: [self.jsonItem objectForKey:@"img"]]]];
+		//self.goView.image = [UIImage imageWithData: [NSData dataWithContentsOfURL: [NSURL URLWithString: [self.jsonItem objectForKey:@"img"]]]];
 	}
 	
 	
     [super viewDidLoad];
 }
 
+-(IBAction)go:(id)sender
+{
+	NSLog(@"%@  utu", [self.jsonItem objectForKey:@"title"]);
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:[self.jsonItem objectForKey:@"title"]]]; 
+}
 
 -(IBAction)play:(id)sender
 {
@@ -108,6 +127,67 @@
 	
 }
 
+- (void)viewWillAppear:(BOOL)animated 
+{
+	progressView = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(145, 20, 25, 25)];  
+	progressView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;  
+	progressView.autoresizingMask = (UIViewAutoresizingFlexibleLeftMargin |  
+									 UIViewAutoresizingFlexibleRightMargin |  
+									 UIViewAutoresizingFlexibleTopMargin |  
+									 UIViewAutoresizingFlexibleBottomMargin);  
+	[self.view addSubview:progressView];  
+	[progressView startAnimating]; 
+	
+	if ([self.jsonItem objectForKey:@"img"] == nil) {
+		NSLog(@"бля");
+	}
+	else {
+		
+
+
+	
+	NSURL *url = [NSURL URLWithString:[self.jsonItem objectForKey:@"img"]];
+		//NSURL *url = [NSURL URLWithString:@"http://img9.imageshack.us/img9/8882/iconnormal.png"];
+   // NSLog(@"%@", [self.jsonItem objectForKey:@"img"]);
+    // Somehow, updating the progress view cannot be properly done
+    // without a queue (thread issues?), so here we use a local
+    // queue which updates the UIProgressView instance.
+    ASIHTTPRequest *request = [[[ASIHTTPRequest alloc] initWithURL:url] autorelease];
+    [downloadQueue setDelegate:self];
+    [downloadQueue setRequestDidFinishSelector:@selector(requestDone:)];
+    [downloadQueue setRequestDidFailSelector:@selector(requestWentWrong:)];
+    [downloadQueue addOperation:request];
+    [downloadQueue go];
+	}
+}
+
+- (void)requestDone:(ASIHTTPRequest *)request
+{
+	
+	[[UIApplication sharedApplication] endIgnoringInteractionEvents]; 
+	[progressView removeFromSuperview];  
+	[progressView release]; 
+ 
+	
+	NSData *data = [request responseData];
+
+    UIImage *remoteImage = [[UIImage alloc] initWithData:data];
+	if (remoteImage) {
+		NSLog(@"test");
+	}
+    goView.image = remoteImage;
+}
+
+- (void)requestWentWrong:(ASIHTTPRequest *)request
+{
+	[[UIApplication sharedApplication] endIgnoringInteractionEvents]; 
+	[progressView removeFromSuperview];  
+	[progressView release]; 
+
+	
+	NSError *error = [request error];
+}
+
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -116,6 +196,7 @@
 }
 
 - (void)viewDidUnload {
+	self.goView.image = nil;
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
 }
