@@ -9,12 +9,17 @@
 #import "SouthparkAppDelegate.h"
 #import "FlickrController.h"
 #import "RSS.h"
+#import "Coffee.h"
+
+
 @implementation SouthparkAppDelegate
 
 //@synthesize window;
 //@synthesize tabBarController;
 @synthesize downloadQueue;
 @synthesize moviePlayer;
+@synthesize coffeeArray;
+
 
 + (SouthparkAppDelegate *)sharedAppDelegate
 {
@@ -46,7 +51,26 @@
 												 name:MPMoviePlayerScalingModeDidChangeNotification 
 											   object:nil];
 	
+	//Copy database to the user's phone if needed.
+	[self copyDatabaseIfNeeded];
+	
+	//Initialize the coffee array.
+	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+	self.coffeeArray = tempArray;
+	[tempArray release];
+	
+	//Once the db is copied, get the initial data to display on the screen.
+	[Coffee getInitialDataToDisplay:[self getDBPath]];
+	
 }
+
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+	// Save data if appropriate
+	
+	[Coffee finalizeStatements];
+}
+
 
 -(void)initAndPlayMovie:(NSURL *)movieURL
 {
@@ -166,12 +190,61 @@
 }
 
 
+- (void) copyDatabaseIfNeeded {
+	
+	//Using NSFileManager we can perform many file system operations.
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	NSError *error;
+	NSString *dbPath = [self getDBPath];
+	BOOL success = [fileManager fileExistsAtPath:dbPath]; 
+	
+	if(!success) {
+		
+		NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"SQL.sqlite"];
+		success = [fileManager copyItemAtPath:defaultDBPath toPath:dbPath error:&error];
+		
+		if (!success) 
+			NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
+	}	
+}
+
+- (NSString *) getDBPath {
+	
+	//Search for standard documents using NSSearchPathForDirectoriesInDomains
+	//First Param = Searching the documents directory
+	//Second Param = Searching the Users directory and not the System
+	//Expand any tildes and identify home directories.
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
+	NSString *documentsDir = [paths objectAtIndex:0];
+	return [documentsDir stringByAppendingPathComponent:@"SQL.sqlite"];
+}
+
+- (void) removeCoffee:(Coffee *)coffeeObj {
+	
+	//Delete it from the database.
+	[coffeeObj deleteCoffee];
+	
+	//Remove it from the array.
+	[coffeeArray removeObject:coffeeObj];
+}
+
+- (void) addCoffee:(Coffee *)coffeeObj {
+	
+	//Add it to the database.
+	[coffeeObj addCoffee];
+	
+	//Add it to the coffee array.
+	[coffeeArray addObject:coffeeObj];
+}
+
+
+
 - (void)dealloc {
 	[controller release];
     [tabBarController release];
 	[downloadQueue release];
     [window release];
-	
+	[coffeeArray release];
 	// remove all movie notifications
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:MPMoviePlayerContentPreloadDidFinishNotification

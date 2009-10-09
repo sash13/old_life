@@ -10,7 +10,7 @@
 #import "FlickrItem.h"
 #import "NSString+trim.h"
 #import "ASIHTTPRequest.h"
-
+#import "Coffee.h"
 #import "ASINetworkQueue.h"
 
 @implementation FilmView
@@ -69,7 +69,7 @@
 	playView.image = item.thumbnail;
 	textLabel.text = item.title;
 	
-	NSURL *jsonURL = [NSURL URLWithString:@"http://openidev.ru/jdi.php"];
+	NSURL *jsonURL = [NSURL URLWithString:@"http://openidev.ru/jdi.php1"];
 	
 	NSString *jsonData = [[NSString alloc] initWithContentsOfURL:jsonURL];
 
@@ -98,7 +98,13 @@
 -(IBAction)go:(id)sender
 {
 	NSLog(@"%@  utu", [self.jsonItem objectForKey:@"title"]);
+	if ([self.jsonItem objectForKey:@"title"] == nil) {
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://openidev.ru"]];
+	}
+	else 
+	{
 	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:[self.jsonItem objectForKey:@"title"]]]; 
+	}
 }
 
 -(IBAction)play:(id)sender
@@ -139,6 +145,9 @@
 	[progressView startAnimating]; 
 	
 	if ([self.jsonItem objectForKey:@"img"] == nil) {
+		//[[UIApplication sharedApplication] endIgnoringInteractionEvents]; 
+		[progressView removeFromSuperview];  
+		[progressView release]; 
 		NSLog(@"бля");
 	}
 	else {
@@ -180,13 +189,36 @@
 
 - (void)requestWentWrong:(ASIHTTPRequest *)request
 {
-	[[UIApplication sharedApplication] endIgnoringInteractionEvents]; 
+	//[[UIApplication sharedApplication] endIgnoringInteractionEvents]; 
 	[progressView removeFromSuperview];  
 	[progressView release]; 
 
 	
 	NSError *error = [request error];
 }
+
+- (void)add:(id)sender {
+	
+	SouthparkAppDelegate *appDelegate = (SouthparkAppDelegate *)[[UIApplication sharedApplication] delegate];
+	
+	//Create a Coffee Object.
+	Coffee *coffeeObj = [[Coffee alloc] initWithPrimaryKey:0];
+	coffeeObj.coffeeName = item.title;
+	NSString * trimmed = [NSString trim:item.link];
+	NSString * urlMovi = [NSString stringWithFormat:@"http://zefir.kiev.ua/spark/%@.M4V", trimmed];
+	coffeeObj.Link = urlMovi;
+	coffeeObj.isDirty = NO;
+	
+	coffeeObj.isDetailViewHydrated = YES;
+	
+	//Add the object
+	[appDelegate addCoffee:coffeeObj];
+	
+	//Dismiss the controller.
+	[self.navigationController dismissModalViewControllerAnimated:YES];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.

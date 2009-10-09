@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "FlickrItemDelegate.h"
 #import "SouthparkAppDelegate.h"
+
 @class FlickrItem;
 @class ASINetworkQueue;
+@class Coffee;
+
 @interface FilmView : UIViewController <FlickrItemDelegate> {
 	
 	IBOutlet UIImageView *playView;
@@ -29,5 +32,5 @@
 @property (nonatomic, retain) NSDictionary *jsonItem;
 -(IBAction)play:(id)sender;
 -(IBAction)go:(id)sender;
-
+-(IBAction)add:(id)sender;
 @end

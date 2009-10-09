@@ -10,6 +10,8 @@
 #import "MyMovieViewController.h"
 
 @class FlickrController;
+@class Coffee;
+
 @interface SouthparkAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
 @private
 	IBOutlet UIWindow *window;
@@ -21,6 +23,7 @@
 	MPMoviePlayerController *moviePlayer;
     UIView *loadingView;
 	UIView *playView;
+	NSMutableArray *coffeeArray;
 }
 
 //@property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -37,5 +40,14 @@
 
 - (void)showPlayView;
 - (void)hidePlayView;
+
+
+@property (nonatomic, retain) NSMutableArray *coffeeArray;
+
+- (void) copyDatabaseIfNeeded;
+- (NSString *) getDBPath;
+
+- (void) removeCoffee:(Coffee *)coffeeObj;
+- (void) addCoffee:(Coffee *)coffeeObj;
 
 @end
