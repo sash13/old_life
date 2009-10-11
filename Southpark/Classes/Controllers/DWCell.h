@@ -15,12 +15,15 @@
 	IBOutlet UIButton *button;
 	IBOutlet UIProgressView *progressIndicator;
 	ASINetworkQueue *networkQueue;
+	NSTimer * myTimer;
 }
 
 @property (nonatomic, assign) IBOutlet UILabel *label;
 @property (nonatomic, assign) IBOutlet UILabel *link;
 @property (nonatomic, assign) IBOutlet UIButton *button;
+@property (nonatomic, retain) NSTimer * myTimer;
+
 
 - (IBAction)show:(id)sender;
-
+//-(void)myMethod:(NSTimer*)timer;
 @end

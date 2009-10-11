@@ -15,7 +15,7 @@
 @synthesize link;
 @synthesize label;
 @synthesize button;
-
+@synthesize myTimer;
 //- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
 //    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         // Initialization code
@@ -60,28 +60,39 @@
 	request = [[[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:link.text]] autorelease];
 	//NSString *patch = [NSString stringWithFormat:@"/Users/sasha/S/%@.M4V" ,label.text];
 	[request setDownloadDestinationPath:[NSString stringWithFormat:@"/Users/sasha/S/%@.M4V" ,label.text]];
-	
+	//[request setTemporaryFileDownloadPath:[NSString stringWithFormat:@"/Users/sasha/S/%@.M4V.temp" ,label.text]];
+	//[request setAllowResumeForFileDownloads:YES];
 	[networkQueue addOperation:request];
 	
 	[networkQueue go];
 	
+
+	myTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(onTimer:) userInfo:nil repeats:YES];
+
 	//[appDelegate performSelector:@selector(showHeaderForClassName:) withObject:label.text];	
 }
 
 
 - (void)requestDone:(ASIHTTPRequest *)request
 {
-	//NSString *response = [request responseString];
+	
+[myTimer invalidate]; myTimer = nil;	//NSString *response = [request responseString];
 	NSData *response = [request responseData];
 	NSLog(@"ok");
 }
 
 - (void)requestWentWrong:(ASIHTTPRequest *)request
 {
+	[myTimer invalidate]; 
+	myTimer = nil;
 	NSError *error = [request error];
 	NSLog(@"bad %@", error);
 }
 
+	
+- (void)onTimer:(NSTimer *)timer {
+NSLog(@"one sec %f", [progressIndicator progress]);
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
 	
