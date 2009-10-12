@@ -33,6 +33,11 @@
         photo.clipsToBounds = YES;
         [self.contentView addSubview:photo];
         
+		size = [[UILabel alloc] initWithFrame:CGRectMake(153.0, 30.0, 120.0, 10.0)];
+        size.font = [UIFont fontWithName:@"American Typewriter" size:12.0];
+        size.contentMode = UIViewContentModeScaleToFill;
+        [self.contentView addSubview:size];
+		
         scrollingWheel = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(42.0, 27.0, 20.0, 20.0)];
         scrollingWheel.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
         scrollingWheel.hidesWhenStopped = YES;
@@ -71,6 +76,7 @@
         if (item != nil)
         {
             textLabel.text = item.title;
+			size.text = item.summary;
             NSLog(@"%@", item.thumbnailURL);
             // This is to avoid the item loading the image
             // when this setter is called; we only want that

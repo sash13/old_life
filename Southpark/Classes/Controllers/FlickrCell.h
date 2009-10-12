@@ -18,6 +18,7 @@
     UILabel *textLabel;
     FlickrItem *item;
     UIImageView *photo;
+	UILabel *size;
     UIActivityIndicatorView *scrollingWheel;
     NSObject<FlickrCellDelegate> *delegate;
 }

@@ -53,6 +53,10 @@
 	cell.label.text = coffeeObj.coffeeName;
 	//cell.label.text = coffeeObj.Nname;
 	cell.link.text = coffeeObj.Link;
+	//cell.sizes.text = [NSString stringWithFormat:@"%@", coffeeObj.sizes];
+	cell.sizes.text =  [coffeeObj.Sizes stringValue];
+	
+	//cell.sizes.text = coffeeObj.Sizes;
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     // Set up the cell
@@ -90,7 +94,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 	
-	//[self.tableView reloadData];
+	[self.tableView reloadData];
 }
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {

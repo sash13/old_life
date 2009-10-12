@@ -16,6 +16,7 @@
 @synthesize label;
 @synthesize button;
 @synthesize myTimer;
+@synthesize sizes;
 //- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
 //    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         // Initialization code

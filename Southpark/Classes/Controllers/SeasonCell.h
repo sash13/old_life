@@ -18,6 +18,7 @@
     UILabel *textLabel;
 	UILabel *textdescription;
 	UILabel *textcoll;
+	
     SeasonItem *item;
     ///UIImageView *photo;
    // UIActivityIndicatorView *scrollingWheel;

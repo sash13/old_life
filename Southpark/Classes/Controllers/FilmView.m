@@ -259,6 +259,13 @@ NSHTTPURLResponse *response;
 	NSString * trimmed = [NSString trim:item.link];
 	NSString * urlMovi = [NSString stringWithFormat:@"http://zefir.kiev.ua/spark/%@.M4V", trimmed];
 	coffeeObj.Link = urlMovi;
+	
+	NSString * trimmeds = [NSString trim:item.summary];
+	NSDecimalNumber *temp = [[NSDecimalNumber alloc] initWithString:trimmeds];
+	NSLog(@"%@", trimmeds);
+	
+	coffeeObj.Sizes = temp;
+	[temp release];
 	coffeeObj.isDirty = NO;
 	
 	coffeeObj.isDetailViewHydrated = YES;

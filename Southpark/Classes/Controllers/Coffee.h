@@ -14,6 +14,8 @@
 	NSInteger coffeeID;
 	NSString *coffeeName;
 	NSString *Link;
+	//NSString *Sizes;
+	NSDecimalNumber *Sizes;
 	//NSInteger Did;
 	//NSString *Nname;
 	//NSString *link;
@@ -26,7 +28,8 @@
 @property (nonatomic, readonly) NSInteger coffeeID;
 @property (nonatomic, copy) NSString *coffeeName;
 @property (nonatomic, copy) NSString *Link;
-
+@property (nonatomic, copy) NSDecimalNumber *Sizes;
+//@property (nonatomic, copy) NSString *Sizes;
 //@property (nonatomic, readonly) NSInteger Did;
 //@property (nonatomic, copy) NSString *Nname;
 //@property (nonatomic, copy) NSString *link;

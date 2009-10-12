@@ -15,7 +15,7 @@ static sqlite3_stmt *detailStmt = nil;
 
 @implementation Coffee
 
-@synthesize coffeeID, coffeeName, isDirty, isDetailViewHydrated, Link;
+@synthesize coffeeID, coffeeName, isDirty, isDetailViewHydrated, Link, Sizes;
 //@synthesize Did, Nname, link, isDirty, isDetailViewHydrated;
 + (void) getInitialDataToDisplay:(NSString *)dbPath {
 	
@@ -23,7 +23,7 @@ static sqlite3_stmt *detailStmt = nil;
 	SouthparkAppDelegate *appDelegate = (SouthparkAppDelegate *)[[UIApplication sharedApplication] delegate];
 	if (sqlite3_open([dbPath UTF8String], &database) == SQLITE_OK) {
 		
-		const char *sql = "select coffeeID, coffeeName, Link from coffee";
+		const char *sql = "select coffeeID, coffeeName, Link, Sizes from coffee";
 		//const char *sql = "select Did, name from dwas";
 		sqlite3_stmt *selectstmt;
 		if(sqlite3_prepare_v2(database, sql, -1, &selectstmt, NULL) == SQLITE_OK) {
@@ -35,6 +35,9 @@ static sqlite3_stmt *detailStmt = nil;
 				coffeeObj.coffeeName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 1)];
 				//coffeeObj.Nname = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 1)];
 				coffeeObj.Link = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 2)];
+				//coffeeObj.Sizes = sqlite3_column_double(selectstmt, 3);
+				coffeeObj.Sizes =  [NSDecimalNumber numberWithDouble:sqlite3_column_double(selectstmt, 3)];
+				//coffeeObj.Sizes = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 3)];
 				coffeeObj.isDirty = NO;
 				//NSLog(@"%@",coffeeObj.Nname);
 				[appDelegate.coffeeArray addObject:coffeeObj];
@@ -172,13 +175,14 @@ static sqlite3_stmt *detailStmt = nil;
 - (void) addCoffee {
 	
 	if(addStmt == nil) {
-		const char *sql = "insert into Coffee(CoffeeName, Link) Values(?, ?)";
+		const char *sql = "insert into Coffee(CoffeeName, Link, Sizes) Values(?, ?, ?)";
 		if(sqlite3_prepare_v2(database, sql, -1, &addStmt, NULL) != SQLITE_OK)
 			NSAssert1(0, @"Error while creating add statement. '%s'", sqlite3_errmsg(database));
 	}
-	
-	sqlite3_bind_text(addStmt, 1, [coffeeName UTF8String], -1, SQLITE_TRANSIENT);
+	//sqlite3_bind_text(addStmt, 3, [Sizes UTF8String], -1, SQLITE_TRANSIENT);
 	sqlite3_bind_text(addStmt, 2, [Link UTF8String], -1, SQLITE_TRANSIENT);
+	sqlite3_bind_text(addStmt, 1, [coffeeName UTF8String], -1, SQLITE_TRANSIENT);
+	sqlite3_bind_double(addStmt, 3, [Sizes doubleValue]);
 	//sqlite3_bind_double(addStmt, 2, [price doubleValue]);
 	
 	if(SQLITE_DONE != sqlite3_step(addStmt))
@@ -226,7 +230,7 @@ static sqlite3_stmt *detailStmt = nil;
 }
 */
 - (void) dealloc {
-	
+	[Sizes release];
 	[Link release];
 	[coffeeName release];
 	[super dealloc];

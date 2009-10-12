@@ -12,6 +12,7 @@
 @interface DWCell : UITableViewCell {
 	IBOutlet UILabel *label;
 	IBOutlet UILabel *link;
+	IBOutlet UILabel *sizes;
 	IBOutlet UIButton *button;
 	IBOutlet UIProgressView *progressIndicator;
 	ASINetworkQueue *networkQueue;
@@ -20,6 +21,7 @@
 
 @property (nonatomic, assign) IBOutlet UILabel *label;
 @property (nonatomic, assign) IBOutlet UILabel *link;
+@property (nonatomic, assign) IBOutlet UILabel *sizes;
 @property (nonatomic, assign) IBOutlet UIButton *button;
 @property (nonatomic, retain) NSTimer * myTimer;
 
