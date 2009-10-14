@@ -19,7 +19,7 @@
 @synthesize downloadQueue;
 @synthesize moviePlayer;
 @synthesize coffeeArray;
-
+@synthesize downloadArray;
 
 + (SouthparkAppDelegate *)sharedAppDelegate
 {
@@ -67,7 +67,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
 	// Save data if appropriate
-	
+	[coffeeArray makeObjectsPerformSelector:@selector(updatec)];
 	[Coffee finalizeStatements];
 }
 
@@ -237,6 +237,15 @@
 	[coffeeArray addObject:coffeeObj];
 }
 
+-(void) addDw:(DwObjData *)DwObj
+{
+	[downloadArray addObject:DwObj];
+}
+
+-(void) removeDw:(DwObjData *)DwObj
+{
+	[downloadArray removeObject:DwObj];
+}
 
 
 - (void)dealloc {
@@ -245,6 +254,7 @@
 	[downloadQueue release];
     [window release];
 	[coffeeArray release];
+	[downloadArray release];
 	// remove all movie notifications
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:MPMoviePlayerContentPreloadDidFinishNotification

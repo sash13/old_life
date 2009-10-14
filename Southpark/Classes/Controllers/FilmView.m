@@ -269,12 +269,11 @@ NSHTTPURLResponse *response;
 	coffeeObj.isDirty = NO;
 	
 	coffeeObj.isDetailViewHydrated = YES;
-	
-	//Add the object
+
 	[appDelegate addCoffee:coffeeObj];
 	
 	//Dismiss the controller.
-	[self.navigationController dismissModalViewControllerAnimated:YES];
+	//[self.navigationController dismissModalViewControllerAnimated:YES];
 }
 
 

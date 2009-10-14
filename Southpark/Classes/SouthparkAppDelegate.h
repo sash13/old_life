@@ -11,6 +11,7 @@
 
 @class FlickrController;
 @class Coffee;
+@class DwObjData;
 
 @interface SouthparkAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
 @private
@@ -24,6 +25,7 @@
     UIView *loadingView;
 	UIView *playView;
 	NSMutableArray *coffeeArray;
+	NSMutableArray *downloadArray;
 }
 
 //@property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -43,11 +45,15 @@
 
 
 @property (nonatomic, retain) NSMutableArray *coffeeArray;
+@property (nonatomic, retain) NSMutableArray *downloadArray;
 
 - (void) copyDatabaseIfNeeded;
 - (NSString *) getDBPath;
 
 - (void) removeCoffee:(Coffee *)coffeeObj;
 - (void) addCoffee:(Coffee *)coffeeObj;
+
+- (void) removeDw:(DwObjData *)DwObj;
+- (void) addDw:(DwObjData *)DwObj;
 
 @end

@@ -11,11 +11,12 @@
 static sqlite3 *database = nil;
 static sqlite3_stmt *deleteStmt = nil;
 static sqlite3_stmt *addStmt = nil;
-static sqlite3_stmt *detailStmt = nil;
+static sqlite3_stmt *updatec_statment = nil;
+
 
 @implementation Coffee
 
-@synthesize coffeeID, coffeeName, isDirty, isDetailViewHydrated, Link, Sizes;
+@synthesize coffeeID, coffeeName, isDirty, isDetailViewHydrated, Link, Sizes, ccc;
 //@synthesize Did, Nname, link, isDirty, isDetailViewHydrated;
 + (void) getInitialDataToDisplay:(NSString *)dbPath {
 	
@@ -27,7 +28,7 @@ static sqlite3_stmt *detailStmt = nil;
 		//const char *sql = "select Did, name from dwas";
 		sqlite3_stmt *selectstmt;
 		if(sqlite3_prepare_v2(database, sql, -1, &selectstmt, NULL) == SQLITE_OK) {
-			
+			NSLog(@"%f", SQLITE_ROW);
 			while(sqlite3_step(selectstmt) == SQLITE_ROW) {
 				
 				NSInteger primaryKey = sqlite3_column_int(selectstmt, 0);
@@ -195,6 +196,36 @@ static sqlite3_stmt *detailStmt = nil;
 	sqlite3_reset(addStmt);
 }
 
+- (void)updateCcc:(NSDecimalNumber*) newCcc {
+	ccc = newCcc;
+	isDirty = YES;
+	
+}
+
+- (void) updatec {
+	if(isDirty) {
+		
+		if (updatec_statment == nil) {
+			const char *sql = "UPDATE Coffee SET ccc = ? where coffeeID = ?";
+			if (sqlite3_prepare_v2(database, sql, -1, &updatec_statment, NULL) != SQLITE_OK) {
+				NSAssert1(0, @"Error: failed to prepare statement with message '%s'.", sqlite3_errmsg(database));
+			}
+		}
+		
+		sqlite3_bind_double(addStmt, 4, [ccc doubleValue]);
+		
+		int success = sqlite3_step(updatec_statment);
+		
+		if (success != SQLITE_DONE) {
+			NSAssert1(0, @"Error: failed to save priority with message '%s'.", sqlite3_errmsg(database));
+		}
+		
+		sqlite3_reset(updatec_statment);
+		isDirty = NO;
+	}
+	
+}
+
 /*- (void) hydrateDetailViewData {
 	
 	//If the detail view is hydrated then do not get it from the database.
@@ -230,6 +261,7 @@ static sqlite3_stmt *detailStmt = nil;
 }
 */
 - (void) dealloc {
+	[ccc release];
 	[Sizes release];
 	[Link release];
 	[coffeeName release];

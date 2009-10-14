@@ -9,7 +9,9 @@
 #import "DWCell.h"
 #import "ASIHTTPRequest.h"
 #import "ASINetworkQueue.h"
-
+#import "Coffee.h"
+#import "SouthparkAppDelegate.h"
+#import "DwObjData.h"
 @implementation DWCell
 
 @synthesize link;
@@ -17,6 +19,7 @@
 @synthesize button;
 @synthesize myTimer;
 @synthesize sizes;
+//@synthesize coffee;
 //- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
 //    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         // Initialization code
@@ -30,11 +33,16 @@
 }
 
 - (IBAction)show:(id)sender {
-	id appDelegate = [[UIApplication sharedApplication] delegate];
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Title" message:label.text  delegate:self cancelButtonTitle:@"button 1" otherButtonTitles: @"button", nil];
-	[alert show];
-	[alert release];
-	
+	//id appDelegate = [[UIApplication sharedApplication] delegate];
+	//UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Title" message:label.text  delegate:self cancelButtonTitle:@"button 1" otherButtonTitles: @"button", nil];
+	//[alert show];
+	//[alert release];
+	SouthparkAppDelegate *appDelegate = (SouthparkAppDelegate *)[[UIApplication sharedApplication] delegate];
+	DwObjData *DwObj = [[DwObjData alloc] init];	//Add the object
+	DwObj.texts = label.text;
+	DwObj.sizes  = 0;
+	[appDelegate addDw:DwObj];
+	[DwObj release];
 	
 	[networkQueue cancelAllOperations];
 	[networkQueue setDownloadProgressDelegate:progressIndicator];
@@ -92,7 +100,17 @@
 
 	
 - (void)onTimer:(NSTimer *)timer {
-NSLog(@"one sec %f", [progressIndicator progress]);
+//NSLog(@"one sec %f", [progressIndicator progress]);
+	//SouthparkAppDelegate *appDelegate = (SouthparkAppDelegate *)[[UIApplication sharedApplication] delegate];
+	
+	//Create a Coffee Object.
+	//Coffee *coffeeObj = [[Coffee alloc] initWithPrimaryKey:0];
+	//NSDecimalNumber *ttt = [progressIndicator progress];
+	NSDecimalNumber *myOtherDecimalObj = [[NSDecimalNumber alloc] initWithFloat:[progressIndicator progress]];
+	//[coffee updateCcc:myOtherDecimalObj];
+
+
+	
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

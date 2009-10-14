@@ -16,12 +16,14 @@
 	NSString *Link;
 	//NSString *Sizes;
 	NSDecimalNumber *Sizes;
+	NSDecimalNumber *ccc;
 	//NSInteger Did;
 	//NSString *Nname;
 	//NSString *link;
 	
 	//Intrnal variables to keep track of the state of the object.
 	BOOL isDirty;
+
 	BOOL isDetailViewHydrated;
 }
 
@@ -29,6 +31,7 @@
 @property (nonatomic, copy) NSString *coffeeName;
 @property (nonatomic, copy) NSString *Link;
 @property (nonatomic, copy) NSDecimalNumber *Sizes;
+@property (nonatomic, copy) NSDecimalNumber *ccc;
 //@property (nonatomic, copy) NSString *Sizes;
 //@property (nonatomic, readonly) NSInteger Did;
 //@property (nonatomic, copy) NSString *Nname;
@@ -40,11 +43,13 @@
 //Static methods.
 + (void) getInitialDataToDisplay:(NSString *)dbPath;
 + (void) finalizeStatements;
-
+- (void) updatec;
+- (void)updateCcc:(NSDecimalNumber*) newCcc;
 //Instance methods.
 - (id) initWithPrimaryKey:(NSInteger)pk;
 - (void) deleteCoffee;
 - (void) addCoffee;
-- (void) hydrateDetailViewData;
+
+//- (void) hydrateDetailViewData;
 
 @end
