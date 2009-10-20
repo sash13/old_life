@@ -134,15 +134,13 @@
     [scrollingWheel stopAnimating];
 }
 
-#pragma mark -
-#pragma mark UIView animation delegate methods
 
-- (void)animationFinished
+/*- (void)animationFinished
 {
     if ([delegate respondsToSelector:@selector(flickrCellAnimationFinished:)])
     {
         [delegate flickrCellAnimationFinished:self];
     }
-}
+}*/
 
 @end

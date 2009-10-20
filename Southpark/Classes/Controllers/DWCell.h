@@ -8,28 +8,36 @@
 
 #import <UIKit/UIKit.h>
 #import "SouthparkAppDelegate.h"
+#import "Coffee.h"
 
 @class ASINetworkQueue;
-@class DwObjData;
+@class Coffee;
 
 @interface DWCell : UITableViewCell {
-	IBOutlet UILabel *label;
-	IBOutlet UILabel *link;
-	IBOutlet UILabel *sizes;
-	IBOutlet UIButton *button;
-	IBOutlet UIProgressView *progressIndicator;
+	@private
+	//IBOutlet UILabel *label;
+	//IBOutlet UILabel *link;
+	//IBOutlet UILabel *sizes;
+	//IBOutlet UIButton *button;
+	//IBOutlet UIProgressView *progressIndicator;
+	UILabel *label;
+	UILabel *link;
+	UILabel *sizes;
+	UIButton *button;
+	UIProgressView *progressIndicator;
 	ASINetworkQueue *networkQueue;
 	NSTimer * myTimer;
+	Coffee *item;
 	//Coffee *coffee;
 }
 
-@property (nonatomic, assign) IBOutlet UILabel *label;
-@property (nonatomic, assign) IBOutlet UILabel *link;
-@property (nonatomic, assign) IBOutlet UILabel *sizes;
-@property (nonatomic, assign) IBOutlet UIButton *button;
+//@property (nonatomic, assign) UILabel *label;
+//@property (nonatomic, assign) UILabel *link;
+//@property (nonatomic, assign) UILabel *sizes;
+//@property (nonatomic, assign) UIButton *button;
 @property (nonatomic, retain) NSTimer * myTimer;
-//@property(nonatomic,retain) Coffee *coffee;
-
+@property(nonatomic,retain) Coffee *item;
+- (IBAction)stop:(id)sender;
 - (IBAction)show:(id)sender;
 //-(void)myMethod:(NSTimer*)timer;
 @end

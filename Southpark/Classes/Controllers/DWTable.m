@@ -36,7 +36,7 @@
    // }
 	
 	//Get the object from the array.
-	Coffee *coffeeObj = [appDelegate.coffeeArray objectAtIndex:indexPath.row];
+	/*Coffee *coffeeObj = [appDelegate.coffeeArray objectAtIndex:indexPath.row];
 	
 	//Set the coffename.
 	//cell.text = coffeeObj.coffeeName;
@@ -45,7 +45,7 @@
 	//cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	DWCell *cell = (DWCell *)[tableView dequeueReusableCellWithIdentifier:ClassCellIdentifier];
 	if(cell == nil) {
-		cell = (DWCell *)[[[NSBundle mainBundle] loadNibNamed:@"DWCell" owner:self options:nil] lastObject];
+		cell = (DWCell *)[[[NSBundle mainBundle] loadNibNamed:nil owner:self options:nil] lastObject];
 	}
 	
 	// Set up the cell
@@ -57,6 +57,18 @@
 	cell.sizes.text =  [coffeeObj.Sizes stringValue];
 	
 	//cell.sizes.text = coffeeObj.Sizes;
+	 */
+	Coffee *coffeeObj = [appDelegate.coffeeArray objectAtIndex:indexPath.row];
+    static NSString *identifier = @"DWCell";
+    DWCell *cell = (DWCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) 
+    {
+        CGRect rect = CGRectMake(0.0, 0.0, 320.0, 75.0);
+        cell = [[[DWCell alloc] initWithFrame:rect reuseIdentifier:identifier] autorelease];
+        //cell.delegate = self;
+    }
+    cell.item = coffeeObj;
+	
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     // Set up the cell
@@ -93,7 +105,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-	
+	 self.tableView.rowHeight = 44.0;
 	[self.tableView reloadData];
 }
 

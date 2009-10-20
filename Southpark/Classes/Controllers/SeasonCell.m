@@ -56,7 +56,7 @@
 
 - (void)dealloc 
 {
-   // delegate = nil;
+    delegate = nil;
    // [photo release];
     [textLabel release];
 	[textdescription release];

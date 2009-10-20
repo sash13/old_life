@@ -93,9 +93,8 @@
     if (remoteHostStatus == NotReachable)
     {
         [[NSNotificationCenter defaultCenter] removeObserver:self];
-        NSString *msg = @"Flickr is not reachable! This requires Internet connectivity.";
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Network Problem" 
-                                                        message:msg 
+                                                        message:@"Check your internet connections" 
                                                        delegate:nil 
                                               cancelButtonTitle:@"OK" 
                                               otherButtonTitles:nil];
@@ -240,10 +239,6 @@
 #pragma mark -
 #pragma mark UIViewController methods
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation 
-{
-    return NO;
-}
 
 - (void)didReceiveMemoryWarning 
 {

@@ -22,11 +22,11 @@
     SeasonItem *item;
     ///UIImageView *photo;
    // UIActivityIndicatorView *scrollingWheel;
-    NSObject<SeasonItemDelegate> *delegate;
+    NSObject<SeasonCellDelegate> *delegate;
 }
 
 @property (nonatomic, retain) SeasonItem *item;
-@property (nonatomic, assign) NSObject<SeasonItemDelegate> *delegate;
+@property (nonatomic, assign) NSObject<SeasonCellDelegate> *delegate;
 
 //- (void)loadImage;
 //- (void)toggleImage;

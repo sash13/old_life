@@ -116,6 +116,7 @@
 								<reference key="NSSuperview" ref="366050010"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
+								<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 								<bool key="IBUIMultipleTouchEnabled">YES</bool>
 							</object>
 							<object class="IBUILabel" id="191575907">
@@ -234,11 +235,11 @@
 						<reference key="object" ref="239104187"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="257555388"/>
 							<reference ref="441140359"/>
 							<reference ref="960094513"/>
 							<reference ref="384457837"/>
 							<reference ref="191575907"/>
+							<reference ref="257555388"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -289,7 +290,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>DWCell</string>
-					<string>{{444, 460}, {320, 44}}</string>
+					<string>{{631, 460}, {320, 44}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>

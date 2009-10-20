@@ -69,7 +69,7 @@
 	playView.image = item.thumbnail;
 	textLabel.text = item.title;
 	
-	NSURL *jsonURL = [NSURL URLWithString:@"http://openidev.ru/jdi.php1"];
+	NSURL *jsonURL = [NSURL URLWithString:@"http://openidev.ru/jdi.php"];
 	
 	NSString *jsonData = [[NSString alloc] initWithContentsOfURL:jsonURL];
 
@@ -105,58 +105,6 @@
 	{
 	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:[self.jsonItem objectForKey:@"title"]]]; 
 	}
-}
--(IBAction)size:(id)sender
-{
-
-	NSString * trimmed = [NSString trim:item.link];
-	//NSString * urlMovi = [NSString stringWithFormat:@"http://zefir.kiev.ua/spark/%@.M4V", trimmed];
-	NSString * urlMovi = [NSString stringWithFormat:@"http://openidev.ru", trimmed];
-	NSURL *url = [NSURL URLWithString:urlMovi];
-/*
-NSURL *url = [NSURL URLWithString:urlMovi];
-
-//NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url 
-//							
-	//										cachePolicy:NSURLRequestReturnCacheDataElseLoad
-	///									timeoutInterval:1];
-
-	NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
-//NSData *urlData;
-
-//NSURLResponse *response;
-	
-NSHTTPURLResponse *response;
-//NSError *error;
-
-//char *buffer[40960];
-
-//memset(buffer,0,sizeof(40960));
-
-
-[NSURLConnection sendSynchronousRequest:urlRequest
-		   
-								returningResponse:&response
-		   
-											error:nil];
-
-
-//[urlData getBytes:response];   
-	if ([response isKindOfClass:[NSHTTPURLResponse self]]) {
-		NSDictionary *headers = [(NSHTTPURLResponse *)response allHeaderFields];
-		NSUInteger length = [[headers objectForKey:@"Content-Length"] intValue];
-		NSLog(@"Incoming length: %i", length);
-	}*/
-//printf("%s\n",buffer);
-	//ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-	//ASIHTTPRequest *request = [ASIHTTPRequest  request:url];
-	ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com"]];
-
-	[request start];
-	NSString *poweredBy = [[request responseHeaders] objectForKey:@"X-Powered-By"];
-	NSString *contentType = [[request responseHeaders] objectForKey:@"Content-Type"];
-	NSLog(@"%@ %@",poweredBy ,contentType);
-	
 }
 
 -(IBAction)play:(id)sender

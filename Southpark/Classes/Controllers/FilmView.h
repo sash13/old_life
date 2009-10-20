@@ -33,5 +33,4 @@
 -(IBAction)play:(id)sender;
 -(IBAction)go:(id)sender;
 -(IBAction)add:(id)sender;
--(IBAction)size:(id)sender;
 @end
