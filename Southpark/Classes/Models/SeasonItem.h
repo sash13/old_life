@@ -23,7 +23,7 @@
     // Why NSObject instead of "id"? Because this way
     // we can ask if it "respondsToSelector:" before invoking
     // any delegate method...
-    NSObject<SeasonItemDelegate> *delegate;
+    //NSObject<SeasonItemDelegate> *delegate;
 }
 
 @property (nonatomic, copy) NSString *title;
@@ -33,7 +33,7 @@
 //@property (nonatomic, copy) NSString *imageURL;
 //@property (nonatomic, copy) NSString *thumbnailURL;
 //@property (nonatomic, retain) UIImage *thumbnail;
-@property (nonatomic, assign) NSObject<SeasonItemDelegate> *delegate;
+//@property (nonatomic, assign) NSObject<SeasonItemDelegate> *delegate;
 
 //- (BOOL)hasLoadedThumbnail;
 

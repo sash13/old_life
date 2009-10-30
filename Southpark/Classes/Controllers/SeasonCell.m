@@ -61,7 +61,7 @@
     [textLabel release];
 	[textdescription release];
 	[textcoll release];
-    [item setDelegate:nil];
+   // [item setDelegate:nil];
     [item release];
     [super dealloc];
 }
@@ -73,12 +73,12 @@
 {
     if (newItem != item)
     {
-        item.delegate = nil;
+       // item.delegate = nil;
         [item release];
         item = nil;
         
         item = [newItem retain];
-        [item setDelegate:self];
+        //[item setDelegate:self];
         
         if (item != nil)
         {

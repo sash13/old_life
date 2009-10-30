@@ -14,6 +14,7 @@
 @class ASINetworkQueue;
 @class Coffee;
 
+//@interface FilmView : UIViewController <FlickrItemDelegate> {
 @interface FilmView : UIViewController <FlickrItemDelegate> {
 	
 	IBOutlet UIImageView *playView;

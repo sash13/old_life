@@ -54,6 +54,7 @@
     delegate = nil;
     [photo release];
     [textLabel release];
+	[size release];
     [item setDelegate:nil];
     [item release];
     [super dealloc];
@@ -101,7 +102,7 @@
    // [UIView setAnimationDelegate:self];
     //[UIView setAnimationDidStopSelector:@selector(animationFinished)];
     
-    photo.image = item.thumbnail;
+  //  photo.image = item.thumbnail;
     
     //[UIView commitAnimations];
 }
@@ -131,16 +132,17 @@
 - (void)flickrItem:(FlickrItem *)item couldNotLoadImageError:(NSError *)error
 {
     // Here we could show a "default" or "placeholder" image...
+	//photo.image = nil;
     [scrollingWheel stopAnimating];
 }
 
 
-/*- (void)animationFinished
+- (void)animationFinished
 {
     if ([delegate respondsToSelector:@selector(flickrCellAnimationFinished:)])
     {
         [delegate flickrCellAnimationFinished:self];
     }
-}*/
+}
 
 @end

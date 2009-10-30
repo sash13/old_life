@@ -9,21 +9,23 @@
 #import <UIKit/UIKit.h>
 #import "RSSDelegate.h"
 #import "FlickrCellDelegate.h"
-#import "SeasonItemDelegate.h"
+//#import "FlickrItemDelegate.h"
 
 @class RSS;
-@class SeasonItem;
-@interface FlickrController : UITableViewController <RSSDelegate, FlickrCellDelegate, SeasonItemDelegate>
+//@class SeasonItem;
+@interface FlickrController : UITableViewController <RSSDelegate, FlickrCellDelegate>
 {
 @private
     RSS *rss;
     NSArray *flickrItems;
-	SeasonItem *item;
+	NSString *selecteds;
+	//SeasonItem *itemk;
    // UINavigationController *navigationController;
 }
 
 //@property (nonatomic, readonly) UINavigationController *navigationController;
-@property (nonatomic, retain) SeasonItem *item;
+//@property (nonatomic, retain) SeasonItem *itemk;
+@property (nonatomic, retain) NSString *selecteds;
 - (void)reloadFeed;
 
 @end

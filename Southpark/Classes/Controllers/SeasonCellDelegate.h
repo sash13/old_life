@@ -13,6 +13,6 @@
 @protocol SeasonCellDelegate
 
 @required
-- (void)flickrCellAnimationFinished:(SeasonCell *)cell;
+//- (void)flickrCellAnimationFinished:(SeasonCell *)cell;
 
 @end

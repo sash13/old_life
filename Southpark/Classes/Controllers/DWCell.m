@@ -40,7 +40,7 @@
     {
 		networkQueue = [[ASINetworkQueue alloc] init];
 
-		button = [[UIButton alloc] initWithFrame:CGRectMake(10.0, 10.0, 24.0, 24.0)];
+		button = [[UIButton alloc] initWithFrame:CGRectMake(5.0, 5.0, 24.0, 24.0)];
 		[button setBackgroundImage:[UIImage imageNamed:@"StartDownload.png"] forState:UIControlStateNormal];
 		//[button setTitle:@"D" forState:UIControlStateNormal]; 
 		[self.contentView addSubview:button];
@@ -51,7 +51,7 @@ sizes.font = [UIFont fontWithName:@"American Typewriter" size:12.0];
 sizes.contentMode = UIViewContentModeScaleToFill;
 [self.contentView addSubview:sizes];
 
-label = [[UILabel alloc] initWithFrame:CGRectMake(40.0, 10.0, 100.0, 10.0)];
+label = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 30.0, 100.0, 10.0)];
 label.font = [UIFont fontWithName:@"American Typewriter" size:12.0];
 label.contentMode = UIViewContentModeScaleToFill;
 [self.contentView addSubview:label];
@@ -78,6 +78,7 @@ link.contentMode = UIViewContentModeScaleToFill;
 
 
 - (IBAction)show:(id)sender {
+	link.text = @"downloaded";
 	[button addTarget:self action:@selector(stop:) forControlEvents:UIControlEventTouchUpInside];
 	[button setBackgroundImage:[UIImage imageNamed:@"CancelDownload.png"] forState:UIControlStateNormal];
 
@@ -113,14 +114,16 @@ link.contentMode = UIViewContentModeScaleToFill;
 	[request setDidFailSelector:@selector(requestWentWrong:)];
 	[[self queue] addOperation:request]; //queue is an NSOperationQueue
 	*/
-	
+	NSString *root = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) objectAtIndex:0];
 	ASIHTTPRequest *request;
 	request = [[[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:link.text]] autorelease];
 	//NSString *patch = [NSString stringWithFormat:@"/Users/sasha/S/%@.M4V" ,label.text];
-	[request setDownloadDestinationPath:[NSString stringWithFormat:@"/Users/sasha/S/%@.M4V" ,label.text]];
+	//[request setDownloadDestinationPath:[NSString stringWithFormat:@"/Users/sasha/S/%@.M4V" ,root,label.text]];
+	[request setDownloadDestinationPath:[NSString stringWithFormat:@"%@/%@.M4V" ,root,label.text]];
 	//[request setTemporaryFileDownloadPath:[NSString stringWithFormat:@"/Users/sasha/S/%@.M4V.temp",label.text]];
 	//[request setAllowResumeForFileDownloads:YES];
-	[request setTemporaryFileDownloadPath:[NSString stringWithFormat:@"/Users/sasha/S/%@.M4V.temp" ,label.text]];
+	//[request setTemporaryFileDownloadPath:[NSString stringWithFormat:@"/Users/sasha/S/%@.M4V.temp" ,label.text]];
+	[request setTemporaryFileDownloadPath:[NSString stringWithFormat:@"%@/%@.M4V.temp" ,root,label.text]];
 	[request setAllowResumeForFileDownloads:YES];
 	[networkQueue addOperation:request];
 	
@@ -135,7 +138,7 @@ link.contentMode = UIViewContentModeScaleToFill;
 
 - (void)requestDone:(ASIHTTPRequest *)request
 {
-	
+	link.text = @"Complited";
 [myTimer invalidate]; myTimer = nil;	//NSString *response = [request responseString];
 	NSData *response = [request responseData];
 	NSLog(@"ok");
@@ -165,7 +168,7 @@ link.contentMode = UIViewContentModeScaleToFill;
 	//DwObj.sizes  = myOtherDecimalObj;
 	//[appDelegate addDw:DwObj];
 	
-	NSLog(@"info %f", [progressIndicator progress]);
+	//NSLog(@"info %f", [progressIndicator progress]);
 	//NSDecimalNumber *myOtherDecimalObj = [[NSDecimalNumber alloc] initWithFloat:[progressIndicator progress]];
 	//[coffee updateCcc:myOtherDecimalObj];
 
@@ -214,7 +217,7 @@ link.contentMode = UIViewContentModeScaleToFill;
         {
 			
             label.text = item.coffeeName;
-			link.text = item.Link;
+			link.text = @"";
 			sizes.text = [item.Sizes stringValue];
 			[button addTarget:self action:@selector(show:) forControlEvents:UIControlEventTouchUpInside];
 			// NSLog(@"%@", item.thumbnailURL);

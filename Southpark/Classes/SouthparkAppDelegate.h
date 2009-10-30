@@ -12,7 +12,7 @@
 @class FlickrController;
 @class Coffee;
 @class DwObjData;
-
+@class   HTTPServer;
 @interface SouthparkAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
 @private
 	IBOutlet UIWindow *window;
@@ -26,6 +26,8 @@
 	UIView *playView;
 	NSMutableArray *coffeeArray;
 	NSMutableArray *downloadArray;
+	HTTPServer *httpServer;
+	NSDictionary *addresses;
 }
 
 //@property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -53,7 +55,8 @@
 - (void) removeCoffee:(Coffee *)coffeeObj;
 - (void) addCoffee:(Coffee *)coffeeObj;
 
-- (void) removeDw:(DwObjData *)DwObj;
-- (void) addDw:(DwObjData *)DwObj;
+//- (void) removeDw:(DwObjData *)DwObj;
+//- (void) addDw:(DwObjData *)DwObj;
 
+- (NSString *)myIPAddress;
 @end

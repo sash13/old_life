@@ -10,11 +10,11 @@
 
 @protocol SeasonItemDelegate
 
-@required
-- (void)seasonItem:(SeasonItem *)item couldNotLoadImageError:(NSError *)error;
+//@required
+//- (void)seasonItem:(SeasonItem *)item couldNotLoadImageError:(NSError *)error;
 
-@optional
-- (void)seasonItem:(SeasonItem *)item didLoadImage:(UIImage *)image;
-- (void)seasonItem:(SeasonItem *)item didLoadThumbnail:(UIImage *)image;
+//@optional
+//- (void)seasonItem:(SeasonItem *)item didLoadImage:(UIImage *)image;
+//- (void)seasonItem:(SeasonItem *)item didLoadThumbnail:(UIImage *)image;
 
 @end

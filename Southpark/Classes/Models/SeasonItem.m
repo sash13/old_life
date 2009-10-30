@@ -24,11 +24,11 @@
 //@synthesize imageURL;
 //@synthesize thumbnailURL;
 //@synthesize thumbnail;
-@synthesize delegate;
+//@synthesize delegate;
 
 - (void)dealloc
 {
-    delegate = nil;
+   // delegate = nil;
    // [thumbnail release];
    // [imageURL release];
    // [thumbnailURL release];
@@ -39,16 +39,14 @@
     [super dealloc];
 }
 
-#pragma mark -
-#pragma mark Public methods
+
 
 //- (BOOL)hasLoadedThumbnail
 //{
 //    return (thumbnail != nil);
 //}
 
-#pragma mark -
-#pragma mark Overridden setters
+
 
 /*- (UIImage *)thumbnail
 {
@@ -60,8 +58,7 @@
     return thumbnail;
 }
 */
-#pragma mark -
-#pragma mark ASIHTTPRequest delegate methods
+
 
 /*- (void)requestDone:(ASIHTTPRequest *)request
 {

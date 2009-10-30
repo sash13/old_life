@@ -52,8 +52,7 @@
     [super dealloc];
 }
 
-#pragma mark -
-#pragma mark Public methods
+
 
 - (void)reloadFeed
 {
@@ -92,8 +91,6 @@
 	[rss fetch];
 }
 
-#pragma mark -
-#pragma mark RSSDelegate methods
 
 - (void)feed:(RSS *)feed didFindItems:(NSArray *)items
 {
@@ -110,12 +107,6 @@
     [[SouthparkAppDelegate sharedAppDelegate] hideLoadingView];
 }
 
-#pragma mark -
-#pragma mark FlickrCellDelegate methods
-
-
-#pragma mark -
-#pragma mark UIScrollViewDelegate methods
 
 // These methods are adapted from
 // http://idevkit.com/forums/tutorials-code-samples-sdk/2-dynamic-content-loading-uitableview.html
@@ -182,14 +173,25 @@
     //controller.title = item.title;
     //[self.navigationController pushViewController:controller animated:YES];
     //[controller release];  
+	//NSString *selecteds = [seasonItems objectAtIndex:indexPath.row];
+	SeasonItem *itemk = [seasonItems objectAtIndex:indexPath.row];
+   // FlickrController *controller = [[FlickrController alloc] init];
+	//controller.selecteds = selecteds;
+   // controller.itemk = itemk;
+   // controller.title = itemk.title;
+    //[self.navigationController pushViewController:controller animated:YES];
+   // [controller release];    
 	
-	SeasonItem *item = [seasonItems objectAtIndex:indexPath.row];
-    FlickrController *controller = [[FlickrController alloc] init];
-    controller.item = item;
-    controller.title = item.title;
-    [self.navigationController pushViewController:controller animated:YES];
-    [controller release];    
+	//NSString *selecteds = itemk.title;
+	NSString * selectedst = [NSString trim:itemk.title];
+	//Initialize the detail view controller and display it.
+	FlickrController *dvController = [[FlickrController alloc] initWithNibName:nil bundle:[NSBundle mainBundle]];
+	dvController.selecteds = selectedst;
+	[self.navigationController pushViewController:dvController animated:YES];
+	[dvController release];
+	dvController = nil;
 	
+	//controller = nil;
 	//NSLog(@"%@", selected);
 
 }

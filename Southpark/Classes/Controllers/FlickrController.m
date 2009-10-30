@@ -15,9 +15,9 @@
 //#import "FlickrItemController.h"
 #import "SouthparkAppDelegate.h"
 #import "Reachability.h"
-#import "SeasonItem.h"
+//#import "SeasonItem.h"
 #import "FilmView.h"
-
+#import "NSString+trim.h"
 
 @interface FlickrController (Private)
 - (void)loadContentForVisibleCells;
@@ -27,18 +27,20 @@
 @implementation FlickrController
 
 //@synthesize navigationController;
-@synthesize item;
-
+//@synthesize itemk;
+@synthesize selecteds;
 
 
 - (void)viewDidLoad {
-
- self.title = item.title;
-	rss = [[RSS alloc] init];
+//NSString * trimmed = selecteds;
+	NSLog(selecteds);
+ self.title = selecteds;
+	//NSLog(@"%@",trimmed);
+	/*rss = [[RSS alloc] init];
 	rss.delegate = self;
-	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://zefir.kiev.ua/spark/southpgodnew.php?status=%@",item.title]];
+	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://zefir.kiev.ua/spark/southpgodnew.php?status=%@",selecteds]];
 	rss.url = url;
-	[url release];
+	[url release];*/
  //UIBarButtonItem *reloadButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
  ////target:self 
  //action:@selector(reloadFeed)];
@@ -51,9 +53,10 @@
 - (void)dealloc 
 {
    // [navigationController release];
+	[selecteds release];
     [flickrItems release];
-	[item setDelegate:nil];
-    [item release];
+	//[itemk setDelegate:nil];
+    //[itemk release];
 	
     [rss setDelegate:nil];
     [rss release];
@@ -63,26 +66,15 @@
 #pragma mark -
 #pragma mark Public methods
 
-- (void)setItem:(SeasonItem *)newItem
-{
-    if (item != newItem)
-    {
-        [item setDelegate:nil];
-        [item release];
-        item = nil;
-        item = [newItem retain];
-        
-        if (item != nil)
-        {
-            item.delegate = self;
-        }
-    }
-}
-
 
 - (void)reloadFeed
 {
 //[self reloadFeed];
+	rss = [[RSS alloc] init];
+	rss.delegate = self;
+	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://zefir.kiev.ua/spark/southpgodnew.php?status=%@",selecteds]];
+	rss.url = url;
+	[url release];
 	NSLog(@"test");
 
     // Check if the remote server is available
@@ -117,8 +109,6 @@
 	[rss fetch];
 }
 
-#pragma mark -
-#pragma mark RSSDelegate methods
 
 - (void)feed:(RSS *)feed didFindItems:(NSArray *)items
 {
@@ -128,15 +118,23 @@
     [self loadContentForVisibleCells]; 
     [[SouthparkAppDelegate sharedAppDelegate] hideLoadingView];
 }
-
+/*- (void)setItem:(SeasonItem *)newItem
+{
+    if (itemk != newItem)
+    {
+       // [itemk setDelegate:nil];
+        [itemk release];
+        itemk = nil;
+        itemk = [newItem retain];
+    }
+}
+*/
 - (void)feed:(RSS *)feed didFailWithError:(NSString *)errorMsg
 {
 	//[self.tableView reloadData];
     [[SouthparkAppDelegate sharedAppDelegate] hideLoadingView];
 }
 
-#pragma mark -
-#pragma mark FlickrCellDelegate methods
 
 - (void)flickrCellAnimationFinished:(FlickrCell *)cell
 {

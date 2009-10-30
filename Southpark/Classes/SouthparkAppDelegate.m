@@ -10,7 +10,10 @@
 #import "FlickrController.h"
 #import "RSS.h"
 #import "Coffee.h"
-
+#import "HTTPServer.h"
+#import "MyHTTPConnection.h"
+#import "localhostAddresses.h"
+#import "MyIP.h"
 
 @implementation SouthparkAppDelegate
 
@@ -24,6 +27,20 @@
 + (SouthparkAppDelegate *)sharedAppDelegate
 {
     return (SouthparkAppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
+
+- (NSString *)myIPAddress {
+	NSString *myIP = [[[MyIP sharedInstance] ipsForInterfaces] objectForKey:@"en0"];
+	//NSString *localIP = nil;
+	//localIP = [addresses objectForKey:@"en1"];
+#if TARGET_IPHONE_SIMULATOR
+	if(!myIP) {
+		myIP = [[[MyIP sharedInstance] ipsForInterfaces] objectForKey:@"en1"];
+	}
+#endif
+	
+	return myIP;
 }
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
@@ -62,6 +79,19 @@
 	//Once the db is copied, get the initial data to display on the screen.
 	[Coffee getInitialDataToDisplay:[self getDBPath]];
 	
+	NSString *root = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) objectAtIndex:0];
+	NSLog(@"%@",root);
+	httpServer = [HTTPServer new];
+	[httpServer setType:@"_http._tcp."];
+	[httpServer setConnectionClass:[MyHTTPConnection class]];
+	[httpServer setDocumentRoot:[NSURL fileURLWithPath:root]];
+	[httpServer setPort:8080];
+	//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(displayInfoUpdate:) name:@"LocalhostAdressesResolved" object:nil];
+	[localhostAddresses performSelectorInBackground:@selector(list) withObject:nil];
+	
+	NSError *error;
+	BOOL success = [httpServer start:&error];
+	
 }
 
 
@@ -69,6 +99,9 @@
 	// Save data if appropriate
 	[coffeeArray makeObjectsPerformSelector:@selector(updatec)];
 	[Coffee finalizeStatements];
+	if(httpServer) {
+		[httpServer stop];
+	}
 }
 
 
@@ -249,6 +282,7 @@
 
 
 - (void)dealloc {
+	[httpServer release];
 	[controller release];
     [tabBarController release];
 	[downloadQueue release];
