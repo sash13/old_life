@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "RSSDelegate.h"
 #import "SeasonCellDelegate.h"
+#import "AdMobDelegateProtocol.h"
+#import "AdMobView.h"
 
 @class RSS;
 
-@interface SeasonsController : UITableViewController <RSSDelegate, SeasonCellDelegate>
+@interface SeasonsController : UITableViewController <RSSDelegate, SeasonCellDelegate, AdMobDelegate>
 {
 @private
     RSS *rss;

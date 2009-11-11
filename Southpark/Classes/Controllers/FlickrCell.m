@@ -82,9 +82,10 @@
             // This is to avoid the item loading the image
             // when this setter is called; we only want that
             // to happen depending on the scrolling of the table
+			photo.image = item.thumbnail;
             if ([item hasLoadedThumbnail])
             {
-                photo.image = item.thumbnail;
+                photo.image = nil;
             }
             else
             {
@@ -143,6 +144,11 @@
     {
         [delegate flickrCellAnimationFinished:self];
     }
+}
+
+-(void)viewDidUnload
+{
+	photo.image = nil;
 }
 
 @end

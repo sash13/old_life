@@ -31,7 +31,8 @@
 	//self.title = @"Flickr RSS Feed";
 	rss = [[RSS alloc] init];
 	rss.delegate = self;
-	NSURL *url = [[NSURL alloc] initWithString:@"http://zefir.kiev.ua/spark/demo1.php"];
+	//NSURL *url = [[NSURL alloc] initWithString:@"http://zefir.kiev.ua/spark/demo1.php"];
+	NSURL *url = [[NSURL alloc] initWithString:@"http://openidev.ru/smotri/demo1.php"];
 	rss.url = url;
 	[url release];
 	//UIBarButtonItem *reloadButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
@@ -135,17 +136,31 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView 
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
+	if (section == 0) return 1;
 	//NSLog(@"%f", [flickrItems count]);
-    return [seasonItems count];
+    if (section == 1) return [seasonItems count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
+	static NSString *MyIdentifier = @"MyIdentifier";
+	NSInteger section = indexPath.section;
+	if (section == 0) {
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+	if (cell == nil) {
+		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:MyIdentifier] autorelease];
+		// Request an AdMob ad for this table view cell
+		[cell.contentView addSubview:[AdMobView requestAdWithDelegate:self]];
+	}
+		return cell;
+	}
+	
+	if (section == 1) {
     SeasonItem *item = [seasonItems objectAtIndex:indexPath.row];
     static NSString *identifier = @"SeasonItemCell";
     SeasonCell *cell = (SeasonCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
@@ -157,6 +172,8 @@
     }
     cell.item = item;
     return cell;
+	}
+	return nil;
 }
 
 //- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -164,9 +181,38 @@
 //    FlickrCell *flickrCell = (FlickrCell *)cell;
 //    [flickrCell loadImage];
 //}
+#pragma mark -
+#pragma mark AdMobDelegate methods
+
+- (NSString *)publisherId {
+	return @"a14aaba25b0e13b"; // this should be prefilled; if not, get it from www.admob.com
+}
+
+- (UIColor *)adBackgroundColor {
+	return [UIColor colorWithRed:0 green:0 blue:0 alpha:1]; // this should be prefilled; if not, provide a UIColor
+}
+
+
+- (UIColor *)primaryTextColor {
+	return [UIColor colorWithRed:1 green:1 blue:1 alpha:1]; // this should be prefilled; if not, provide a UIColor
+}
+
+- (UIColor *)secondaryTextColor {
+	return [UIColor colorWithRed:1 green:1 blue:1 alpha:1]; // this should be prefilled; if not, provide a UIColor
+}
+
+- (BOOL)mayAskForLocation {
+	return YES; // this should be prefilled; if not, see AdMobProtocolDelegate.h for instructions
+}
+
+
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 {
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	NSInteger section = indexPath.section;
+	if (section == 1) {
    // FlickrCell *cell = (FlickrCell *)[self.tableView cellForRowAtIndexPath:indexPath];
 	// FlickrItemController *controller = [[FlickrItemController alloc] init];
     //controller.item = item;
@@ -190,22 +236,43 @@
 	[self.navigationController pushViewController:dvController animated:YES];
 	[dvController release];
 	dvController = nil;
-	
+	}
 	//controller = nil;
 	//NSLog(@"%@", selected);
 
 }
 
+- (void)didReceiveAd:(AdMobView *)adView {
+	NSLog(@"AdMob: Did receive ad");
+}
+
+- (void)didFailToReceiveAd:(AdMobView *)adView {
+	NSLog(@"AdMob: Did fail to receive ad");
+}
 
 - (void)didReceiveMemoryWarning 
 {
     [super didReceiveMemoryWarning];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	if((indexPath.section == 0) && (indexPath.row == 0)) {
+		return 48.0; // this is the height of the AdMob ad
+	}
+	
+	return 50.0; // this is the generic cell height
+}
+
+
 - (void)viewWillAppear:(BOOL)animated 
 {
-    self.tableView.rowHeight = 44.0;
-	
+	//NSInteger section = indexPath.section;
+	//if(section == 0) {
+	//	self.tableView.rowHeight = 48.0; // this is the height of the AdMob ad
+	//}
+	//else{
+   // self.tableView.rowHeight = 44.0;
+	//}
 	[self.tableView reloadData];
 	
 	
@@ -218,4 +285,9 @@
     }
 }
 
+/*- (BOOL)useTestAd {
+	return YES;
+}
+
+*/
 @end

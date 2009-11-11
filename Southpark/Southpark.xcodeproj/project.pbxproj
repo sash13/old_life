@@ -68,6 +68,12 @@
 		D9E707D9107B78A6000C8DDD /* DWTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E707D8107B78A6000C8DDD /* DWTable.m */; };
 		D9E707F4107B79BD000C8DDD /* Coffee.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E707F3107B79BD000C8DDD /* Coffee.m */; };
 		D9E7085B107B7A68000C8DDD /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E7085A107B7A68000C8DDD /* libsqlite3.0.dylib */; };
+		D9FC9CDC10A31EF6002094F2 /* libAdMobDevice3_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FE8A5F10A307940048ADCD /* libAdMobDevice3_0.a */; };
+		D9FE8AD310A313F70048ADCD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FE8AD210A313F70048ADCD /* QuartzCore.framework */; };
+		D9FE8AD910A3140C0048ADCD /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FE8AD810A3140C0048ADCD /* AddressBook.framework */; };
+		D9FE8ADF10A314240048ADCD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FE8ADE10A314240048ADCD /* CoreLocation.framework */; };
+		D9FE8AE510A3146C0048ADCD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FE8AE410A3146C0048ADCD /* AudioToolbox.framework */; };
+		D9FE8AFB10A3153E0048ADCD /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FE8AFA10A3153E0048ADCD /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -183,6 +189,17 @@
 		D9E707F2107B79BD000C8DDD /* Coffee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coffee.h; sourceTree = "<group>"; };
 		D9E707F3107B79BD000C8DDD /* Coffee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coffee.m; sourceTree = "<group>"; };
 		D9E7085A107B7A68000C8DDD /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		D9FE8A5A10A307800048ADCD /* AdMobView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobView.h; sourceTree = "<group>"; };
+		D9FE8A5F10A307940048ADCD /* libAdMobDevice3_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdMobDevice3_0.a; path = Classes/libAdMobDevice3_0.a; sourceTree = "<group>"; };
+		D9FE8A6010A307940048ADCD /* libAdMobSimulator3_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdMobSimulator3_0.a; path = Classes/libAdMobSimulator3_0.a; sourceTree = "<group>"; };
+		D9FE8AB710A313550048ADCD /* libAdMobDevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdMobDevice.a; sourceTree = "<group>"; };
+		D9FE8AB810A313550048ADCD /* libAdMobSimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdMobSimulator.a; sourceTree = "<group>"; };
+		D9FE8AD210A313F70048ADCD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D9FE8AD810A3140C0048ADCD /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		D9FE8ADE10A314240048ADCD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D9FE8AE410A3146C0048ADCD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D9FE8AFA10A3153E0048ADCD /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D9FE8B0210A315E30048ADCD /* AdMobDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobDelegateProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9FC9CDC10A31EF6002094F2 /* libAdMobDevice3_0.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -198,6 +216,11 @@
 				D983706E105C2E5B00943965 /* libz.1.2.3.dylib in Frameworks */,
 				D999F6E710690DD900773A0A /* MediaPlayer.framework in Frameworks */,
 				D9E7085B107B7A68000C8DDD /* libsqlite3.0.dylib in Frameworks */,
+				D9FE8AD310A313F70048ADCD /* QuartzCore.framework in Frameworks */,
+				D9FE8AD910A3140C0048ADCD /* AddressBook.framework in Frameworks */,
+				D9FE8ADF10A314240048ADCD /* CoreLocation.framework in Frameworks */,
+				D9FE8AE510A3146C0048ADCD /* AudioToolbox.framework in Frameworks */,
+				D9FE8AFB10A3153E0048ADCD /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +230,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D9FE8A5810A307800048ADCD /* AdMob */,
 				D986A7DC109B196200D44F7A /* Server */,
 				D986A7CD109B194600D44F7A /* Categories */,
 				D986A7CA109B194600D44F7A /* TCP */,
@@ -247,6 +271,11 @@
 				D983706D105C2E5B00943965 /* libz.1.2.3.dylib */,
 				D999F6E610690DD900773A0A /* MediaPlayer.framework */,
 				D9E7085A107B7A68000C8DDD /* libsqlite3.0.dylib */,
+				D9FE8AD210A313F70048ADCD /* QuartzCore.framework */,
+				D9FE8AD810A3140C0048ADCD /* AddressBook.framework */,
+				D9FE8ADE10A314240048ADCD /* CoreLocation.framework */,
+				D9FE8AE410A3146C0048ADCD /* AudioToolbox.framework */,
+				D9FE8AFA10A3153E0048ADCD /* MessageUI.framework */,
 			);
 			name = Southpark;
 			sourceTree = "<group>";
@@ -263,6 +292,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D9FE8A5F10A307940048ADCD /* libAdMobDevice3_0.a */,
+				D9FE8A6010A307940048ADCD /* libAdMobSimulator3_0.a */,
 				D986A7FE109B1B0A00D44F7A /* ServerView.xib */,
 				D921CE2F108CA79400B50FA1 /* CancelDownload.png */,
 				D921CE30108CA79400B50FA1 /* StartDownload.png */,
@@ -459,6 +490,17 @@
 			name = Player;
 			sourceTree = "<group>";
 		};
+		D9FE8A5810A307800048ADCD /* AdMob */ = {
+			isa = PBXGroup;
+			children = (
+				D9FE8B0210A315E30048ADCD /* AdMobDelegateProtocol.h */,
+				D9FE8AB710A313550048ADCD /* libAdMobDevice.a */,
+				D9FE8AB810A313550048ADCD /* libAdMobSimulator.a */,
+				D9FE8A5A10A307800048ADCD /* AdMobView.h */,
+			);
+			name = AdMob;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -580,6 +622,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Southpark_Prefix.pch;
 				INFOPLIST_FILE = "Southpark-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Classes\"",
+				);
 				PRODUCT_NAME = Southpark;
 			};
 			name = Debug;
@@ -592,6 +638,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Southpark_Prefix.pch;
 				INFOPLIST_FILE = "Southpark-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Classes\"",
+				);
 				PRODUCT_NAME = Southpark;
 			};
 			name = Release;
@@ -606,7 +656,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SDKROOT = iphoneos2.2.1;
+				SDKROOT = iphoneos3.0;
 			};
 			name = Debug;
 		};
@@ -619,7 +669,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos2.2.1;
+				SDKROOT = iphoneos3.0;
 			};
 			name = Release;
 		};

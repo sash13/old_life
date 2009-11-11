@@ -72,7 +72,8 @@
 //[self reloadFeed];
 	rss = [[RSS alloc] init];
 	rss.delegate = self;
-	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://zefir.kiev.ua/spark/southpgodnew.php?status=%@",selecteds]];
+	//NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://zefir.kiev.ua/spark/southpgodnew.php?status=%@",selecteds]];
+	NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://openidev.ru/southpgodnew.php?status=%@",selecteds]];
 	rss.url = url;
 	[url release];
 	NSLog(@"test");
