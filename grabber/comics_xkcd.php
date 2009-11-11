@@ -1,15 +1,15 @@
 <?
 header("Content-type: text/html; charset=utf-8");
 
-    $filename = 'bash/1.txt';
+    $filename = 'bash/xkdc.txt';
 	$handle = fopen($filename, "r");
     $content = fread($handle, filesize($filename));
   
 //$content = file_get_contents("http://bash.org.ru"); // Берем страницу
-	preg_match_all('/<div class="a">([\s\S]+?)<\/td><\/table>/', $content, $out); // Выбираем все записи
+	preg_match_all('/<a href="\/([\s\S]+?)"><\/a>/', $content, $out); // Выбираем все записи
 	$quotes = $out[1];
-	//print_r($quotes);
-	foreach ($quotes as $quote) {
+	print_r($quotes);
+	/*foreach ($quotes as $quote) {
 		
 		
 		preg_match('/<div>([\s\S]+?)<\/div>/', $quote, $out); // Берем текст записи
@@ -31,7 +31,7 @@ header("Content-type: text/html; charset=utf-8");
 		//					VALUES
 		//				('{$bash_id}', '{$bash_text}')");
 		//}
-		
-	}
+		*/
+	//}
 	fclose($handle);
 	

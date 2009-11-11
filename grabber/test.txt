@@ -1,1 +1,91 @@
-404997
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>bash.org.ru - Цитатник Рунета</title>
+	<link rel="shortcut icon" href="http://bash.org.ru/favicon.ico" type="image/vnd.microsoft.icon">
+	<link rel="stylesheet" type="text/css" media="screen" href="http://s.bash.org.ru/screen.css?67634245">
+	<link rel="stylesheet" type="text/css" media="screen" href="http://s.bash.org.ru/black.css?34521345">
+	<link rel="stylesheet" type="text/css" media="handheld" href="http://s.bash.org.ru/mobile.css">
+	<link rel="alternate" title="Комиксы от Bash.org.ru — RSS" href="http://bash.org.ru/rss/comics.xml" type="application/rss+xml">
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+</head>
+<body>
+<div id="navstrip"><b>[bash.org.ru]</b> [<a href="http://ithappens.ru">IT Happens</a>] [<a href="http://zadolba.li">zadolba.li</a>]<img src="http://o.hai.lolwut.ru/" width="0" height="0" style="visibility: hidden;"></div><div id="page">
+	<div class="header"><a href="/"><img src="/logo.gif" width="300" height="40" alt="bash.org.ru" /></a>bash.org.ru — Цитатник Рунета</div>
+	<div class="menu">цитаты: [<a href="/">последние</a>] [<a href="/random">случайные</a>] [<a href="/best">лучшие</a>] [<a href="/byrating">по рейтингу</a>] [<a href="/rss">RSS</a>] [<a href="http://twitter.com/b_o_r/" target="blank">Twitter</a>] <br>бездна: [<a href="/abyss">Бездна</a>] [<a href="/abysstop">топ Бездны</a>] [<a href="/abyssbest">лучшее Бездны</a>] [<a href="/add">добавить</a>] <br>что-то: [<a href="/comics">комикс</a>] [<a href="/faq">ЧаВО</a>] [<a href="http://maillist.ru/81859/" target="blank">рассылка</a>] [<a href="/idea">для мобильника</a>] [<a href="/webmaster">вебмастеру</a>] </div>
+	<div id="quotes"><center>
+	<hr>
+	
+	<h1>Октябрь 2009</h1>
+			
+	<table class="cpar">
+		<tr>
+			<td width="25%"><h2><a href="/comics-calendar/200909" class="nav">&larr; Сентябрь</a></h2></td>
+			<td width="50%"><table class="cal">
+	<tr><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th class="we">Сб</th><th class="we">Вс</th></tr>
+	<tr><td class="empty">&nbsp;</td><td class="empty">&nbsp;</td><td class="empty">&nbsp;</td><td><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>1</td><td><a href="/comics/20091002"><img src="http://s.bash.org.ru/img/ts/4nh86r1aztr5ejem398675.jpg"></a><br>2</td><td class="we"><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>3</td><td class="we"><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>4</td></tr>
+	<tr><td><a href="/comics/20091005"><img src="http://s.bash.org.ru/img/ts/3zgh94o9tkvgfmxx225439.jpg"></a><br>5</td><td><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>6</td><td><a href="/comics/20091007"><img src="http://s.bash.org.ru/img/ts/nwyhid2rnlgk3bix398097.png"></a><br>7</td><td><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>8</td><td><a href="/comics/20091009"><img src="http://s.bash.org.ru/img/ts/8veq176u68voupcc404702.png"></a><br>9</td><td class="we"><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>10</td><td class="we"><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>11</td></tr>
+	<tr><td><a href="/comics/20091012"><img src="http://s.bash.org.ru/img/ts/qbvtkdboipmffwot404493.jpg"></a><br>12</td><td><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>13</td><td><a href="/comics/20091014"><img src="http://s.bash.org.ru/img/ts/5zgj9iavwgyqdoyq403852.jpg"></a><br>14</td><td><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>15</td><td><a href="/comics/20091016"><img src="http://s.bash.org.ru/img/ts/okgl4i0hk1wjlw1e234233.jpg"></a><br>16</td><td class="we"><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>17</td><td class="we"><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>18</td></tr>
+	<tr><td><a href="/comics/20091019"><img src="http://s.bash.org.ru/img/ts/1t6q2uj33vey4qtp403685.jpg"></a><br>19</td><td><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>20</td><td><a href="/comics/20091021"><img src="http://s.bash.org.ru/img/ts/b3c7z8fwrssqzcbj392156.jpg"></a><br>21</td><td><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>22</td><td><a href="/comics/20091023"><img src="http://s.bash.org.ru/img/ts/5rhyfd3racz1c9ifs6b130.jpg"></a><br>23</td><td class="we"><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>24</td><td class="we"><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>25</td></tr>
+	<tr><td><a href="/comics/20091026"><img src="http://s.bash.org.ru/img/ts/eyryuwtwc5sxyaga244085.jpg"></a><br>26</td><td><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>27</td><td><a href="/comics/20091028"><img src="http://s.bash.org.ru/img/ts/jsga3ziv5qgocr6q404852.jpg"></a><br>28</td><td><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>29</td><td><a href="/comics/20091030"><img src="http://s.bash.org.ru/img/ts/qqceue3y1mw86g1x404787.jpg"></a><br>30</td><td class="we"><img src="http://s.bash.org.ru/img/v.gif" width="40" height="40"><br>31</td><td class="empty">&nbsp;</td></tr>
+</table>
+</td>
+			<td width="25%"><h2><a href="/comics-calendar/200911" class="nav">Ноябрь &rarr;</a></h2></td>
+		</tr>
+	</table>
+</center>	<hr><center><small>Хочешь опубликовать свой комикс? Это возможно — прочти <a href="/comics-howto">информацию для художников</a>.</small></center>	</div>
+	<hr> 
+<div class="q"><div><center><iframe src="http://lol.bash.org.ru/_ad.php?zone=zone:3" allowtransparency="true" style="background-color:#f3f3f3;" width="600" height="90" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" name="ctf" id="ctf"></iframe></center></div></div><hr><div class="q"><div style="text-align: center; font-size: 10pt;"><a href="/gogogo/20100">Студент, а ты уже скачал лицензионный софт? Используй студенческий по назначению</a>: скачивай лицензионные инструменты по разработке и дизайну бесплатно: Visual Studio 2008, Windows Server 2008 R2, Expression Studio 3, SQL Server 2008 и другие.</div></div>	<hr><center><!--Rating@Mail.ru LOGO--><a target=_top
+href="http://top.mail.ru/jump?from=901403"><img
+src="http://top.list.ru/counter?id=901403;t=49;l=1"
+border=0 height=31 width=88
+alt="Рейтинг@Mail.ru"/></a> <!--/LOGO--><!--LiveInternet logo--><a href="http://www.liveinternet.ru/click"
+target=_blank><img src="http://counter.yadro.ru/logo?15.1" border=0
+title="LiveInternet"
+alt="" width=88 height=31></a><!--/LiveInternet-->
+<a href="http://www.yandex.ru/cy?base=0&host=bash.org.ru"><img src="http://www.yandex.ru/cycounter?bash.org.ru" width="88" height="31" alt="Индекс Цитирования Яndex" border="0"></a>
+<!-- SpyLOG -->
+<script src="http://tools.spylog.ru/counter_cv.js" id="spylog_code" type="text/javascript" counter="926575" part="" track_links="ext" page_level="0">
+</script>
+<noscript>
+<a href="http://u9265.75.spylog.com/cnt?cid=926575&f=3&p=0" target="_blank">
+<img src="http://u9265.75.spylog.com/cnt?cid=926575&p=0" alt="SpyLOG" border="0" width="88" height="31"></a>
+</noscript>
+<!--/ SpyLOG --></center>	<hr><small>Идея проекта &copy; bash.org.
+	<br>Реализация и плюшки &copy; 2004—2009, команда bash.org.ru.
+	<br><a href="http://bash.org.ru/ads">Информация для рекламодателей</a>. По другим поводам: <a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;%20&#115;&#117;%70%70%6f&#114;&#116;%40&#098;%61%73&#104;&#046;&#111;&#114;&#103;%2e&#114;&#117;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;@&#098;&#097;&#115;&#104;&#046;&#111;&#114;&#103;&#046;&#114;&#117;</a>.
+	</small>
+</div>
+<!--Rating@Mail.ru COUNTER--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=901403;js='+js+a+';rand='+Math.random()+
+'" height=1 width=1/>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><img
+src="http://top.list.ru/counter?js=na;id=901403"
+height=1 width=1 alt=""/></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<img src='http://counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' width=1 height=1 alt=''>")//--></script><!--/LiveInternet--><script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3271837-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>
