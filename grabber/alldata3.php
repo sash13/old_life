@@ -13,7 +13,7 @@ while($data=mysql_fetch_array($t)){
 //echo '<quote>';
 echo '<b>'.$data[idnom].'</b><br>';
 //echo '<text><![CDATA['.$data[text].']]></text>';
-echo $data[infotext].'<br>';
+echo $data[infotext].'<br>'.$data[fullimg];
 //echo '</quote>';
 
 }

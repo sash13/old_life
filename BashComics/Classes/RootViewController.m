@@ -7,24 +7,54 @@
 //
 
 #import "RootViewController.h"
-
+#import "Parser.h"
+#import "Bash.h";
 
 @implementation RootViewController
 
-/*
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	appDelegate = (BashComicsAppDelegate *)[[UIApplication sharedApplication] delegate];
+	
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] 
+											 initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
+											 target:self action:@selector(refresh:)];
 }
-*/
 
-/*
+- (void) refresh:(id)sender {
+	[appDelegate showView];
+	NSLog(@"refresh");
+	pars = [[Parser alloc] init];
+	pars.delegate = self;
+	[pars myfu];
+}
+
+-(void)update:(Parser *)feed myError:(NSString *)errorMsg {
+	
+	[appDelegate hideView];
+	NSLog(@"%@", errorMsg);
+	[self.tableView reloadData];
+	
+}
+
+-(void)update:(Parser *)feed successfully:(NSString *)successMsg {
+	
+	[appDelegate hideView];
+	NSLog(@"%@", successMsg);
+	[self.tableView reloadData];
+	
+	
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+	
+	[self.tableView reloadData];
 }
-*/
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -71,28 +101,37 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [appDelegate.bashArray count];
 }
 
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
+	static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
     }
-    
-	// Configure the cell.
-
-    return cell;
+	//Get the object from the array.
+	Bash *bashObj = [appDelegate.bashArray objectAtIndex:indexPath.row];
+	
+	//Set the coffename.
+	cell.text = bashObj.bashInfo;
+	
+	
+	
+	
+	//Set the accessory type.
+	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	
+	return cell;
 }
 
 
 
-/*
+
 // Override to support row selection in the table view.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
@@ -101,7 +140,7 @@
 	// [self.navigationController pushViewController:anotherViewController animated:YES];
 	// [anotherViewController release];
 }
-*/
+
 
 
 /*
@@ -145,6 +184,8 @@
 
 
 - (void)dealloc {
+	[pars setDelegate:nil];
+	[pars release];
     [super dealloc];
 }
 

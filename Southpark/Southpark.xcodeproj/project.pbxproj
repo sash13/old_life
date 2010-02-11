@@ -27,6 +27,7 @@
 		D921CE72108CABA700B50FA1 /* ASINSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D921CE6C108CABA700B50FA1 /* ASINSStringAdditions.m */; };
 		D9222020105EDB0700A5A980 /* RSS.m in Sources */ = {isa = PBXBuildFile; fileRef = D922201A105EDB0700A5A980 /* RSS.m */; };
 		D9222021105EDB0700A5A980 /* FlickrItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D922201E105EDB0700A5A980 /* FlickrItem.m */; };
+		D9513A1210AC4F590016B12F /* libAdMobSimulator3_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FE8A6010A307940048ADCD /* libAdMobSimulator3_0.a */; };
 		D96C69881076128900F5FFA6 /* DWCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D96C69871076128900F5FFA6 /* DWCell.m */; };
 		D983703A105C2C5400943965 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D9837035105C2C5400943965 /* Reachability.m */; };
 		D9837043105C2C7F00943965 /* FlickrCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D983703D105C2C7F00943965 /* FlickrCell.m */; };
@@ -68,7 +69,6 @@
 		D9E707D9107B78A6000C8DDD /* DWTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E707D8107B78A6000C8DDD /* DWTable.m */; };
 		D9E707F4107B79BD000C8DDD /* Coffee.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E707F3107B79BD000C8DDD /* Coffee.m */; };
 		D9E7085B107B7A68000C8DDD /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E7085A107B7A68000C8DDD /* libsqlite3.0.dylib */; };
-		D9FC9CDC10A31EF6002094F2 /* libAdMobDevice3_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FE8A5F10A307940048ADCD /* libAdMobDevice3_0.a */; };
 		D9FE8AD310A313F70048ADCD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FE8AD210A313F70048ADCD /* QuartzCore.framework */; };
 		D9FE8AD910A3140C0048ADCD /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FE8AD810A3140C0048ADCD /* AddressBook.framework */; };
 		D9FE8ADF10A314240048ADCD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FE8ADE10A314240048ADCD /* CoreLocation.framework */; };
@@ -190,7 +190,6 @@
 		D9E707F3107B79BD000C8DDD /* Coffee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coffee.m; sourceTree = "<group>"; };
 		D9E7085A107B7A68000C8DDD /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		D9FE8A5A10A307800048ADCD /* AdMobView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdMobView.h; sourceTree = "<group>"; };
-		D9FE8A5F10A307940048ADCD /* libAdMobDevice3_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdMobDevice3_0.a; path = Classes/libAdMobDevice3_0.a; sourceTree = "<group>"; };
 		D9FE8A6010A307940048ADCD /* libAdMobSimulator3_0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdMobSimulator3_0.a; path = Classes/libAdMobSimulator3_0.a; sourceTree = "<group>"; };
 		D9FE8AB710A313550048ADCD /* libAdMobDevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdMobDevice.a; sourceTree = "<group>"; };
 		D9FE8AB810A313550048ADCD /* libAdMobSimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdMobSimulator.a; sourceTree = "<group>"; };
@@ -207,7 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9FC9CDC10A31EF6002094F2 /* libAdMobDevice3_0.a in Frameworks */,
+				D9513A1210AC4F590016B12F /* libAdMobSimulator3_0.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -292,7 +291,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D9FE8A5F10A307940048ADCD /* libAdMobDevice3_0.a */,
 				D9FE8A6010A307940048ADCD /* libAdMobSimulator3_0.a */,
 				D986A7FE109B1B0A00D44F7A /* ServerView.xib */,
 				D921CE2F108CA79400B50FA1 /* CancelDownload.png */,
@@ -668,6 +666,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-lxml2";
 				PREBINDING = NO;
 				SDKROOT = iphoneos3.0;
 			};

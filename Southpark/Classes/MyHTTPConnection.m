@@ -45,7 +45,7 @@
 		//NSLog(@"fileDict: %@", fileDict);
         NSString *modDate = [[fileDict objectForKey:NSFileModificationDate] description];
 		if ([[fileDict objectForKey:NSFileType] isEqualToString: @"NSFileTypeDirectory"]) fname = [fname stringByAppendingString:@"/"];
-		[outdata appendFormat:@"<a href=\"%@\">%@</a>		(%8.1f Kb, %@)<br />\n", fname, fname, [[fileDict objectForKey:NSFileSize] floatValue] / 1024, modDate];
+    [outdata appendFormat:[@"<a href=\"%@\">%@</a>		(%8.1f Kb, %@)<br />  <script type=\"text/javascript\" src=\"swfobject.js\"></script><script type=\"text/javascript\">swfobject.registerObject(\"player\",\"9.0.98\",\"expressInstall.swf\");</script><object id=\"player\"  name=\"player\" width=\"328\" height=\"200\"><param name=\"movie\" value=\"player-viral.swf\" /><param name=\"allowfullscreen\" value=\"true\" /><param name=\"allowscriptaccess\" value=\"always\" /><param name=\"flashvars\" value=\"file=рр\" ><object type=\"application/x-shockwave-flash\" data=\"player-viral.swf\" width=\"328\" height=\"200\"><param name=\"movie\" value=\"player-viral.swf\" ><param name=\"allowfullscreen\" value=\"true\" ><param name=\"allowscriptaccess\" value=\"always\"><param name=\"flashvars\" value=\"file=Spontaneous Combustion.M4V\"><p><a href=\"http://get.adobe.com/flashplayer\">Get Flash</a> to see this player.</p></object></object> \n", fname, fname, [[fileDict objectForKey:NSFileSize] floatValue] /1024];
     }
     [outdata appendString:@"</p>"];
 	

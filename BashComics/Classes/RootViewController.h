@@ -6,7 +6,16 @@
 //  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
-@interface RootViewController : UITableViewController {
+#import "ParserDelegate.h"
+
+@class Parser;
+@class Bash;
+
+@interface RootViewController : UITableViewController <ParserDelegate> 
+{
+@private
+    Parser *pars;
+	BashComicsAppDelegate *appDelegate;
 }
 
 @end
