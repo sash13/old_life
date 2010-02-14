@@ -18,7 +18,7 @@
 	NSString *bashDate;
 	NSString *bashInfo;
 	NSString *imgthis;
-	NSString *isNew;
+	//NSString *isNew;
 	BOOL isDirty;
 	UIImage *thumbnail;
 	BOOL isViewController;
@@ -32,7 +32,7 @@
 @property (nonatomic, copy) NSString *bashDate;
 @property (nonatomic, copy) NSString *bashInfo;
 @property (nonatomic, copy) NSString *imgthis;
-@property (nonatomic, copy) NSString *isNew;
+//@property (nonatomic, copy) NSString *isNew;
 @property (nonatomic, retain) UIImage *thumbnail;
 @property (nonatomic, readwrite) BOOL isDirty;
 @property (nonatomic, readwrite) BOOL isViewController;
@@ -40,7 +40,7 @@
 @property (nonatomic, assign) NSObject<BashDelegate> *delegate;
 
 + (void) getInitialDataToDisplay:(NSString *)dbPath;
-+ (void) getInitialFavToDisplay:(NSString *)dbPath;
+//+ (void) getInitialFavToDisplay:(NSString *)dbPath;
 
 + (void) finalizeStatements;
 

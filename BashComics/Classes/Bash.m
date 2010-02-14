@@ -34,39 +34,6 @@ static sqlite3_stmt *detailStmt = nil;
 	NSLog(@"add");
 	if (sqlite3_open([dbPath UTF8String], &database) == SQLITE_OK) {
 		
-		const char *sql = "select bashID, bashdate, bashinfo, bashlink, bashtumb, bashimgfull from bash Where fav = 'yes' ORDER BY bashID DESC";
-		sqlite3_stmt *selectstmt;
-		if(sqlite3_prepare_v2(database, sql, -1, &selectstmt, NULL) == SQLITE_OK) {
-			
-			while(sqlite3_step(selectstmt) == SQLITE_ROW) {
-				
-				NSInteger primaryKey = sqlite3_column_int(selectstmt, 0);
-				Bash *bashObj = [[Bash alloc] initWithPrimaryKey:primaryKey];
-				//bashObj.bashImgFull = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 5)];
-				bashObj.bashImgFull = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 5)];
-				bashObj.bashTumb = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 4)];
-				bashObj.bashLink = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 3)];
-				bashObj.bashInfo = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 2)];
-				bashObj.bashDate = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 1)];
-				
-				bashObj.isDirty = NO;
-				//NSLog(@"add");
-				[appDelegate.bashArray addObject:bashObj];
-				[bashObj release];
-			}
-		}
-	}
-	else
-		sqlite3_close(database); 
-}
-
-+ (void) getInitialFavToDisplay:(NSString *)dbPath {
-	
-	BashComicsAppDelegate *appDelegate = (BashComicsAppDelegate *)[[UIApplication sharedApplication] delegate];
-	
-	NSLog(@"add");
-	if (sqlite3_open([dbPath UTF8String], &database) == SQLITE_OK) {
-		
 		const char *sql = "select bashID, bashdate, bashinfo, bashlink, bashtumb, bashimgfull from bash ORDER BY bashID DESC";
 		sqlite3_stmt *selectstmt;
 		if(sqlite3_prepare_v2(database, sql, -1, &selectstmt, NULL) == SQLITE_OK) {
@@ -83,6 +50,39 @@ static sqlite3_stmt *detailStmt = nil;
 				bashObj.bashDate = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 1)];
 				
 				bashObj.isDirty = NO;
+				NSLog(@"add");
+				[appDelegate.bashArray addObject:bashObj];
+				[bashObj release];
+			}
+		}
+	}
+	else
+		sqlite3_close(database); 
+}
+
+/*+ (void) getInitialFavToDisplay:(NSString *)dbPath {
+	
+	BashComicsAppDelegate *appDelegate = (BashComicsAppDelegate *)[[UIApplication sharedApplication] delegate];
+	
+	NSLog(@"add");
+	if (sqlite3_open([dbPath UTF8String], &database) == SQLITE_OK) {
+		
+		const char *sql = "select bashID, bashdate, bashinfo, bashlink, bashtumb, bashimgfull from bash  Where fav = 'yes' ORDER BY bashID DESC";
+		sqlite3_stmt *selectstmt;
+		if(sqlite3_prepare_v2(database, sql, -1, &selectstmt, NULL) == SQLITE_OK) {
+			
+			while(sqlite3_step(selectstmt) == SQLITE_ROW) {
+				
+				NSInteger primaryKey = sqlite3_column_int(selectstmt, 0);
+				Bash *bashObj = [[Bash alloc] initWithPrimaryKey:primaryKey];
+				//bashObj.bashImgFull = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 5)];
+				bashObj.bashImgFull = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 5)];
+				bashObj.bashTumb = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 4)];
+				bashObj.bashLink = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 3)];
+				bashObj.bashInfo = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 2)];
+				bashObj.bashDate = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 1)];
+				
+				bashObj.isDirty = NO;
 				//NSLog(@"add");
 				[appDelegate.bashArray addObject:bashObj];
 				[bashObj release];
@@ -92,6 +92,7 @@ static sqlite3_stmt *detailStmt = nil;
 	else
 		sqlite3_close(database); 
 }
+*/
 
 + (void) finalizeStatements {
 	

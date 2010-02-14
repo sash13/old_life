@@ -15,7 +15,7 @@
 @synthesize window;
 @synthesize navigationController;
 @synthesize bashArray;
-@synthesize favArray;
+//@synthesize favArray;
 @synthesize downloadQueue;
 
 
@@ -162,7 +162,7 @@
 - (void)dealloc {
 	[downloadQueue release];
 	[bashArray release];
-	[favArray release];
+	//[favArray release];
 	[navigationController release];
 	[window release];
 	[super dealloc];

@@ -29,9 +29,9 @@
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] 
 											 initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
 											 target:self action:@selector(refresh:)];
-	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] 
-											  initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks 
-											  target:self action:@selector(refresh:)];
+	//self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] 
+	//										  initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks 
+	//										  target:self action:@selector(refresh:)];
 }
 
 - (void) refresh:(id)sender {

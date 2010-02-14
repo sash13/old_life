@@ -276,7 +276,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>17</integer>
+									<integer>12</integer>
+									<integer>10</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -319,7 +320,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>BashComicsAppDelegate.m</string>
+								<string>Bash.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,18 +328,17 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>BashComicsAppDelegate.m</string>
+										<string>Bash.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D9F97C34112875F2000629FA</string>
+										<string>D9F97C6411287771000629FA</string>
 										<key>history</key>
 										<array>
 											<string>D9EABA3E111F42370038D9F3</string>
 											<string>D924DFA51124549E00558812</string>
 											<string>D924DFAB1124549E00558812</string>
 											<string>D966C46A11258174007F5D2D</string>
-											<string>D966C53811259005007F5D2D</string>
 											<string>D966C53A11259005007F5D2D</string>
 											<string>D966C54111259086007F5D2D</string>
 											<string>D966C5931125A23A007F5D2D</string>
@@ -348,13 +348,14 @@
 											<string>D9A52F98112747E6004EC1F3</string>
 											<string>D9E8EE0711274AE8007B2560</string>
 											<string>D9E8EE1E11274CFA007B2560</string>
-											<string>D9F97C2D112875F2000629FA</string>
-											<string>D9F97C2E112875F2000629FA</string>
-											<string>D9F97C2F112875F2000629FA</string>
-											<string>D9F97C30112875F2000629FA</string>
 											<string>D9F97C31112875F2000629FA</string>
-											<string>D9F97C32112875F2000629FA</string>
-											<string>D9F97C33112875F2000629FA</string>
+											<string>D9F97C441128768F000629FA</string>
+											<string>D9F97C51112876EF000629FA</string>
+											<string>D9F97C53112876EF000629FA</string>
+											<string>D9F97C5D1128774C000629FA</string>
+											<string>D9F97C5E1128774C000629FA</string>
+											<string>D9F97C6311287771000629FA</string>
+											<string>D9F97C5F1128774C000629FA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -552,9 +553,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>/Users/sasha/Work/SVN/southpark/trunk/BashComics/BashComics.xcodeproj</string>
 		<string>D9EAB9BD111F3C3B0038D9F3</string>
+		<string>/Users/sasha/Work/SVN/southpark/trunk/BashComics/BashComics.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>77 205 1380 772 0 0 1680 1028 </string>
@@ -573,14 +575,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>BashComicsAppDelegate.m</string>
+								<string>Bash.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -597,6 +597,8 @@
 							<string>396pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -649,7 +651,7 @@
 			<key>WindowToolGUID</key>
 			<string>D9EAB9BD111F3C3B0038D9F3</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -928,7 +930,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>D9E8EE1311274B1C007B2560</string>
+				<string>D9F97C4111287652000629FA</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
