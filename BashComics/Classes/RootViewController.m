@@ -9,12 +9,19 @@
 #import "RootViewController.h"
 #import "Parser.h"
 #import "Bash.h";
+#import "BashCell.h"
+#import "ViewController.h"
+
+@interface RootViewController (Private)
+- (void)loadContentForVisibleCells;
+@end
 
 @implementation RootViewController
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.title = @"По мотивам";
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
 	appDelegate = (BashComicsAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -22,6 +29,9 @@
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] 
 											 initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
 											 target:self action:@selector(refresh:)];
+	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] 
+											  initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks 
+											  target:self action:@selector(refresh:)];
 }
 
 - (void) refresh:(id)sender {
@@ -42,17 +52,53 @@
 
 -(void)update:(Parser *)feed successfully:(NSString *)successMsg {
 	
+	
 	[appDelegate hideView];
 	NSLog(@"%@", successMsg);
 	[self.tableView reloadData];
+	[self loadContentForVisibleCells]; 
 	
 	
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-	
+	self.tableView.rowHeight = 41.0;
+	[self loadContentForVisibleCells]; 
 	[self.tableView reloadData];
+}
+
+- (void)loadContentForVisibleCells
+{
+    NSArray *cells = [self.tableView visibleCells];
+    [cells retain];
+    for (int i = 0; i < [cells count]; i++) 
+    { 
+        // Go through each cell in the array and call its loadContent method if it responds to it.
+        BashCell *bashCell = (BashCell *)[[cells objectAtIndex: i] retain];
+        [bashCell loadImage];
+        [bashCell release];
+        bashCell = nil;
+    }
+    [cells release];
+}
+
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView; 
+{
+    // Method is called when the decelerating comes to a stop.
+    // Pass visible cells to the cell loading function. If possible change 
+    // scrollView to a pointer to your table cell to avoid compiler warnings
+    [self loadContentForVisibleCells]; 
+}
+
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate;
+{
+    if (!decelerate) 
+    {
+        [self loadContentForVisibleCells]; 
+    }
 }
 
 /*
@@ -108,7 +154,7 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-	static NSString *CellIdentifier = @"Cell";
+	/*static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -126,7 +172,20 @@
 	//Set the accessory type.
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	
-	return cell;
+	return cell;*/
+	
+	Bash *bashObj = [appDelegate.bashArray objectAtIndex:indexPath.row];
+    static NSString *identifier = @"FlickrItemCell";
+    BashCell *cell = (BashCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) 
+    {
+        CGRect rect = CGRectMake(0.0, 0.0, 320.0, 75.0);
+        cell = [[[BashCell alloc] initWithFrame:rect reuseIdentifier:identifier] autorelease];
+        cell.delegate = self;
+    }
+    cell.item = bashObj;
+    return cell;
+	
 }
 
 
@@ -136,9 +195,26 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     // Navigation logic may go here -- for example, create and push another view controller.
-	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
-	// [self.navigationController pushViewController:anotherViewController animated:YES];
-	// [anotherViewController release];
+	Bash *bashObj = [appDelegate.bashArray objectAtIndex:indexPath.row];
+	
+	
+	viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+	viewController.item = bashObj;
+	[self.navigationController pushViewController:viewController animated:YES];
+	[viewController release];
+	 
+	/*if(viewController == nil) 
+		viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+	
+	Bash *bashObj = [appDelegate.bashArray objectAtIndex:indexPath.row];
+	
+	//Get the detail view data if it does not exists.
+	//We only load the data we initially want and keep on loading as we need.
+	[bashObj viewControllerData];
+	
+	viewController.item = bashObj;
+	
+	[self.navigationController pushViewController:viewController animated:YES];*/
 }
 
 

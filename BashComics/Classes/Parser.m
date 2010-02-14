@@ -139,6 +139,12 @@
 				
 				//////////////////////////////////////////////////////////////////////////////
 				//Bash *bashObj = [[Bash alloc] initWithPrimaryKey:0];
+				if ([dateC isEqualToString:myObj.bashDate]) {
+					NSLog(@"ends");
+				}
+				
+				else {
+					NSLog(@"%@ %@",dateC, myObj.bashDate);
 				bashObj.bashLink = myurl;
 				bashObj.bashImgFull = imgfullC;
 				bashObj.bashTumb = tumbC;
@@ -146,6 +152,7 @@
 				bashObj.bashInfo = infoC;
 				
 				[appDelegate addBash:bashObj];
+				}
 				//////////////////////////////////////////////////////////////////////////////
 				myurl = [NSString stringWithFormat:@"http://bash.org.ru%@",nextC];
 				

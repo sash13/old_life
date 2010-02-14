@@ -7,15 +7,18 @@
 //
 
 #import "ParserDelegate.h"
+#import "BashCellDelegate.h"
 
 @class Parser;
 @class Bash;
+@class ViewController;
 
-@interface RootViewController : UITableViewController <ParserDelegate> 
+@interface RootViewController : UITableViewController <ParserDelegate, BashCellDelegate> 
 {
 @private
     Parser *pars;
 	BashComicsAppDelegate *appDelegate;
+	ViewController *viewController;
 }
 
 @end

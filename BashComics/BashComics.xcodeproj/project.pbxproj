@@ -15,6 +15,12 @@
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
+		D924DF931124515800558812 /* BashCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D924DF921124515800558812 /* BashCell.m */; };
+		D9251F1C11272C31004EAE1E /* Bash.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D9251F1B11272C31004EAE1E /* Bash.sqlite */; };
+		D966C55711259B16007F5D2D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D966C55511259B16007F5D2D /* ViewController.m */; };
+		D966C55811259B16007F5D2D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D966C55611259B16007F5D2D /* ViewController.xib */; };
+		D9A52F19112738DD004EC1F3 /* TapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A52F18112738DD004EC1F3 /* TapDetectingImageView.m */; };
+		D9A52F1B11273A08004EC1F3 /* WeCanDoIt.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A52F1A11273A08004EC1F3 /* WeCanDoIt.png */; };
 		D9EAB9F8111F3FE20038D9F3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9EAB9F7111F3FE20038D9F3 /* CFNetwork.framework */; };
 		D9EAB9FC111F3FEE0038D9F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9EAB9FB111F3FEE0038D9F3 /* SystemConfiguration.framework */; };
 		D9EABA00111F3FFE0038D9F3 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D9EAB9FF111F3FFE0038D9F3 /* libxml2.dylib */; };
@@ -30,7 +36,6 @@
 		D9EABA25111F40390038D9F3 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EABA19111F40390038D9F3 /* ASIHTTPRequest.m */; };
 		D9EABA26111F40390038D9F3 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EABA1B111F40390038D9F3 /* ASINetworkQueue.m */; };
 		D9EABA27111F40390038D9F3 /* ASINSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EABA1D111F40390038D9F3 /* ASINSStringAdditions.m */; };
-		D9EABA29111F40460038D9F3 /* Bash.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D9EABA28111F40460038D9F3 /* Bash.sqlite */; };
 		D9EABA2D111F40710038D9F3 /* Bash.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EABA2C111F40710038D9F3 /* Bash.m */; };
 		D9EABA49111F42860038D9F3 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EABA48111F42860038D9F3 /* Parser.m */; };
 /* End PBXBuildFile section */
@@ -49,6 +54,17 @@
 		28F335F01007B36200424DE2 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* BashComics-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BashComics-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		D924DF7D11244E0700558812 /* BashDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BashDelegate.h; sourceTree = "<group>"; };
+		D924DF911124515800558812 /* BashCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BashCell.h; sourceTree = "<group>"; };
+		D924DF921124515800558812 /* BashCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BashCell.m; sourceTree = "<group>"; };
+		D924DF941124516E00558812 /* BashCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BashCellDelegate.h; sourceTree = "<group>"; };
+		D9251F1B11272C31004EAE1E /* Bash.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bash.sqlite; sourceTree = "<group>"; };
+		D966C55411259B16007F5D2D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D966C55511259B16007F5D2D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D966C55611259B16007F5D2D /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		D9A52F17112738DD004EC1F3 /* TapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapDetectingImageView.h; sourceTree = "<group>"; };
+		D9A52F18112738DD004EC1F3 /* TapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapDetectingImageView.m; sourceTree = "<group>"; };
+		D9A52F1A11273A08004EC1F3 /* WeCanDoIt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WeCanDoIt.png; path = ../../../../../Downloads/ScrollViewSuite/SharedResources/WholeImages/WeCanDoIt.png; sourceTree = SOURCE_ROOT; };
 		D9EAB9F7111F3FE20038D9F3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D9EAB9FB111F3FEE0038D9F3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D9EAB9FF111F3FFE0038D9F3 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -75,7 +91,6 @@
 		D9EABA1B111F40390038D9F3 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
 		D9EABA1C111F40390038D9F3 /* ASINSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINSStringAdditions.h; sourceTree = "<group>"; };
 		D9EABA1D111F40390038D9F3 /* ASINSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINSStringAdditions.m; sourceTree = "<group>"; };
-		D9EABA28111F40460038D9F3 /* Bash.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bash.sqlite; sourceTree = "<group>"; };
 		D9EABA2B111F40710038D9F3 /* Bash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bash.h; sourceTree = "<group>"; };
 		D9EABA2C111F40710038D9F3 /* Bash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bash.m; sourceTree = "<group>"; };
 		D9EABA47111F42860038D9F3 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
@@ -105,6 +120,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D924DF901124513A00558812 /* Cell */,
 				D9EABA2E111F41A80038D9F3 /* parse */,
 				D9EABA2A111F40610038D9F3 /* SQL */,
 				D9EABA0D111F40390038D9F3 /* asi */,
@@ -113,6 +129,11 @@
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				1D3623240D0F684500981E51 /* BashComicsAppDelegate.h */,
 				1D3623250D0F684500981E51 /* BashComicsAppDelegate.m */,
+				D966C55411259B16007F5D2D /* ViewController.h */,
+				D966C55511259B16007F5D2D /* ViewController.m */,
+				D966C55611259B16007F5D2D /* ViewController.xib */,
+				D9A52F17112738DD004EC1F3 /* TapDetectingImageView.h */,
+				D9A52F18112738DD004EC1F3 /* TapDetectingImageView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -154,7 +175,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D9EABA28111F40460038D9F3 /* Bash.sqlite */,
+				D9A52F1A11273A08004EC1F3 /* WeCanDoIt.png */,
+				D9251F1B11272C31004EAE1E /* Bash.sqlite */,
 				28F335F01007B36200424DE2 /* RootViewController.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* BashComics-Info.plist */,
@@ -170,6 +192,16 @@
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D924DF901124513A00558812 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D924DF911124515800558812 /* BashCell.h */,
+				D924DF921124515800558812 /* BashCell.m */,
+				D924DF941124516E00558812 /* BashCellDelegate.h */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		D9EABA05111F40390038D9F3 /* Hpple */ = {
@@ -228,6 +260,7 @@
 			children = (
 				D9EABA2B111F40710038D9F3 /* Bash.h */,
 				D9EABA2C111F40710038D9F3 /* Bash.m */,
+				D924DF7D11244E0700558812 /* BashDelegate.h */,
 			);
 			name = SQL;
 			sourceTree = "<group>";
@@ -293,7 +326,9 @@
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
-				D9EABA29111F40460038D9F3 /* Bash.sqlite in Resources */,
+				D966C55811259B16007F5D2D /* ViewController.xib in Resources */,
+				D9251F1C11272C31004EAE1E /* Bash.sqlite in Resources */,
+				D9A52F1B11273A08004EC1F3 /* WeCanDoIt.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +354,9 @@
 				D9EABA27111F40390038D9F3 /* ASINSStringAdditions.m in Sources */,
 				D9EABA2D111F40710038D9F3 /* Bash.m in Sources */,
 				D9EABA49111F42860038D9F3 /* Parser.m in Sources */,
+				D924DF931124515800558812 /* BashCell.m in Sources */,
+				D966C55711259B16007F5D2D /* ViewController.m in Sources */,
+				D9A52F19112738DD004EC1F3 /* TapDetectingImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,10 +408,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Sasha 1";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
 				PREBINDING = NO;
 				SDKROOT = iphoneos3.0;
 			};

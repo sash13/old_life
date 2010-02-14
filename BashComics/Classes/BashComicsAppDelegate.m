@@ -15,16 +15,33 @@
 @synthesize window;
 @synthesize navigationController;
 @synthesize bashArray;
+@synthesize favArray;
+@synthesize downloadQueue;
+
+
+
++ (BashComicsAppDelegate *)sharedAppDelegate
+{
+    return (BashComicsAppDelegate *)[UIApplication sharedApplication].delegate;
+}
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 	[self copyDatabaseIfNeeded];
+	[self createIfNo];
+	[self createTumbIfNo];
+	downloadQueue = [[NSOperationQueue alloc] init];
 	
 	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
 	self.bashArray = tempArray;
 	[tempArray release];
+	
+	
+	//NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+	//self.favArray = tempArray;
+	//[tempArray release];
 	
 	[Bash getInitialDataToDisplay:[self getDBPath]];
     
@@ -54,6 +71,20 @@
 	
 }
 
+-(void)createIfNo {
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	NSString *path = [self getFile];
+	if (![fileManager fileExistsAtPath:path])
+		[fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
+}
+
+-(void)createTumbIfNo {
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	NSString *path = [self getFileTumb];
+	if (![fileManager fileExistsAtPath:path])
+		[fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
+}
+
 - (void) copyDatabaseIfNeeded {
 	
 	//Using NSFileManager we can perform many file system operations.
@@ -77,6 +108,20 @@
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
 	NSString *documentsDir = [paths objectAtIndex:0];
 	return [documentsDir stringByAppendingPathComponent:@"Bash.sqlite"];
+}
+
+- (NSString *) getFile {
+	
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
+	NSString *documentsDir = [paths objectAtIndex:0];
+	return [documentsDir stringByAppendingPathComponent:@"files"];
+}
+
+- (NSString *) getFileTumb {
+	
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
+	NSString *documentsDir = [paths objectAtIndex:0];
+	return [documentsDir stringByAppendingPathComponent:@"tumb"];
 }
 
 - (void) addBash:(Bash *)bashObj {
@@ -115,7 +160,9 @@
 #pragma mark Memory management
 
 - (void)dealloc {
+	[downloadQueue release];
 	[bashArray release];
+	[favArray release];
 	[navigationController release];
 	[window release];
 	[super dealloc];

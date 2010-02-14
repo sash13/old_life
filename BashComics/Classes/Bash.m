@@ -7,15 +7,24 @@
 //
 
 #import "Bash.h"
+#import "ASIHTTPRequest.h"
 
 static sqlite3 *database = nil;
 static sqlite3_stmt *check = nil;
 static sqlite3_stmt *addStmt = nil;
 static sqlite3_stmt *updateStmt = nil;
+static sqlite3_stmt *detailStmt = nil;
+
+@interface Bash (Private)
+- (void)loadURL:(NSURL *)url;
+@end
+
 
 @implementation Bash
 
-@synthesize bashID, bashInfo, bashDate, bashLink, bashImgFull, bashTumb, isDirty, imgthis;
+@synthesize bashID, bashInfo, bashDate, bashLink, bashImgFull, bashTumb, isDirty, imgthis, isViewController;
+@synthesize thumbnail;
+@synthesize delegate;
 
 
 + (void) getInitialDataToDisplay:(NSString *)dbPath {
@@ -25,7 +34,7 @@ static sqlite3_stmt *updateStmt = nil;
 	NSLog(@"add");
 	if (sqlite3_open([dbPath UTF8String], &database) == SQLITE_OK) {
 		
-		const char *sql = "select bashID, bashdate, bashinfo, bashlink from bash ORDER BY bashID DESC";
+		const char *sql = "select bashID, bashdate, bashinfo, bashlink, bashtumb, bashimgfull from bash Where fav = 'yes' ORDER BY bashID DESC";
 		sqlite3_stmt *selectstmt;
 		if(sqlite3_prepare_v2(database, sql, -1, &selectstmt, NULL) == SQLITE_OK) {
 			
@@ -33,6 +42,42 @@ static sqlite3_stmt *updateStmt = nil;
 				
 				NSInteger primaryKey = sqlite3_column_int(selectstmt, 0);
 				Bash *bashObj = [[Bash alloc] initWithPrimaryKey:primaryKey];
+				//bashObj.bashImgFull = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 5)];
+				bashObj.bashImgFull = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 5)];
+				bashObj.bashTumb = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 4)];
+				bashObj.bashLink = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 3)];
+				bashObj.bashInfo = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 2)];
+				bashObj.bashDate = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 1)];
+				
+				bashObj.isDirty = NO;
+				//NSLog(@"add");
+				[appDelegate.bashArray addObject:bashObj];
+				[bashObj release];
+			}
+		}
+	}
+	else
+		sqlite3_close(database); 
+}
+
++ (void) getInitialFavToDisplay:(NSString *)dbPath {
+	
+	BashComicsAppDelegate *appDelegate = (BashComicsAppDelegate *)[[UIApplication sharedApplication] delegate];
+	
+	NSLog(@"add");
+	if (sqlite3_open([dbPath UTF8String], &database) == SQLITE_OK) {
+		
+		const char *sql = "select bashID, bashdate, bashinfo, bashlink, bashtumb, bashimgfull from bash ORDER BY bashID DESC";
+		sqlite3_stmt *selectstmt;
+		if(sqlite3_prepare_v2(database, sql, -1, &selectstmt, NULL) == SQLITE_OK) {
+			
+			while(sqlite3_step(selectstmt) == SQLITE_ROW) {
+				
+				NSInteger primaryKey = sqlite3_column_int(selectstmt, 0);
+				Bash *bashObj = [[Bash alloc] initWithPrimaryKey:primaryKey];
+				//bashObj.bashImgFull = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 5)];
+				bashObj.bashImgFull = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 5)];
+				bashObj.bashTumb = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 4)];
 				bashObj.bashLink = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 3)];
 				bashObj.bashInfo = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 2)];
 				bashObj.bashDate = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 1)];
@@ -54,6 +99,7 @@ static sqlite3_stmt *updateStmt = nil;
 	if (check) sqlite3_finalize(check);
 	if (addStmt) sqlite3_finalize(addStmt);
 	if (updateStmt) sqlite3_finalize(updateStmt);
+	if (detailStmt) sqlite3_finalize(detailStmt);
 }
 
 
@@ -63,6 +109,7 @@ static sqlite3_stmt *updateStmt = nil;
 	[super init];
 	bashID = pk;
 	
+	isViewController = NO;
 	return self;
 }
 
@@ -127,6 +174,34 @@ static sqlite3_stmt *updateStmt = nil;
 	sqlite3_reset(addStmt);
 }
 
+
+-(void)viewControllerData
+{
+	//If the detail view is hydrated then do not get it from the database.
+	if(isViewController) return;
+	
+	if(detailStmt == nil) {
+		const char *sql = "Select bashImgFull from Bash Where BashID = ?";
+		if(sqlite3_prepare_v2(database, sql, -1, &detailStmt, NULL) != SQLITE_OK)
+			NSAssert1(0, @"Error while creating detail view statement. '%s'", sqlite3_errmsg(database));
+	}
+	
+	sqlite3_bind_int(detailStmt, 1, bashID);
+	
+	if(SQLITE_DONE != sqlite3_step(detailStmt)) {
+		
+           self.bashImgFull = [NSString stringWithUTF8String:(char *)sqlite3_column_text(detailStmt, 5)];
+	}
+	else
+		NSAssert1(0, @"Error while getting the price of coffee. '%s'", sqlite3_errmsg(database));
+	
+	//Reset the detail statement.
+	sqlite3_reset(detailStmt);
+	
+	//Set isDetailViewHydrated as YES, so we do not get it again from the database.
+	isViewController = YES;
+	
+}
 /*
  - (void) deleteCoffee {
  
@@ -189,10 +264,124 @@ static sqlite3_stmt *updateStmt = nil;
 	bashTumb = nil;
 	[imgthis release];
 	imgthis = nil;
+	[thumbnail release];
+	thumbnail = nil;
+	
+	isViewController = NO;
 
 }
 
+#pragma mark -
+#pragma mark Public methods
+
+- (BOOL)hasLoadedThumbnail
+{
+    return (thumbnail != nil);
+}
+
+#pragma mark -
+#pragma mark Overridden setters
+
+- (UIImage *)thumbnail
+{
+    if (thumbnail == nil)
+    {
+		//NSLog(@"%@", self.bashTumb);
+        NSURL *url = [NSURL URLWithString:self.bashTumb];
+		//NSLog(@"%@",url);
+	    [self loadURL:url];
+    }
+    return thumbnail;
+}
+
+- (NSString *) yesOrNo:(NSString *)string {
+	
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
+	NSString *documentsDir = [paths objectAtIndex:0];
+	//documentsDir = [documentsDir stringByAppendingPathComponent:@"tumb/"];
+	NSString *newDocumentsDir = [documentsDir stringByAppendingPathComponent:@"tumb/"];
+
+	return [newDocumentsDir stringByAppendingPathComponent:string];
+}
+
+/*- (NSString *) docDirs {
+	
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
+	NSString *documentsDir = [paths objectAtIndex:0];
+
+	return documentsDir;
+}
+*/
+
+#pragma mark -
+#pragma mark ASIHTTPRequest delegate methods
+
+- (void)requestDone:(ASIHTTPRequest *)request
+{
+    NSData *data = [request responseData];
+    UIImage *remoteImage = [[UIImage alloc] initWithData:data];
+    self.thumbnail = remoteImage;
+    if ([delegate respondsToSelector:@selector(bash:didLoadThumbnail:)])
+    {
+        [delegate bash:self didLoadThumbnail:self.thumbnail];
+    }
+    [remoteImage release];
+}
+
+- (void)requestWentWrong:(ASIHTTPRequest *)request
+{
+    NSError *error = [request error];
+    if ([delegate respondsToSelector:@selector(bash:couldNotLoadImageError:)])
+    {
+        [delegate bash:self couldNotLoadImageError:error];
+    }
+}
+
+#pragma mark -
+#pragma mark Private methods
+
+- (void)loadURL:(NSURL *)url
+{
+	NSArray *listItems = [self.bashTumb componentsSeparatedByString:@"/"];
+	NSString *MybashTumb = [listItems lastObject];
+	
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	NSError *error;
+	
+	NSString *dbPath = [self yesOrNo:MybashTumb];
+	//NSString *docDir = [self docDirs];
+	
+	//NSLog(@"%@", dbPath);
+	BOOL success = [fileManager fileExistsAtPath:dbPath]; 
+	if(!success) {
+		
+    ASIHTTPRequest *request = [[ASIHTTPRequest alloc] initWithURL:url];
+    [request setDelegate:self];
+    [request setDidFinishSelector:@selector(requestDone:)];
+    [request setDidFailSelector:@selector(requestWentWrong:)];
+	[request setDownloadDestinationPath:dbPath];
+    NSOperationQueue *queue = [BashComicsAppDelegate sharedAppDelegate].downloadQueue;
+    [queue addOperation:request];
+    [request release];  
+	}
+	else {
+		//NSLog(@"%@", dbPath);
+		UIImage *remoteImage = [[UIImage alloc] initWithContentsOfFile:dbPath];
+		self.thumbnail = remoteImage;
+		if ([delegate respondsToSelector:@selector(bash:didLoadThumbnail:)])
+		{
+			[delegate bash:self didLoadThumbnail:self.thumbnail];
+		}
+		[remoteImage release];
+	}
+
+}
+
+
+
 - (void) dealloc {
+	delegate = nil;
+	[thumbnail release];
 	[bashInfo release];
 	[imgthis release];
 	[bashDate release];
