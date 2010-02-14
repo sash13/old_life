@@ -50,7 +50,7 @@ static sqlite3_stmt *detailStmt = nil;
 				bashObj.bashDate = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 1)];
 				
 				bashObj.isDirty = NO;
-				NSLog(@"add");
+				//NSLog(@"add");
 				[appDelegate.bashArray addObject:bashObj];
 				[bashObj release];
 			}

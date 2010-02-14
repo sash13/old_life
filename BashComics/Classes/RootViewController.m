@@ -198,7 +198,8 @@
 	Bash *bashObj = [appDelegate.bashArray objectAtIndex:indexPath.row];
 	
 	
-	viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+	//viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+	viewController = [[ViewController alloc] initWithNibName:nil bundle:nil];
 	viewController.item = bashObj;
 	[self.navigationController pushViewController:viewController animated:YES];
 	[viewController release];
