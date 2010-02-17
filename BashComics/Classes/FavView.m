@@ -29,14 +29,14 @@
 	appDelegate = (BashComicsAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	[self.filteredListContent removeAllObjects]; // First clear the filtered array.
-	NSString *mytext = @"394022";
+	NSString *mytext = @"yes";
 	/*
 	 Search the main list for products whose type matches the scope (if selected) and whose name matches searchText; add items that match to the filtered array.
 	 */
 	for (Bash *product in appDelegate.bashArray)
 	{
 
-			NSComparisonResult result = [product.bashInfo compare:mytext options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [mytext length])];
+			NSComparisonResult result = [product.bashFav compare:mytext options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [mytext length])];
             if (result == NSOrderedSame)
 			{
 				[appDelegate.favArray addObject:product];
