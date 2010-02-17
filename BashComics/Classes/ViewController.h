@@ -16,6 +16,7 @@
 	
 	Bash *item;
 	UIScrollView *imageScrollView;
+	BashComicsAppDelegate *appDelegate;
 
 
 }

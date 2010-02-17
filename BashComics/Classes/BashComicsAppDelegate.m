@@ -15,7 +15,7 @@
 @synthesize window;
 @synthesize navigationController;
 @synthesize bashArray;
-//@synthesize favArray;
+@synthesize favArray;
 @synthesize downloadQueue;
 
 
@@ -39,9 +39,9 @@
 	[tempArray release];
 	
 	
-	//NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-	//self.favArray = tempArray;
-	//[tempArray release];
+	NSMutableArray *tempArrays = [[NSMutableArray alloc] init];
+	self.favArray = tempArrays;
+	[tempArrays release];
 	
 	[Bash getInitialDataToDisplay:[self getDBPath]];
     
@@ -162,7 +162,7 @@
 - (void)dealloc {
 	[downloadQueue release];
 	[bashArray release];
-	//[favArray release];
+	[favArray release];
 	[navigationController release];
 	[window release];
 	[super dealloc];

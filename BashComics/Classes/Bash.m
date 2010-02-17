@@ -22,7 +22,7 @@ static sqlite3_stmt *detailStmt = nil;
 
 @implementation Bash
 
-@synthesize bashID, bashInfo, bashDate, bashLink, bashImgFull, bashTumb, isDirty, imgthis, isViewController;
+@synthesize bashID, bashInfo, bashDate, bashLink, bashImgFull, bashTumb, isDirty, imgthis, bashFav, isViewController;
 @synthesize thumbnail;
 @synthesize delegate;
 
@@ -34,7 +34,7 @@ static sqlite3_stmt *detailStmt = nil;
 	NSLog(@"add");
 	if (sqlite3_open([dbPath UTF8String], &database) == SQLITE_OK) {
 		
-		const char *sql = "select bashID, bashdate, bashinfo, bashlink, bashtumb, bashimgfull from bash ORDER BY bashID DESC";
+		const char *sql = "select bashID, bashdate, bashinfo, bashlink, bashtumb, bashimgfull, bashfav from bash ORDER BY bashID DESC";
 		sqlite3_stmt *selectstmt;
 		if(sqlite3_prepare_v2(database, sql, -1, &selectstmt, NULL) == SQLITE_OK) {
 			
@@ -43,6 +43,7 @@ static sqlite3_stmt *detailStmt = nil;
 				NSInteger primaryKey = sqlite3_column_int(selectstmt, 0);
 				Bash *bashObj = [[Bash alloc] initWithPrimaryKey:primaryKey];
 				//bashObj.bashImgFull = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 5)];
+				bashObj.bashFav = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 6)];
 				bashObj.bashImgFull = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 5)];
 				bashObj.bashTumb = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 4)];
 				bashObj.bashLink = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectstmt, 3)];
@@ -240,9 +241,9 @@ static sqlite3_stmt *detailStmt = nil;
 		sqlite3_bind_text(updateStmt, 3, [bashLink UTF8String], -1, SQLITE_TRANSIENT);
 		sqlite3_bind_text(updateStmt, 4, [bashImgFull UTF8String], -1, SQLITE_TRANSIENT);
 		sqlite3_bind_text(updateStmt, 5, [bashTumb UTF8String], -1, SQLITE_TRANSIENT);
+		sqlite3_bind_text(updateStmt, 6, [bashFav UTF8String], -1, SQLITE_TRANSIENT);
 		
-		
-		sqlite3_bind_int(updateStmt, 6, bashID);
+		sqlite3_bind_int(updateStmt, 7, bashID);
 		
 		if(SQLITE_DONE != sqlite3_step(updateStmt))
 			NSAssert1(0, @"Error while updating. '%s'", sqlite3_errmsg(database));
@@ -267,6 +268,8 @@ static sqlite3_stmt *detailStmt = nil;
 	imgthis = nil;
 	[thumbnail release];
 	thumbnail = nil;
+	[bashFav release];
+	bashFav = nil;
 	
 	isViewController = NO;
 
@@ -389,6 +392,7 @@ static sqlite3_stmt *detailStmt = nil;
 	[bashLink release];
 	[bashImgFull release];
 	[bashTumb release];
+	[bashFav release];
 	[super dealloc];
 }
 

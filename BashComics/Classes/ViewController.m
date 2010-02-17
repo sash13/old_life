@@ -42,18 +42,9 @@
 	return [newDocumentsDir stringByAppendingPathComponent:string];
 }
 
-- (void)requestDone:(ASIHTTPRequest *)request
+- (void)createView:(NSString *)patch
 {
-
-	NSArray *listItems = [item.bashImgFull componentsSeparatedByString:@"/"];
-	NSString *MybashTumb = [listItems lastObject];
-	
-	NSString *dbPath = [self myDir:MybashTumb];
-	
-	NSLog(@"Ok");
-	
-	NSData *data = [request responseData];
-	UIImage *remoteImage = [[UIImage alloc] initWithContentsOfFile:dbPath];
+	UIImage *remoteImage = [[UIImage alloc] initWithContentsOfFile:patch];
 	// set up main scroll view
     //imageScrollView = [[UIScrollView alloc] initWithFrame:[[self view] bounds]];
 	imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320 , 480)];
@@ -78,20 +69,43 @@
 	
 }
 
+- (void)requestDone:(ASIHTTPRequest *)request
+{
+
+	[appDelegate hideView];
+	NSArray *listItems = [item.bashImgFull componentsSeparatedByString:@"/"];
+	NSString *MybashTumb = [listItems lastObject];
+	
+	NSString *dbPath = [self myDir:MybashTumb];
+	[self createView:dbPath];
+
+	
+}
+
 - (void)requestWentWrong:(ASIHTTPRequest *)request
 {
-	
+	[appDelegate hideView];
 	NSError *error = [request error];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-    [super viewDidLoad];
+
+	[super viewDidLoad];
+	
+	[self.navigationController setToolbarHidden:YES animated:YES];
+	appDelegate = (BashComicsAppDelegate *)[[UIApplication sharedApplication] delegate];
+	[appDelegate showView];
 	NSArray *listItems = [item.bashImgFull componentsSeparatedByString:@"/"];
 	NSString *MybashTumb = [listItems lastObject];
 	
 	NSString *dbPath = [self myDir:MybashTumb];
 	self.title = item.bashInfo;
+	
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	BOOL success = [fileManager fileExistsAtPath:dbPath]; 
+	if(!success) {
+		
 	
 	NSURL *url = [NSURL URLWithString:item.bashImgFull];
     ASIHTTPRequest *request = [[ASIHTTPRequest alloc] initWithURL:url];
@@ -102,6 +116,12 @@
     NSOperationQueue *queue = [BashComicsAppDelegate sharedAppDelegate].downloadQueue;
     [queue addOperation:request];
     [request release];  
+	}
+	else {
+		[self createView:dbPath];
+		[appDelegate hideView];
+	}
+
 	
 	}
 

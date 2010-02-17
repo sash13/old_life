@@ -18,6 +18,11 @@
 
 @implementation RootViewController
 
+@synthesize favView;
+@synthesize toolbar;
+
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,7 +36,9 @@
 											 target:self action:@selector(refresh:)];
 	//self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] 
 	//										  initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks 
-	//										  target:self action:@selector(refresh:)];
+	//										  target:self action:@selector(openFav:)];
+	
+	
 }
 
 - (void) refresh:(id)sender {
@@ -40,6 +47,14 @@
 	pars = [[Parser alloc] init];
 	pars.delegate = self;
 	[pars myfu];
+}
+
+- (void) openFav:(id)sender {
+    if (self.favView == nil)
+        self.favView = [[[FavView alloc] initWithNibName:
+							  NSStringFromClass([favView class]) bundle:nil] autorelease];
+	
+	[self.navigationController presentModalViewController:self.favView animated:YES];
 }
 
 -(void)update:(Parser *)feed myError:(NSString *)errorMsg {
@@ -65,6 +80,41 @@
     [super viewWillAppear:animated];
 	self.tableView.rowHeight = 41.0;
 	[self loadContentForVisibleCells]; 
+	
+	//Initialize the toolbar
+	toolbar = [[UIToolbar alloc] init];
+	toolbar.barStyle = UIBarStyleBlackTranslucent;
+	
+	//Set the toolbar to fit the width of the app.
+	[toolbar sizeToFit];
+	
+	//Caclulate the height of the toolbar
+	CGFloat toolbarHeight = [toolbar frame].size.height;
+	
+	//Get the bounds of the parent view
+	CGRect rootViewBounds = self.parentViewController.view.bounds;
+	
+	//Get the height of the parent view.
+	CGFloat rootViewHeight = CGRectGetHeight(rootViewBounds);
+	
+	//Get the width of the parent view,
+	CGFloat rootViewWidth = CGRectGetWidth(rootViewBounds);
+	
+	//Create a rectangle for the toolbar
+	CGRect rectArea = CGRectMake(0, rootViewHeight - toolbarHeight, rootViewWidth, toolbarHeight);
+	
+	//Reposition and resize the receiver
+	[toolbar setFrame:rectArea];
+	
+	//Create a button
+	UIBarButtonItem *infoButton = [[UIBarButtonItem alloc] 
+								   initWithTitle:@"Info" style:UIBarButtonItemStyleBordered target:self action:@selector(openFav:)];
+	
+	[toolbar setItems:[NSArray arrayWithObjects:infoButton,nil]];
+	
+	//Add the toolbar as a subview to the navigation controller.
+	[self.navigationController.view addSubview:toolbar];
+	
 	[self.tableView reloadData];
 }
 
@@ -193,13 +243,14 @@
 
 // Override to support row selection in the table view.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	
 
+	[toolbar removeFromSuperview];
     // Navigation logic may go here -- for example, create and push another view controller.
 	Bash *bashObj = [appDelegate.bashArray objectAtIndex:indexPath.row];
 	
 	
-	//viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-	viewController = [[ViewController alloc] initWithNibName:nil bundle:nil];
+	viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
 	viewController.item = bashObj;
 	[self.navigationController pushViewController:viewController animated:YES];
 	[viewController release];
@@ -261,6 +312,8 @@
 
 
 - (void)dealloc {
+	if (self.favView != nil)
+		[favView release];
 	[pars setDelegate:nil];
 	[pars release];
     [super dealloc];

@@ -38,6 +38,8 @@
 		D9EABA27111F40390038D9F3 /* ASINSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EABA1D111F40390038D9F3 /* ASINSStringAdditions.m */; };
 		D9EABA2D111F40710038D9F3 /* Bash.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EABA2C111F40710038D9F3 /* Bash.m */; };
 		D9EABA49111F42860038D9F3 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EABA48111F42860038D9F3 /* Parser.m */; };
+		D9F97CAB11287B20000629FA /* FavView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F97CA911287B20000629FA /* FavView.m */; };
+		D9F97CAC11287B20000629FA /* FavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9F97CAA11287B20000629FA /* FavView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +63,7 @@
 		D9251F1B11272C31004EAE1E /* Bash.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bash.sqlite; sourceTree = "<group>"; };
 		D966C55411259B16007F5D2D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D966C55511259B16007F5D2D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D966C55611259B16007F5D2D /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		D966C55611259B16007F5D2D /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ViewController.xib; path = Classes/ViewController.xib; sourceTree = "<group>"; };
 		D9A52F17112738DD004EC1F3 /* TapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapDetectingImageView.h; sourceTree = "<group>"; };
 		D9A52F18112738DD004EC1F3 /* TapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapDetectingImageView.m; sourceTree = "<group>"; };
 		D9A52F1A11273A08004EC1F3 /* WeCanDoIt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WeCanDoIt.png; path = ../../../../../Downloads/ScrollViewSuite/SharedResources/WholeImages/WeCanDoIt.png; sourceTree = SOURCE_ROOT; };
@@ -96,6 +98,9 @@
 		D9EABA47111F42860038D9F3 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 		D9EABA48111F42860038D9F3 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
 		D9EABA4A111F42C70038D9F3 /* ParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParserDelegate.h; sourceTree = "<group>"; };
+		D9F97CA811287B20000629FA /* FavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavView.h; sourceTree = "<group>"; };
+		D9F97CA911287B20000629FA /* FavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavView.m; sourceTree = "<group>"; };
+		D9F97CAA11287B20000629FA /* FavView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,9 +136,11 @@
 				1D3623250D0F684500981E51 /* BashComicsAppDelegate.m */,
 				D966C55411259B16007F5D2D /* ViewController.h */,
 				D966C55511259B16007F5D2D /* ViewController.m */,
-				D966C55611259B16007F5D2D /* ViewController.xib */,
 				D9A52F17112738DD004EC1F3 /* TapDetectingImageView.h */,
 				D9A52F18112738DD004EC1F3 /* TapDetectingImageView.m */,
+				D9F97CA811287B20000629FA /* FavView.h */,
+				D9F97CA911287B20000629FA /* FavView.m */,
+				D9F97CAA11287B20000629FA /* FavView.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -175,6 +182,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D966C55611259B16007F5D2D /* ViewController.xib */,
 				D9A52F1A11273A08004EC1F3 /* WeCanDoIt.png */,
 				D9251F1B11272C31004EAE1E /* Bash.sqlite */,
 				28F335F01007B36200424DE2 /* RootViewController.xib */,
@@ -329,6 +337,7 @@
 				D966C55811259B16007F5D2D /* ViewController.xib in Resources */,
 				D9251F1C11272C31004EAE1E /* Bash.sqlite in Resources */,
 				D9A52F1B11273A08004EC1F3 /* WeCanDoIt.png in Resources */,
+				D9F97CAC11287B20000629FA /* FavView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +366,7 @@
 				D924DF931124515800558812 /* BashCell.m in Sources */,
 				D966C55711259B16007F5D2D /* ViewController.m in Sources */,
 				D9A52F19112738DD004EC1F3 /* TapDetectingImageView.m in Sources */,
+				D9F97CAB11287B20000629FA /* FavView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

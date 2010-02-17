@@ -13,7 +13,7 @@
     UIWindow *window;
     UINavigationController *navigationController;
 	NSMutableArray *bashArray;
-	//NSMutableArray *favArray;
+	NSMutableArray *favArray;
 	UIView *View;
 	NSOperationQueue *downloadQueue;
 }
@@ -21,7 +21,7 @@
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 @property (nonatomic, retain) NSMutableArray *bashArray;
-//@property (nonatomic, retain) NSMutableArray *favArray;
+@property (nonatomic, retain) NSMutableArray *favArray;
 
 @property (nonatomic, retain) NSOperationQueue *downloadQueue;
 

@@ -18,7 +18,7 @@
 	NSString *bashDate;
 	NSString *bashInfo;
 	NSString *imgthis;
-	//NSString *isNew;
+	NSString *bashFav;
 	BOOL isDirty;
 	UIImage *thumbnail;
 	BOOL isViewController;
@@ -32,7 +32,7 @@
 @property (nonatomic, copy) NSString *bashDate;
 @property (nonatomic, copy) NSString *bashInfo;
 @property (nonatomic, copy) NSString *imgthis;
-//@property (nonatomic, copy) NSString *isNew;
+@property (nonatomic, copy) NSString *bashFav;
 @property (nonatomic, retain) UIImage *thumbnail;
 @property (nonatomic, readwrite) BOOL isDirty;
 @property (nonatomic, readwrite) BOOL isViewController;
