@@ -27,6 +27,12 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+	//NSLog(@"%f",[appDelegate.favArray count]);
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	
 	appDelegate = (BashComicsAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
 	[appDelegate.favArray removeAllObjects]; // First clear the filtered array.
@@ -36,19 +42,15 @@
 	 */
 	for (Bash *product in appDelegate.bashArray)
 	{
-
-			NSComparisonResult result = [product.bashFav compare:mytext options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [mytext length])];
-            if (result == NSOrderedSame)
-			{
-				[appDelegate.favArray addObject:product];
-				//NSLog(@"%@",product);
-            }
+		
+		NSComparisonResult result = [product.bashFav compare:mytext options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [mytext length])];
+		if (result == NSOrderedSame)
+		{
+			[appDelegate.favArray addObject:product];
+			//NSLog(@"%@",product);
+		}
 		
 	}
-	//NSLog(@"%f",[appDelegate.favArray count]);
-}
-
-- (void)viewWillAppear:(BOOL)animated {
 	
 	[self.tableView reloadData];
 	self.tableView.rowHeight = 41.0;
@@ -155,12 +157,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	Bash *bashObj = [appDelegate.favArray objectAtIndex:indexPath.row];
-	
+	NSLog(@"open %@", bashObj.bashInfo);
 	
 	viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
 	viewController.item = bashObj;
-	[self.navigationController pushViewController:viewController animated:YES];
+	//[self.navigationController pushViewController:viewController animated:YES];
+	[self presentModalViewController:viewController animated:YES];
 	[viewController release];
+	
 }
 
 

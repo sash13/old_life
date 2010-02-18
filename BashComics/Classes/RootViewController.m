@@ -55,7 +55,7 @@
         self.favView = [[[FavView alloc] initWithNibName:
 							  NSStringFromClass([favView class]) bundle:nil] autorelease];
 	
-	[self.navigationController presentModalViewController:self.favView animated:YES];
+	[self presentModalViewController:self.favView animated:YES];
 }
 
 -(void)update:(Parser *)feed myError:(NSString *)errorMsg {
@@ -63,6 +63,11 @@
 	[appDelegate hideView];
 	NSLog(@"%@", errorMsg);
 	[self.tableView reloadData];
+	
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:"Внимание" message:@"Проблемы с интернет подключением!"
+												   delegate:self cancelButtonTitle:@"Закрыть" otherButtonTitles: nil];
+	[alert show];
+	[alert release];
 	
 }
 

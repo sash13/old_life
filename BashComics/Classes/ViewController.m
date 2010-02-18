@@ -85,7 +85,13 @@
 - (void)requestWentWrong:(ASIHTTPRequest *)request
 {
 	[appDelegate hideView];
-	NSError *error = [request error];
+	//NSError *error = [request error];
+	
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:"Внимание" message:@"Проблемы с интернет подключением!"
+												   delegate:self cancelButtonTitle:@"Закрыть" otherButtonTitles: nil];
+	[alert show];
+	[alert release];
+	
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -143,8 +149,15 @@
 }
 
 -(void)add:(id)sender {
+	if([item.bashFav isEqualToString:@"yes"]){
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Уже добавлено в избранное"
+													   delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+		[alert show];
+		[alert release];
+	}
+	else 
+		[item setValue:@"yes" forKey:@"bashFav"];
 	
-	[item setValue:@"yes" forKey:@"bashFav"];
 	
 }
 /*

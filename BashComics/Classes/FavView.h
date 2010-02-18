@@ -24,4 +24,6 @@
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 
 - (IBAction)dismissAction:(id)sender;
+-(void)loadContentForVisibleCells;
+
 @end
