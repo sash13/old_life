@@ -93,7 +93,12 @@
 
 	[super viewDidLoad];
 	
-	[self.navigationController setToolbarHidden:YES animated:YES];
+	//[self.navigationController setToolbarHidden:YES animated:YES];
+	
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] 
+											  initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
+											  target:self action:@selector(add:)];
+	
 	appDelegate = (BashComicsAppDelegate *)[[UIApplication sharedApplication] delegate];
 	[appDelegate showView];
 	NSArray *listItems = [item.bashImgFull componentsSeparatedByString:@"/"];
@@ -137,6 +142,11 @@
 	[self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
+-(void)add:(id)sender {
+	
+	[item setValue:@"yes" forKey:@"bashFav"];
+	
+}
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

@@ -228,7 +228,7 @@ static sqlite3_stmt *detailStmt = nil;
 	if(isDirty) {
 		
 		if(updateStmt == nil) {
-			const char *sql = "update Bash Set bashInfo = ?, bashDate = ?, bashLink = ?, bashImgFull = ?,bashTumb = ?, Where bashID = ?";
+			const char *sql = "update Bash Set bashInfo = ?, bashDate = ?, bashLink = ?, bashImgFull = ?,bashTumb = ?,bashFav = ? Where bashID = ?";
 			if(sqlite3_prepare_v2(database, sql, -1, &updateStmt, NULL) != SQLITE_OK) 
 				NSAssert1(0, @"Error while creating update statement. '%s'", sqlite3_errmsg(database));
 		}
@@ -245,6 +245,7 @@ static sqlite3_stmt *detailStmt = nil;
 		
 		sqlite3_bind_int(updateStmt, 7, bashID);
 		
+		NSLog(@"update %@", bashInfo);
 		if(SQLITE_DONE != sqlite3_step(updateStmt))
 			NSAssert1(0, @"Error while updating. '%s'", sqlite3_errmsg(database));
 		
@@ -381,7 +382,12 @@ static sqlite3_stmt *detailStmt = nil;
 
 }
 
-
+- (void) setBashFav:(NSString *)newValue {
+	
+	self.isDirty = YES;
+	[bashFav release];
+	bashFav = [newValue copy];
+}
 
 - (void) dealloc {
 	delegate = nil;

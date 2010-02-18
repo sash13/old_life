@@ -9,9 +9,10 @@
 #import "FavView.h"
 #import "Bash.h";
 #import "BashCell.h"
+#import "ViewController.h"
 
 @implementation FavView
-@synthesize filteredListContent, tableView;
+@synthesize tableView;
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -28,7 +29,7 @@
     [super viewDidLoad];
 	appDelegate = (BashComicsAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
-	[self.filteredListContent removeAllObjects]; // First clear the filtered array.
+	[appDelegate.favArray removeAllObjects]; // First clear the filtered array.
 	NSString *mytext = @"yes";
 	/*
 	 Search the main list for products whose type matches the scope (if selected) and whose name matches searchText; add items that match to the filtered array.
@@ -47,6 +48,12 @@
 	//NSLog(@"%f",[appDelegate.favArray count]);
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+	
+	[self.tableView reloadData];
+	self.tableView.rowHeight = 41.0;
+	[self loadContentForVisibleCells];
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -60,6 +67,39 @@
 {
 	
 	[self.parentViewController dismissModalViewControllerAnimated:YES];
+}
+
+- (void)loadContentForVisibleCells
+{
+    NSArray *cells = [self.tableView visibleCells];
+    [cells retain];
+    for (int i = 0; i < [cells count]; i++) 
+    { 
+        // Go through each cell in the array and call its loadContent method if it responds to it.
+        BashCell *bashCell = (BashCell *)[[cells objectAtIndex: i] retain];
+        [bashCell loadImage];
+        [bashCell release];
+        bashCell = nil;
+    }
+    [cells release];
+}
+
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView; 
+{
+    // Method is called when the decelerating comes to a stop.
+    // Pass visible cells to the cell loading function. If possible change 
+    // scrollView to a pointer to your table cell to avoid compiler warnings
+    [self loadContentForVisibleCells]; 
+}
+
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate;
+{
+    if (!decelerate) 
+    {
+        [self loadContentForVisibleCells]; 
+    }
 }
 
 
@@ -114,27 +154,13 @@
 // Override to support row selection in the table view.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-    // Navigation logic may go here -- for example, create and push another view controller.
-	//Bash *bashObj = [appDelegate.bashArray objectAtIndex:indexPath.row];
+	Bash *bashObj = [appDelegate.favArray objectAtIndex:indexPath.row];
 	
 	
-	//viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-	//viewController.item = bashObj;
-	//[self.navigationController pushViewController:viewController animated:YES];
-	//[viewController release];
-	
-	/*if(viewController == nil) 
-	 viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-	 
-	 Bash *bashObj = [appDelegate.bashArray objectAtIndex:indexPath.row];
-	 
-	 //Get the detail view data if it does not exists.
-	 //We only load the data we initially want and keep on loading as we need.
-	 [bashObj viewControllerData];
-	 
-	 viewController.item = bashObj;
-	 
-	 [self.navigationController pushViewController:viewController animated:YES];*/
+	viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+	viewController.item = bashObj;
+	[self.navigationController pushViewController:viewController animated:YES];
+	[viewController release];
 }
 
 
@@ -153,7 +179,7 @@
 
 - (void)dealloc {
 	[tableView release];
-	[filteredListContent release];
+	//[filteredListContent release];
     [super dealloc];
 }
 

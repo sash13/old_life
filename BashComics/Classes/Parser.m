@@ -150,6 +150,7 @@
 				bashObj.bashTumb = tumbC;
 				bashObj.bashDate = dateC;
 				bashObj.bashInfo = infoC;
+				bashObj.bashFav = @"no";
 				
 				[appDelegate addBash:bashObj];
 				}
@@ -192,6 +193,7 @@
 					//bashObj.bashInfo = [[[NSString alloc] initWithBytes:[infoC bytes] length:[infoC length] 
 					//						encoding:NSUTF8StringEncoding] autorelease];
 					bashObj.bashInfo = infoC;
+					bashObj.bashFav = @"no";
 					[appDelegate addBash:bashObj];
 					NSLog(@"imgfull:%@ date:%@  tumb: %@ prev: %@ next: %@  %@",imgfullC,dateC,tumbC,prevC,nextC,infoC);
 				}

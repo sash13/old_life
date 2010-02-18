@@ -39,6 +39,7 @@
 	//										  target:self action:@selector(openFav:)];
 	
 	
+	
 }
 
 - (void) refresh:(id)sender {
@@ -81,32 +82,24 @@
 	self.tableView.rowHeight = 41.0;
 	[self loadContentForVisibleCells]; 
 	
-	//Initialize the toolbar
+
 	toolbar = [[UIToolbar alloc] init];
 	toolbar.barStyle = UIBarStyleBlackTranslucent;
-	
-	//Set the toolbar to fit the width of the app.
+
 	[toolbar sizeToFit];
-	
-	//Caclulate the height of the toolbar
+
 	CGFloat toolbarHeight = [toolbar frame].size.height;
-	
-	//Get the bounds of the parent view
+
 	CGRect rootViewBounds = self.parentViewController.view.bounds;
-	
-	//Get the height of the parent view.
+
 	CGFloat rootViewHeight = CGRectGetHeight(rootViewBounds);
-	
-	//Get the width of the parent view,
+
 	CGFloat rootViewWidth = CGRectGetWidth(rootViewBounds);
 	
-	//Create a rectangle for the toolbar
 	CGRect rectArea = CGRectMake(0, rootViewHeight - toolbarHeight, rootViewWidth, toolbarHeight);
 	
-	//Reposition and resize the receiver
 	[toolbar setFrame:rectArea];
 	
-	//Create a button
 	UIBarButtonItem *infoButton = [[UIBarButtonItem alloc] 
 								   initWithTitle:@"Info" style:UIBarButtonItemStyleBordered target:self action:@selector(openFav:)];
 	
@@ -156,11 +149,12 @@
     [super viewDidAppear:animated];
 }
 */
-/*
+
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
+	[toolbar removeFromSuperview];
 }
-*/
+
 /*
 - (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
@@ -225,7 +219,7 @@
 	return cell;*/
 	
 	Bash *bashObj = [appDelegate.bashArray objectAtIndex:indexPath.row];
-    static NSString *identifier = @"FlickrItemCell";
+    static NSString *identifier = @"ItemCell";
     BashCell *cell = (BashCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) 
     {
@@ -245,8 +239,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 
-	[toolbar removeFromSuperview];
-    // Navigation logic may go here -- for example, create and push another view controller.
+	//[toolbar removeFromSuperview];
+
 	Bash *bashObj = [appDelegate.bashArray objectAtIndex:indexPath.row];
 	
 	

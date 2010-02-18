@@ -10,15 +10,17 @@
 #import "BashCellDelegate.h"
 
 @class Bash;
+@class ViewController;
 
 @interface FavView : UIViewController <BashCellDelegate> {
-	NSMutableArray	*filteredListContent;
+	//NSMutableArray	*filteredListContent;
 	BashComicsAppDelegate *appDelegate;
 	IBOutlet UITableView *tableView;
+	ViewController *viewController;
 
 }
 
-@property (nonatomic, retain) NSMutableArray *filteredListContent;
+//@property (nonatomic, retain) NSMutableArray *filteredListContent;
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 
 - (IBAction)dismissAction:(id)sender;
