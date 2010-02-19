@@ -29,6 +29,8 @@
     [super viewDidLoad];
 
 	self.title = @"Любимые";
+	
+	
 	//NSLog(@"%f",[appDelegate.favArray count]);
 }
 
@@ -168,6 +170,31 @@
 	
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle 
+forRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	if(editingStyle == UITableViewCellEditingStyleDelete) {
+		
+
+		//Bash *bashObj = [appDelegate.favArray objectAtIndex:indexPath.row];
+
+		//[bashObj setValue:@"yes" forKey:@"bashFav"];
+
+		//[self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+	}
+}
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+	
+	[super setEditing:editing animated:animated];
+    [self.tableView setEditing:editing animated:YES];
+	
+	//Do not let the user add if the app is in edit mode.
+	if(editing)
+		self.navigationItem.rightBarButtonItem.enabled = NO;
+	else
+		self.navigationItem.rightBarButtonItem.enabled = YES;
+}	
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.

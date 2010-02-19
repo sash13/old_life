@@ -8,7 +8,7 @@
 
 #import "ParserDelegate.h"
 #import "BashCellDelegate.h"
-#import "FavView.h"
+#import "FaviView.h"
 
 @class Parser;
 @class Bash;
@@ -20,10 +20,10 @@
     Parser *pars;
 	BashComicsAppDelegate *appDelegate;
 	ViewController *viewController;
-	FavView *favView;
+	FaviView *faviView;
 	UIToolbar				*toolbar;
 }
 
-@property (nonatomic, retain) FavView*  favView;
+@property (nonatomic, retain) FaviView*  faviView;
 @property (nonatomic, retain) UIToolbar	*toolbar;
 @end

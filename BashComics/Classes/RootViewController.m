@@ -18,7 +18,7 @@
 
 @implementation RootViewController
 
-@synthesize favView;
+@synthesize faviView;
 @synthesize toolbar;
 
 
@@ -57,10 +57,10 @@
 	
 	//[self presentModalViewController:self.favView animated:YES];
 	
-	favView = [[FavView alloc] initWithNibName:@"FavView" bundle:nil];
+	faviView = [[FaviView alloc] initWithNibName:nil bundle:nil];
 	//viewController.item = bashObj;
-	[self.navigationController pushViewController:favView animated:YES];
-	[favView release];
+	[self.navigationController pushViewController:faviView animated:YES];
+	[faviView release];
 }
 
 -(void)update:(Parser *)feed myError:(NSString *)errorMsg {
@@ -317,8 +317,8 @@
 
 
 - (void)dealloc {
-	if (self.favView != nil)
-		[favView release];
+	if (self.faviView != nil)
+		[faviView release];
 	[pars setDelegate:nil];
 	[pars release];
     [super dealloc];

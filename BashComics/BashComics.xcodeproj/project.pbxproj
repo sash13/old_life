@@ -19,6 +19,8 @@
 		D9331055112C382700A7A662 /* Bash.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D9331054112C382700A7A662 /* Bash.sqlite */; };
 		D966C55711259B16007F5D2D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D966C55511259B16007F5D2D /* ViewController.m */; };
 		D966C55811259B16007F5D2D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D966C55611259B16007F5D2D /* ViewController.xib */; };
+		D97DBFEE112ED68F00357B97 /* FaviView.m in Sources */ = {isa = PBXBuildFile; fileRef = D97DBFEC112ED68F00357B97 /* FaviView.m */; };
+		D97DBFEF112ED68F00357B97 /* FaviView.xib1 in Resources */ = {isa = PBXBuildFile; fileRef = D97DBFED112ED68F00357B97 /* FaviView.xib1 */; };
 		D9A52F19112738DD004EC1F3 /* TapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A52F18112738DD004EC1F3 /* TapDetectingImageView.m */; };
 		D9A52F1B11273A08004EC1F3 /* WeCanDoIt.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A52F1A11273A08004EC1F3 /* WeCanDoIt.png */; };
 		D9EAB9F8111F3FE20038D9F3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9EAB9F7111F3FE20038D9F3 /* CFNetwork.framework */; };
@@ -64,6 +66,9 @@
 		D966C55411259B16007F5D2D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D966C55511259B16007F5D2D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D966C55611259B16007F5D2D /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ViewController.xib; path = Classes/ViewController.xib; sourceTree = "<group>"; };
+		D97DBFEB112ED68F00357B97 /* FaviView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaviView.h; sourceTree = "<group>"; };
+		D97DBFEC112ED68F00357B97 /* FaviView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaviView.m; sourceTree = "<group>"; };
+		D97DBFED112ED68F00357B97 /* FaviView.xib1 */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FaviView.xib1; sourceTree = "<group>"; };
 		D9A52F17112738DD004EC1F3 /* TapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapDetectingImageView.h; sourceTree = "<group>"; };
 		D9A52F18112738DD004EC1F3 /* TapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapDetectingImageView.m; sourceTree = "<group>"; };
 		D9A52F1A11273A08004EC1F3 /* WeCanDoIt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WeCanDoIt.png; path = ../../../../../Downloads/ScrollViewSuite/SharedResources/WholeImages/WeCanDoIt.png; sourceTree = SOURCE_ROOT; };
@@ -141,6 +146,9 @@
 				D9F97CA811287B20000629FA /* FavView.h */,
 				D9F97CA911287B20000629FA /* FavView.m */,
 				D9F97CAA11287B20000629FA /* FavView.xib */,
+				D97DBFEB112ED68F00357B97 /* FaviView.h */,
+				D97DBFEC112ED68F00357B97 /* FaviView.m */,
+				D97DBFED112ED68F00357B97 /* FaviView.xib1 */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -338,6 +346,7 @@
 				D9A52F1B11273A08004EC1F3 /* WeCanDoIt.png in Resources */,
 				D9F97CAC11287B20000629FA /* FavView.xib in Resources */,
 				D9331055112C382700A7A662 /* Bash.sqlite in Resources */,
+				D97DBFEF112ED68F00357B97 /* FaviView.xib1 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +376,7 @@
 				D966C55711259B16007F5D2D /* ViewController.m in Sources */,
 				D9A52F19112738DD004EC1F3 /* TapDetectingImageView.m in Sources */,
 				D9F97CAB11287B20000629FA /* FavView.m in Sources */,
+				D97DBFEE112ED68F00357B97 /* FaviView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
