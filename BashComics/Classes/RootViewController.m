@@ -51,11 +51,16 @@
 }
 
 - (void) openFav:(id)sender {
-    if (self.favView == nil)
-        self.favView = [[[FavView alloc] initWithNibName:
-							  NSStringFromClass([favView class]) bundle:nil] autorelease];
+    //if (self.favView == nil)
+     //   self.favView = [[[FavView alloc] initWithNibName:
+	//						  NSStringFromClass([favView class]) bundle:nil] autorelease];
 	
-	[self presentModalViewController:self.favView animated:YES];
+	//[self presentModalViewController:self.favView animated:YES];
+	
+	favView = [[FavView alloc] initWithNibName:@"FavView" bundle:nil];
+	//viewController.item = bashObj;
+	[self.navigationController pushViewController:favView animated:YES];
+	[favView release];
 }
 
 -(void)update:(Parser *)feed myError:(NSString *)errorMsg {

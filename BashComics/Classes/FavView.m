@@ -28,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+	self.title = @"Любимые";
 	//NSLog(@"%f",[appDelegate.favArray count]);
 }
 
@@ -161,8 +162,8 @@
 	
 	viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
 	viewController.item = bashObj;
-	//[self.navigationController pushViewController:viewController animated:YES];
-	[self presentModalViewController:viewController animated:YES];
+	[self.navigationController pushViewController:viewController animated:YES];
+	//[self presentModalViewController:viewController animated:YES];
 	[viewController release];
 	
 }
