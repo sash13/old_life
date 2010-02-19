@@ -111,8 +111,11 @@
 	
 	[toolbar setFrame:rectArea];
 	
-	UIBarButtonItem *infoButton = [[UIBarButtonItem alloc] 
-								   initWithTitle:@"Info" style:UIBarButtonItemStyleBordered target:self action:@selector(openFav:)];
+	//UIBarButtonItem *infoButton = [[UIBarButtonItem alloc] 
+	//							   initWithTitle:@"Любимые" style:UIBarButtonItemStyleBordered target:self action:@selector(openFav:)];
+	
+	UIBarButtonItem *infoButton = [[UIBarButtonItem alloc]
+								   initWithImage:[UIImage imageNamed:@"bookmark.png"] style:UIBarButtonItemStylePlain target:self action:@selector(openFav:)];
 	
 	[toolbar setItems:[NSArray arrayWithObjects:infoButton,nil]];
 	

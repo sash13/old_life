@@ -21,8 +21,8 @@
 		D966C55811259B16007F5D2D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D966C55611259B16007F5D2D /* ViewController.xib */; };
 		D97DBFEE112ED68F00357B97 /* FaviView.m in Sources */ = {isa = PBXBuildFile; fileRef = D97DBFEC112ED68F00357B97 /* FaviView.m */; };
 		D97DBFEF112ED68F00357B97 /* FaviView.xib1 in Resources */ = {isa = PBXBuildFile; fileRef = D97DBFED112ED68F00357B97 /* FaviView.xib1 */; };
+		D97DC068112EE47400357B97 /* bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = D97DC067112EE47400357B97 /* bookmark.png */; };
 		D9A52F19112738DD004EC1F3 /* TapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A52F18112738DD004EC1F3 /* TapDetectingImageView.m */; };
-		D9A52F1B11273A08004EC1F3 /* WeCanDoIt.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A52F1A11273A08004EC1F3 /* WeCanDoIt.png */; };
 		D9EAB9F8111F3FE20038D9F3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9EAB9F7111F3FE20038D9F3 /* CFNetwork.framework */; };
 		D9EAB9FC111F3FEE0038D9F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9EAB9FB111F3FEE0038D9F3 /* SystemConfiguration.framework */; };
 		D9EABA00111F3FFE0038D9F3 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D9EAB9FF111F3FFE0038D9F3 /* libxml2.dylib */; };
@@ -69,9 +69,9 @@
 		D97DBFEB112ED68F00357B97 /* FaviView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaviView.h; sourceTree = "<group>"; };
 		D97DBFEC112ED68F00357B97 /* FaviView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaviView.m; sourceTree = "<group>"; };
 		D97DBFED112ED68F00357B97 /* FaviView.xib1 */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FaviView.xib1; sourceTree = "<group>"; };
+		D97DC067112EE47400357B97 /* bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark.png; sourceTree = "<group>"; };
 		D9A52F17112738DD004EC1F3 /* TapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapDetectingImageView.h; sourceTree = "<group>"; };
 		D9A52F18112738DD004EC1F3 /* TapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapDetectingImageView.m; sourceTree = "<group>"; };
-		D9A52F1A11273A08004EC1F3 /* WeCanDoIt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WeCanDoIt.png; path = ../../../../../Downloads/ScrollViewSuite/SharedResources/WholeImages/WeCanDoIt.png; sourceTree = SOURCE_ROOT; };
 		D9EAB9F7111F3FE20038D9F3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D9EAB9FB111F3FEE0038D9F3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D9EAB9FF111F3FFE0038D9F3 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -190,9 +190,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D97DC067112EE47400357B97 /* bookmark.png */,
 				D9331054112C382700A7A662 /* Bash.sqlite */,
 				D966C55611259B16007F5D2D /* ViewController.xib */,
-				D9A52F1A11273A08004EC1F3 /* WeCanDoIt.png */,
 				28F335F01007B36200424DE2 /* RootViewController.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* BashComics-Info.plist */,
@@ -343,10 +343,10 @@
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
 				D966C55811259B16007F5D2D /* ViewController.xib in Resources */,
-				D9A52F1B11273A08004EC1F3 /* WeCanDoIt.png in Resources */,
 				D9F97CAC11287B20000629FA /* FavView.xib in Resources */,
 				D9331055112C382700A7A662 /* Bash.sqlite in Resources */,
 				D97DBFEF112ED68F00357B97 /* FaviView.xib1 in Resources */,
+				D97DC068112EE47400357B97 /* bookmark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

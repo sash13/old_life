@@ -45,6 +45,8 @@
 - (void)createView:(NSString *)patch
 {
 	UIImage *remoteImage = [[UIImage alloc] initWithContentsOfFile:patch];
+	remoteImage.center=self.view.center;
+
 	// set up main scroll view
     //imageScrollView = [[UIScrollView alloc] initWithFrame:[[self view] bounds]];
 	imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320 , 480)];
@@ -52,12 +54,13 @@
     [imageScrollView setDelegate:self];
     [imageScrollView setBouncesZoom:YES];
     [[self view] addSubview:imageScrollView];
-    
+     
     // add touch-sensitive image view to the scroll view
     TapDetectingImageView *imageView = [[TapDetectingImageView alloc] initWithImage:remoteImage];
     [imageView setDelegate:self];
     [imageView setTag:ZOOM_VIEW_TAG];
     [imageScrollView setContentSize:[imageView frame].size];
+
     [imageScrollView addSubview:imageView];
     [imageView release];
     
@@ -66,7 +69,7 @@
 	//NSLog(@"%f %f",[imageScrollView frame].size.width, [imageScrollView frame].size.height );
     [imageScrollView setMinimumZoomScale:minimumScale];
     [imageScrollView setZoomScale:minimumScale];
-	
+	[remoteImage release];
 }
 
 - (void)requestDone:(ASIHTTPRequest *)request
@@ -103,7 +106,7 @@
 	//[self.navigationController setToolbarHidden:YES animated:YES];
 	
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] 
-											  initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
+											  initWithBarButtonSystemItem:UIBarButtonSystemItemAdd 
 											  target:self action:@selector(add:)];
 	
 	appDelegate = (BashComicsAppDelegate *)[[UIApplication sharedApplication] delegate];
