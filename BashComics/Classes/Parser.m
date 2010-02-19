@@ -25,7 +25,7 @@
 	//if (manyyes) {
 	//	myObj = [appDelegate.bashArray objectAtIndex:manyyes-1];
 	//}
-	int error = 0;
+	int errors = 0;
 	
 	Bash *myObj = [appDelegate.bashArray objectAtIndex:0];
 	
@@ -51,7 +51,7 @@
 	NSString *infoC;
 	NSString *nextC;
 	NSString *prevC;
-	
+
 	
 	//myurl = @"http://bash.org.ru/comics/20100129";
 	//if (myObj.bashLink) {
@@ -64,7 +64,7 @@
 	//NSLog(@"%@",myObj.bashLink);
 	//NSMutableArray *myArray = [NSMutableArray array];
 	
-	while (i > 1) {
+	while (i > 1 || errors > 0) {
 		
 		/*[imgfullE release];
 		 [dateE release];
@@ -257,16 +257,17 @@
 			
 		}
 		else {
-			NSLog(@"error");
-			++error;
+			NSLog(@"errors");
+			++errors;
+			break;
 		}
 		//NSLog(@"%@",myurl);
 	}
-	NSLog(@"error2");
+	NSLog(@"error2 %d", errors);
 	manyyes = [appDelegate.bashArray count];
 	
 	NSLog(@"%i",manyyes);
-	if (error > 0) {
+	if (errors > 0) {
 		[delegate update:self myError:@"error"];
 	}else {
 		[delegate update:self successfully:@"Ok"];

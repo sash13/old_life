@@ -276,7 +276,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>17</integer>
+									<integer>21</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -319,7 +319,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RootViewController.m</string>
+								<string>Parser.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,11 +327,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RootViewController.m</string>
+										<string>Parser.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D97DBF92112EBF7F00357B97</string>
+										<string>D97DBFC7112EC2E700357B97</string>
 										<key>history</key>
 										<array>
 											<string>D9EABA3E111F42370038D9F3</string>
@@ -345,7 +345,6 @@
 											<string>D9F97C441128768F000629FA</string>
 											<string>D9F97D2A1128868A000629FA</string>
 											<string>D9F97D7411288A9C000629FA</string>
-											<string>D933105A112C3A1D00A7A662</string>
 											<string>D933105C112C3A1D00A7A662</string>
 											<string>D9FF6170112D806F0040DECE</string>
 											<string>D9FF6172112D806F0040DECE</string>
@@ -353,11 +352,12 @@
 											<string>D9FF61E0112D90500040DECE</string>
 											<string>D9FF61E1112D90500040DECE</string>
 											<string>D9FF620A112D93950040DECE</string>
-											<string>D9FF6215112D93FF0040DECE</string>
-											<string>D9FF6221112DE57F0040DECE</string>
-											<string>D97DBF8F112EBF7F00357B97</string>
 											<string>D97DBF90112EBF7F00357B97</string>
-											<string>D97DBF91112EBF7F00357B97</string>
+											<string>D97DBFAE112EC0C500357B97</string>
+											<string>D97DBFB5112EC1EC00357B97</string>
+											<string>D97DBFB6112EC1EC00357B97</string>
+											<string>D97DBFB7112EC1EC00357B97</string>
+											<string>D97DBFB8112EC1EC00357B97</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -555,12 +555,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D97DBF9A112EBF7F00357B97</string>
 		<string>D97DBF9B112EBF7F00357B97</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>D9EAB9BD111F3C3B0038D9F3</string>
 		<string>/Users/sasha/Work/SVN/southpark/trunk/BashComics/BashComics.xcodeproj</string>
-		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>63 157 1459 815 0 0 1680 1028 </string>
@@ -579,12 +578,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>Parser.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -653,7 +654,7 @@
 			<key>WindowToolGUID</key>
 			<string>D9EAB9BD111F3C3B0038D9F3</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -942,7 +943,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

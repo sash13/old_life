@@ -87,9 +87,10 @@
 	[appDelegate hideView];
 	//NSError *error = [request error];
 	
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:"Внимание" message:@"Проблемы с интернет подключением!"
-												   delegate:self cancelButtonTitle:@"Закрыть" otherButtonTitles: nil];
-	[alert show];
+
+	
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Внимание" message:@"Проблемы с интернет подключением!"  delegate:self cancelButtonTitle:@"Закрыть" otherButtonTitles: nil];
+	[alert show];	
 	[alert release];
 	
 }
