@@ -7,6 +7,7 @@
 //
 
 @class Bash;
+@class Client;
 
 @interface BashComicsAppDelegate : NSObject <UIApplicationDelegate> {
     
@@ -14,6 +15,7 @@
     UINavigationController *navigationController;
 	NSMutableArray *bashArray;
 	NSMutableArray *favArray;
+	NSMutableArray *twitArray;
 	UIView *View;
 	NSOperationQueue *downloadQueue;
 }
@@ -22,12 +24,16 @@
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 @property (nonatomic, retain) NSMutableArray *bashArray;
 @property (nonatomic, retain) NSMutableArray *favArray;
+@property (nonatomic, retain) NSMutableArray *twitArray;
 
 @property (nonatomic, retain) NSOperationQueue *downloadQueue;
 
 + (BashComicsAppDelegate *)sharedAppDelegate;
 
 - (void) copyDatabaseIfNeeded;
+- (void) addToTwitList;
+- (BOOL)isAvailable:(NSString *)urls;
+
 - (NSString *) getDBPath;
 
 - (void) createIfNo;

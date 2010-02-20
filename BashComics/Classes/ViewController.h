@@ -10,13 +10,16 @@
 #import "TapDetectingImageView.h"
 
 @class Bash;
+@class Client;
 
 
-@interface ViewController : UIViewController <UIScrollViewDelegate, TapDetectingImageViewDelegate> {
+@interface ViewController : UIViewController <UIScrollViewDelegate, TapDetectingImageViewDelegate, UIActionSheetDelegate> {
 	
 	Bash *item;
 	UIScrollView *imageScrollView;
 	BashComicsAppDelegate *appDelegate;
+
+	NSArray *_clients;
 
 
 }
@@ -25,5 +28,7 @@
 
 -(IBAction)hide:(id)sender;
 -(IBAction)open:(id)sender;
+-(void)add;
+
 @end
 

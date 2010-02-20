@@ -21,9 +21,9 @@
 	BashComicsAppDelegate *appDelegate;
 	ViewController *viewController;
 	FaviView *faviView;
-	UIToolbar				*toolbar;
+	//UIToolbar				*toolbar;
 }
 
 @property (nonatomic, retain) FaviView*  faviView;
-@property (nonatomic, retain) UIToolbar	*toolbar;
+//@property (nonatomic, retain) UIToolbar	*toolbar;
 @end

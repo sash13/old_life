@@ -19,7 +19,7 @@
 @implementation RootViewController
 
 @synthesize faviView;
-@synthesize toolbar;
+//@synthesize toolbar;
 
 
 
@@ -34,6 +34,8 @@
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] 
 											 initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
 											 target:self action:@selector(refresh:)];
+	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] 
+											 initWithImage:[UIImage imageNamed:@"favorites.png"] style:UIBarButtonItemStylePlain target:self action:@selector(openFav:)];
 	//self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] 
 	//										  initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks 
 	//										  target:self action:@selector(openFav:)];
@@ -94,7 +96,7 @@
 	[self loadContentForVisibleCells]; 
 	
 
-	toolbar = [[UIToolbar alloc] init];
+	/*toolbar = [[UIToolbar alloc] init];
 	toolbar.barStyle = UIBarStyleBlackTranslucent;
 
 	[toolbar sizeToFit];
@@ -120,7 +122,7 @@
 	[toolbar setItems:[NSArray arrayWithObjects:infoButton,nil]];
 	
 	//Add the toolbar as a subview to the navigation controller.
-	[self.navigationController.view addSubview:toolbar];
+	[self.navigationController.view addSubview:toolbar];*/
 	
 	[self.tableView reloadData];
 }
@@ -166,7 +168,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
-	[toolbar removeFromSuperview];
+	//[toolbar removeFromSuperview];
 }
 
 /*

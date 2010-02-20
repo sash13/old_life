@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Bash.h"
+#import "Client.h"
 #import "ASIHTTPRequest.h"
 
 #define ZOOM_VIEW_TAG 100
@@ -45,7 +46,7 @@
 - (void)createView:(NSString *)patch
 {
 	UIImage *remoteImage = [[UIImage alloc] initWithContentsOfFile:patch];
-	remoteImage.center=self.view.center;
+	//remoteImage.center=self.view.center;
 
 	// set up main scroll view
     //imageScrollView = [[UIScrollView alloc] initWithFrame:[[self view] bounds]];
@@ -106,8 +107,8 @@
 	//[self.navigationController setToolbarHidden:YES animated:YES];
 	
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] 
-											  initWithBarButtonSystemItem:UIBarButtonSystemItemAdd 
-											  target:self action:@selector(add:)];
+											  initWithBarButtonSystemItem:UIBarButtonSystemItemAction 
+											  target:self action:@selector(openThis:)];
 	
 	appDelegate = (BashComicsAppDelegate *)[[UIApplication sharedApplication] delegate];
 	[appDelegate showView];
@@ -140,6 +141,72 @@
 	
 	}
 
+
+
+- (void)actionSheet:(UIActionSheet *)modalView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+  NSString *buttonTitle = [modalView buttonTitleAtIndex:buttonIndex];
+  if ([buttonTitle isEqualToString:@"Удалить из избранного"] || [buttonTitle isEqualToString:@"Твитнуть"] || [buttonTitle isEqualToString:@"Добавить в избранное"] || [buttonTitle isEqualToString:@"Закрыть"]) {
+		
+   
+	switch (buttonIndex)
+	{
+		case 0:
+		{
+			[self add];
+			break;
+		}
+		case 1:
+		{
+			UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Выбрать твиттер клиент"
+															   delegate:self
+													  cancelButtonTitle:@"Закрыть"
+												 destructiveButtonTitle:nil
+													  otherButtonTitles:nil];
+			
+			//Client *client = [appDelegate.twitArray init];
+			//Client *myObj = [appDelegate.twitArray objectAtIndex:0];
+			//NSLog(@"%@", myObj.names);
+
+			for (Client *client in appDelegate.twitArray)
+			{
+				[sheet addButtonWithTitle:client.names];
+			}
+			
+			[sheet showInView:self.view];
+			[sheet release];
+			break;
+		}
+	}
+  }
+  else {
+	//NSString *buttonTitle = [modalView buttonTitleAtIndex:buttonIndex];
+	  NSLog(@"%@",buttonTitle);
+	  
+	  for (Client *client in appDelegate.twitArray)
+	  {
+		  
+		  
+		  if ([buttonTitle isEqualToString:client.names]) {
+			  
+			  NSString *text = [NSString stringWithFormat:@"№%@ %@ via @BashComics",item.bashInfo, item.bashLink];
+			  NSString *message = (NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, 
+																					  (CFStringRef)text,
+																					  NULL, 
+																					  (CFStringRef)@";/?:@&=+$,", 
+																					  kCFStringEncodingUTF8);
+			  
+			  NSString *stringURL = [NSString stringWithFormat:client.url, message];
+			  [message release];
+			  NSURL *url = [NSURL URLWithString:stringURL];
+			  [[UIApplication sharedApplication] openURL:url]; 
+			  
+		  }
+	  }
+  }
+
+}
+
 -(IBAction)hide:(id)sender {
 	
 	[[UIApplication sharedApplication] setStatusBarHidden:YES animated:YES];
@@ -152,12 +219,36 @@
 	[self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
--(void)add:(id)sender {
+-(void)openThis:(id)sender {
+	
 	if([item.bashFav isEqualToString:@"yes"]){
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Уже добавлено в избранное"
-													   delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-		[alert show];
-		[alert release];
+		UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Действие"
+																 delegate:self cancelButtonTitle:@"Закрыть" destructiveButtonTitle:nil
+														otherButtonTitles:@"Удалить из избранного", @"Твитнуть", nil];
+		actionSheet.actionSheetStyle = self.navigationController.navigationBar.barStyle;
+		actionSheet.destructiveButtonIndex = 0;
+		[actionSheet showInView:self.view]; // show from our table view (pops up in the middle of the table)
+		[actionSheet release];
+	}
+	
+	else {
+		
+	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Действие"
+															 delegate:self cancelButtonTitle:@"Закрыть" destructiveButtonTitle:nil
+													otherButtonTitles:@"Добавить в избранное", @"Твитнуть", nil];
+	actionSheet.actionSheetStyle = self.navigationController.navigationBar.barStyle;
+	[actionSheet showInView:self.view]; // show from our table view (pops up in the middle of the table)
+	[actionSheet release];
+	}
+}
+
+-(void)add {
+	if([item.bashFav isEqualToString:@"yes"]){
+		
+		[item setValue:@"no" forKey:@"bashFav"];
+		
+		
+		[appDelegate.favArray removeObject:item];
 	}
 	else 
 		[item setValue:@"yes" forKey:@"bashFav"];

@@ -19,9 +19,9 @@
 		D9331055112C382700A7A662 /* Bash.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D9331054112C382700A7A662 /* Bash.sqlite */; };
 		D966C55711259B16007F5D2D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D966C55511259B16007F5D2D /* ViewController.m */; };
 		D966C55811259B16007F5D2D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D966C55611259B16007F5D2D /* ViewController.xib */; };
+		D96C04C311302FC400FDAC88 /* favorites.png in Resources */ = {isa = PBXBuildFile; fileRef = D96C04C211302FC400FDAC88 /* favorites.png */; };
 		D97DBFEE112ED68F00357B97 /* FaviView.m in Sources */ = {isa = PBXBuildFile; fileRef = D97DBFEC112ED68F00357B97 /* FaviView.m */; };
 		D97DBFEF112ED68F00357B97 /* FaviView.xib1 in Resources */ = {isa = PBXBuildFile; fileRef = D97DBFED112ED68F00357B97 /* FaviView.xib1 */; };
-		D97DC068112EE47400357B97 /* bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = D97DC067112EE47400357B97 /* bookmark.png */; };
 		D9A52F19112738DD004EC1F3 /* TapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A52F18112738DD004EC1F3 /* TapDetectingImageView.m */; };
 		D9EAB9F8111F3FE20038D9F3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9EAB9F7111F3FE20038D9F3 /* CFNetwork.framework */; };
 		D9EAB9FC111F3FEE0038D9F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9EAB9FB111F3FEE0038D9F3 /* SystemConfiguration.framework */; };
@@ -40,6 +40,8 @@
 		D9EABA27111F40390038D9F3 /* ASINSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EABA1D111F40390038D9F3 /* ASINSStringAdditions.m */; };
 		D9EABA2D111F40710038D9F3 /* Bash.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EABA2C111F40710038D9F3 /* Bash.m */; };
 		D9EABA49111F42860038D9F3 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EABA48111F42860038D9F3 /* Parser.m */; };
+		D9EC4DC8113070F500EB3607 /* TwitterClients.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9EC4DC7113070F500EB3607 /* TwitterClients.plist */; };
+		D9EC4DCD113072C400EB3607 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EC4DCC113072C400EB3607 /* Client.m */; };
 		D9F97CAB11287B20000629FA /* FavView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F97CA911287B20000629FA /* FavView.m */; };
 		D9F97CAC11287B20000629FA /* FavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9F97CAA11287B20000629FA /* FavView.xib */; };
 /* End PBXBuildFile section */
@@ -66,10 +68,10 @@
 		D966C55411259B16007F5D2D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D966C55511259B16007F5D2D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D966C55611259B16007F5D2D /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ViewController.xib; path = Classes/ViewController.xib; sourceTree = "<group>"; };
+		D96C04C211302FC400FDAC88 /* favorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorites.png; sourceTree = "<group>"; };
 		D97DBFEB112ED68F00357B97 /* FaviView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaviView.h; sourceTree = "<group>"; };
 		D97DBFEC112ED68F00357B97 /* FaviView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaviView.m; sourceTree = "<group>"; };
 		D97DBFED112ED68F00357B97 /* FaviView.xib1 */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FaviView.xib1; sourceTree = "<group>"; };
-		D97DC067112EE47400357B97 /* bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark.png; sourceTree = "<group>"; };
 		D9A52F17112738DD004EC1F3 /* TapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapDetectingImageView.h; sourceTree = "<group>"; };
 		D9A52F18112738DD004EC1F3 /* TapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapDetectingImageView.m; sourceTree = "<group>"; };
 		D9EAB9F7111F3FE20038D9F3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -103,6 +105,9 @@
 		D9EABA47111F42860038D9F3 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 		D9EABA48111F42860038D9F3 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
 		D9EABA4A111F42C70038D9F3 /* ParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParserDelegate.h; sourceTree = "<group>"; };
+		D9EC4DC7113070F500EB3607 /* TwitterClients.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TwitterClients.plist; sourceTree = "<group>"; };
+		D9EC4DCB113072C400EB3607 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		D9EC4DCC113072C400EB3607 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
 		D9F97CA811287B20000629FA /* FavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavView.h; sourceTree = "<group>"; };
 		D9F97CA911287B20000629FA /* FavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavView.m; sourceTree = "<group>"; };
 		D9F97CAA11287B20000629FA /* FavView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavView.xib; sourceTree = "<group>"; };
@@ -130,6 +135,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D9EC4DBE1130704700EB3607 /* Twitter */,
 				D924DF901124513A00558812 /* Cell */,
 				D9EABA2E111F41A80038D9F3 /* parse */,
 				D9EABA2A111F40610038D9F3 /* SQL */,
@@ -190,7 +196,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D97DC067112EE47400357B97 /* bookmark.png */,
+				D9EC4DC7113070F500EB3607 /* TwitterClients.plist */,
+				D96C04C211302FC400FDAC88 /* favorites.png */,
 				D9331054112C382700A7A662 /* Bash.sqlite */,
 				D966C55611259B16007F5D2D /* ViewController.xib */,
 				28F335F01007B36200424DE2 /* RootViewController.xib */,
@@ -291,6 +298,15 @@
 			name = parse;
 			sourceTree = "<group>";
 		};
+		D9EC4DBE1130704700EB3607 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				D9EC4DCB113072C400EB3607 /* Client.h */,
+				D9EC4DCC113072C400EB3607 /* Client.m */,
+			);
+			name = Twitter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,7 +362,8 @@
 				D9F97CAC11287B20000629FA /* FavView.xib in Resources */,
 				D9331055112C382700A7A662 /* Bash.sqlite in Resources */,
 				D97DBFEF112ED68F00357B97 /* FaviView.xib1 in Resources */,
-				D97DC068112EE47400357B97 /* bookmark.png in Resources */,
+				D96C04C311302FC400FDAC88 /* favorites.png in Resources */,
+				D9EC4DC8113070F500EB3607 /* TwitterClients.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +394,7 @@
 				D9A52F19112738DD004EC1F3 /* TapDetectingImageView.m in Sources */,
 				D9F97CAB11287B20000629FA /* FavView.m in Sources */,
 				D97DBFEE112ED68F00357B97 /* FaviView.m in Sources */,
+				D9EC4DCD113072C400EB3607 /* Client.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

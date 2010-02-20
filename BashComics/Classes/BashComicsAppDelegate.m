@@ -9,6 +9,7 @@
 #import "BashComicsAppDelegate.h"
 #import "RootViewController.h"
 #import "Bash.h"
+#import "Client.h"
 
 @implementation BashComicsAppDelegate
 
@@ -18,7 +19,7 @@
 @synthesize favArray;
 @synthesize downloadQueue;
 
-
+@synthesize twitArray;
 
 + (BashComicsAppDelegate *)sharedAppDelegate
 {
@@ -32,6 +33,7 @@
 	[self copyDatabaseIfNeeded];
 	[self createIfNo];
 	[self createTumbIfNo];
+	
 	downloadQueue = [[NSOperationQueue alloc] init];
 	
 	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
@@ -43,12 +45,18 @@
 	self.favArray = tempArrays;
 	[tempArrays release];
 	
+	NSMutableArray *tempArraysi = [[NSMutableArray alloc] init];
+	self.twitArray = tempArraysi;
+	[tempArraysi release];
+	
 	[Bash getInitialDataToDisplay:[self getDBPath]];
     
     // Override point for customization after app launch    
 	
 	[window addSubview:[navigationController view]];
     [window makeKeyAndVisible];
+	
+	[self addToTwitList];
 }
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
@@ -151,6 +159,41 @@
     [window addSubview:View];
 }
 
+- (BOOL)isAvailable:(NSString *)urls
+{
+
+    NSString *stringURL = [NSString stringWithFormat:urls, @"test"];
+    NSURL *url = [NSURL URLWithString:stringURL];
+    return [[UIApplication sharedApplication] canOpenURL:url];
+}
+
+-(void)addToTwitList {
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"TwitterClients" ofType:@"plist"];
+    NSArray *clients = [NSArray arrayWithContentsOfFile:path];
+	//NSString *name;
+	//NSString *template;
+	for (NSDictionary *dict in clients)
+    {
+       // name = [dict objectForKey:@"name"];
+		//template = [dict objectForKey:@"template"];
+		//cliObj.names = name;
+		//cliObj.url = template;
+		Client *cliObj = [[Client alloc]  initWithPrimaryKey:0];
+		cliObj.names = [dict objectForKey:@"name"];
+		cliObj.url = [dict objectForKey:@"template"];
+		
+		if ([self isAvailable:cliObj.url]) {
+			NSLog(@"%@", cliObj.names);
+			[twitArray addObject:cliObj];
+			
+		}
+
+
+
+    }
+	NSLog(@"%d", [twitArray count]);
+}
+
 - (void)hideView
 {
     [View removeFromSuperview];
@@ -160,6 +203,7 @@
 #pragma mark Memory management
 
 - (void)dealloc {
+	[twitArray release];
 	[downloadQueue release];
 	[bashArray release];
 	[favArray release];
