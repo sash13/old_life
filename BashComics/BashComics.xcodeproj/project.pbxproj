@@ -40,10 +40,8 @@
 		D9EABA27111F40390038D9F3 /* ASINSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EABA1D111F40390038D9F3 /* ASINSStringAdditions.m */; };
 		D9EABA2D111F40710038D9F3 /* Bash.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EABA2C111F40710038D9F3 /* Bash.m */; };
 		D9EABA49111F42860038D9F3 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EABA48111F42860038D9F3 /* Parser.m */; };
-		D9EC4DC8113070F500EB3607 /* TwitterClients.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9EC4DC7113070F500EB3607 /* TwitterClients.plist */; };
+		D9EC4DC8113070F500EB3607 /* Clients.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9EC4DC7113070F500EB3607 /* Clients.plist */; };
 		D9EC4DCD113072C400EB3607 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EC4DCC113072C400EB3607 /* Client.m */; };
-		D9F97CAB11287B20000629FA /* FavView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F97CA911287B20000629FA /* FavView.m */; };
-		D9F97CAC11287B20000629FA /* FavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9F97CAA11287B20000629FA /* FavView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,12 +103,9 @@
 		D9EABA47111F42860038D9F3 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 		D9EABA48111F42860038D9F3 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
 		D9EABA4A111F42C70038D9F3 /* ParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParserDelegate.h; sourceTree = "<group>"; };
-		D9EC4DC7113070F500EB3607 /* TwitterClients.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TwitterClients.plist; sourceTree = "<group>"; };
+		D9EC4DC7113070F500EB3607 /* Clients.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Clients.plist; sourceTree = "<group>"; };
 		D9EC4DCB113072C400EB3607 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
 		D9EC4DCC113072C400EB3607 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
-		D9F97CA811287B20000629FA /* FavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavView.h; sourceTree = "<group>"; };
-		D9F97CA911287B20000629FA /* FavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavView.m; sourceTree = "<group>"; };
-		D9F97CAA11287B20000629FA /* FavView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,9 +144,6 @@
 				D966C55511259B16007F5D2D /* ViewController.m */,
 				D9A52F17112738DD004EC1F3 /* TapDetectingImageView.h */,
 				D9A52F18112738DD004EC1F3 /* TapDetectingImageView.m */,
-				D9F97CA811287B20000629FA /* FavView.h */,
-				D9F97CA911287B20000629FA /* FavView.m */,
-				D9F97CAA11287B20000629FA /* FavView.xib */,
 				D97DBFEB112ED68F00357B97 /* FaviView.h */,
 				D97DBFEC112ED68F00357B97 /* FaviView.m */,
 				D97DBFED112ED68F00357B97 /* FaviView.xib1 */,
@@ -196,7 +188,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D9EC4DC7113070F500EB3607 /* TwitterClients.plist */,
+				D9EC4DC7113070F500EB3607 /* Clients.plist */,
 				D96C04C211302FC400FDAC88 /* favorites.png */,
 				D9331054112C382700A7A662 /* Bash.sqlite */,
 				D966C55611259B16007F5D2D /* ViewController.xib */,
@@ -359,11 +351,10 @@
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
 				D966C55811259B16007F5D2D /* ViewController.xib in Resources */,
-				D9F97CAC11287B20000629FA /* FavView.xib in Resources */,
 				D9331055112C382700A7A662 /* Bash.sqlite in Resources */,
 				D97DBFEF112ED68F00357B97 /* FaviView.xib1 in Resources */,
 				D96C04C311302FC400FDAC88 /* favorites.png in Resources */,
-				D9EC4DC8113070F500EB3607 /* TwitterClients.plist in Resources */,
+				D9EC4DC8113070F500EB3607 /* Clients.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,7 +383,6 @@
 				D924DF931124515800558812 /* BashCell.m in Sources */,
 				D966C55711259B16007F5D2D /* ViewController.m in Sources */,
 				D9A52F19112738DD004EC1F3 /* TapDetectingImageView.m in Sources */,
-				D9F97CAB11287B20000629FA /* FavView.m in Sources */,
 				D97DBFEE112ED68F00357B97 /* FaviView.m in Sources */,
 				D9EC4DCD113072C400EB3607 /* Client.m in Sources */,
 			);

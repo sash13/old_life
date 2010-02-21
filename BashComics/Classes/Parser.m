@@ -267,7 +267,7 @@
 	manyyes = [appDelegate.bashArray count];
 	
 	NSLog(@"%i",manyyes);
-	if (errors > 0) {
+	if (errors == 1) {
 		[delegate update:self myError:@"error"];
 	}else {
 		[delegate update:self successfully:@"Ok"];

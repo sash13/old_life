@@ -168,7 +168,7 @@
 }
 
 -(void)addToTwitList {
-	NSString *path = [[NSBundle mainBundle] pathForResource:@"TwitterClients" ofType:@"plist"];
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"Clients" ofType:@"plist"];
     NSArray *clients = [NSArray arrayWithContentsOfFile:path];
 	//NSString *name;
 	//NSString *template;
