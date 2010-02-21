@@ -99,7 +99,8 @@
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSError *error;
 	NSString *dbPath = [self getDBPath];
-	NSLog(@"%@", dbPath);
+	//NSLog(@"%@", dbPath);
+	
 	BOOL success = [fileManager fileExistsAtPath:dbPath]; 
 	if(!success) {
 		
@@ -183,7 +184,7 @@
 		cliObj.url = [dict objectForKey:@"template"];
 		
 		if ([self isAvailable:cliObj.url]) {
-			NSLog(@"%@", cliObj.names);
+			//NSLog(@"%@", cliObj.names);
 			[twitArray addObject:cliObj];
 			
 		}
@@ -191,7 +192,7 @@
 
 
     }
-	NSLog(@"%d", [twitArray count]);
+	//NSLog(@"%d", [twitArray count]);
 }
 
 - (void)hideView

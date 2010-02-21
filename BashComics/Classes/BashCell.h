@@ -17,6 +17,7 @@
 @private
 	UILabel *textLabel;
 	UILabel *dateLabel;
+	//UILabel *isNewLabel;
 	UIImageView *photo;
 	UIActivityIndicatorView *scrollingWheel;
 	Bash *item;

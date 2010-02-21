@@ -166,7 +166,7 @@
 			
 			//Client *client = [appDelegate.twitArray init];
 			//Client *myObj = [appDelegate.twitArray objectAtIndex:0];
-			//NSLog(@"%@", myObj.names);
+			////NSLog(@"%@", myObj.names);
 
 			for (Client *client in appDelegate.twitArray)
 			{
@@ -181,7 +181,7 @@
   }
   else {
 	//NSString *buttonTitle = [modalView buttonTitleAtIndex:buttonIndex];
-	  NSLog(@"%@",buttonTitle);
+	  //NSLog(@"%@",buttonTitle);
 	  
 	  for (Client *client in appDelegate.twitArray)
 	  {
@@ -331,7 +331,7 @@
     //    As the zoom scale decreases, so more content is visible, the size of the rect grows.
     zoomRect.size.height = [imageScrollView frame].size.height / scale;
     zoomRect.size.width  = [imageScrollView frame].size.width  / scale;
-   // NSLog(@"%f", zoomRect.size.height);
+   // //NSLog(@"%f", zoomRect.size.height);
     // choose an origin so as to get the right center.
     zoomRect.origin.x    = center.x - (zoomRect.size.width  / 2.0);
     zoomRect.origin.y    = center.y - (zoomRect.size.height / 2.0);

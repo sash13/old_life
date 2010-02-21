@@ -34,8 +34,11 @@
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] 
 											 initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
 											 target:self action:@selector(refresh:)];
+	//self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] 
+	//										 initWithImage:[UIImage imageNamed:@"favorites.png"] style:UIBarButtonItemStylePlain target:self action:@selector(openFav:)];
+	//
 	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] 
-											 initWithImage:[UIImage imageNamed:@"favorites.png"] style:UIBarButtonItemStylePlain target:self action:@selector(openFav:)];
+											initWithTitle:@"Любимые" style:UIBarButtonItemStyleBordered target:self action:@selector(openFav:)];
 	//self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] 
 	//										  initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks 
 	//										  target:self action:@selector(openFav:)];
@@ -46,7 +49,7 @@
 
 - (void) refresh:(id)sender {
 	[appDelegate showView];
-	NSLog(@"refresh");
+	//NSLog(@"refresh");
 	pars = [[Parser alloc] init];
 	pars.delegate = self;
 	[pars myfu];
@@ -68,7 +71,7 @@
 -(void)update:(Parser *)feed myError:(NSString *)errorMsg {
 	
 	[appDelegate hideView];
-	NSLog(@"%@", errorMsg);
+	//NSLog(@"%@", errorMsg);
 	[self.tableView reloadData];
 
 	
@@ -83,7 +86,7 @@
 	
 	
 	[appDelegate hideView];
-	NSLog(@"%@", successMsg);
+	//NSLog(@"%@", successMsg);
 	[self.tableView reloadData];
 	[self loadContentForVisibleCells]; 
 	

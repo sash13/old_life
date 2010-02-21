@@ -32,7 +32,7 @@
 	//Bash *myObjs = [appDelegate.bashArray objectAtIndex:manyyes];
 	//Bash *bashObj = [appDelegate.bashArray objectAtIndex:1];
 	//NSString *olele = [appDelegate.bashArray objectAtIndex:manyyes-1];
-	//NSLog(@"Это %@", bashObj.bashDate);
+	////NSLog(@"Это %@", bashObj.bashDate);
 	
 	Bash *bashObj = [[Bash alloc] initWithPrimaryKey:0];
 	int i = 2;
@@ -140,24 +140,24 @@
 				//////////////////////////////////////////////////////////////////////////////
 				//Bash *bashObj = [[Bash alloc] initWithPrimaryKey:0];
 				if ([dateC isEqualToString:myObj.bashDate]) {
-					NSLog(@"ends");
+					//NSLog(@"ends");
 				}
 				
 				else {
-					NSLog(@"%@ %@",dateC, myObj.bashDate);
+					//NSLog(@"%@ %@",dateC, myObj.bashDate);
 				bashObj.bashLink = myurl;
 				bashObj.bashImgFull = imgfullC;
 				bashObj.bashTumb = tumbC;
 				bashObj.bashDate = dateC;
 				bashObj.bashInfo = infoC;
 				bashObj.bashFav = @"no";
-				
+				//bashObj.isNew = @"Новый";
 				[appDelegate addBash:bashObj];
 				}
 				//////////////////////////////////////////////////////////////////////////////
 				myurl = [NSString stringWithFormat:@"http://bash.org.ru%@",nextC];
 				
-				NSLog(@"imgfull:%@ date:%@  tumb: %@ prev: %@ next: %@_%@",imgfullC,dateC,tumbC,prevC,nextC,infoC);
+				//NSLog(@"imgfull:%@ date:%@  tumb: %@ prev: %@ next: %@_%@",imgfullC,dateC,tumbC,prevC,nextC,infoC);
 				
 			}
 			else {
@@ -179,11 +179,11 @@
 				//////////////////////////////////////////////////////////////////////////////
 				//Bash *bashObj = [[Bash alloc] initWithPrimaryKey:0];
 				if ([dateC isEqualToString:myObj.bashDate]) {
-					NSLog(@"ends");
+					//NSLog(@"ends");
 				}
 				
 				else {
-					NSLog(@"%@ %@",dateC, myObj.bashDate);
+					//NSLog(@"%@ %@",dateC, myObj.bashDate);
 					bashObj.bashLink = myurl;
 					bashObj.bashImgFull = imgfullC;
 					bashObj.bashTumb = tumbC;
@@ -194,8 +194,9 @@
 					//						encoding:NSUTF8StringEncoding] autorelease];
 					bashObj.bashInfo = infoC;
 					bashObj.bashFav = @"no";
+					//bashObj.isNew = @"Новый";
 					[appDelegate addBash:bashObj];
-					NSLog(@"imgfull:%@ date:%@  tumb: %@ prev: %@ next: %@  %@",imgfullC,dateC,tumbC,prevC,nextC,infoC);
+					//NSLog(@"imgfull:%@ date:%@  tumb: %@ prev: %@ next: %@  %@",imgfullC,dateC,tumbC,prevC,nextC,infoC);
 				}
 				//NSLog(@"imgfull:%@ date:%@  tumb: %@ prev: %@ next: %@  %@",imgfullC,dateC,tumbC,prevC,nextC,infoC);
 				
@@ -203,11 +204,11 @@
 				//////////////////////////////////////////////////////////////////////////////
 				[appDelegate reload];
 				if (nextC == prevC) {
-					NSLog(@"end");
+					//NSLog(@"end");
 					i--;
 					
 				}else {
-					NSLog(@"next");
+					//NSLog(@"next");
 				}
 				
 				
@@ -237,7 +238,7 @@
 			 {
 			 if([word hasPrefix:@"http://"])
 			 {
-			 NSLog(@"%@",word);
+			 //NSLog(@"%@",word);
 			 [ssl addObject:word];
 			 
 			 }
@@ -257,16 +258,16 @@
 			
 		}
 		else {
-			NSLog(@"errors");
+			//NSLog(@"errors");
 			++errors;
 			break;
 		}
 		//NSLog(@"%@",myurl);
 	}
-	NSLog(@"error2 %d", errors);
+	//NSLog(@"error2 %d", errors);
 	manyyes = [appDelegate.bashArray count];
 	
-	NSLog(@"%i",manyyes);
+	//NSLog(@"%i",manyyes);
 	if (errors == 1) {
 		[delegate update:self myError:@"error"];
 	}else {

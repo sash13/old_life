@@ -13,6 +13,6 @@
 @protocol BashCellDelegate
 
 @required
-- (void)bashCellAnimationFinished:(BashCell *)cell;
+//- (void)bashCellAnimationFinished:(BashCell *)cell;
 
 @end

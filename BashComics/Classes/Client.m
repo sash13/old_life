@@ -39,7 +39,7 @@
 }
 
 - (void) dealloc {
-	[ID release];
+	//[ID release];
 	[url release];
 	[names release];
 

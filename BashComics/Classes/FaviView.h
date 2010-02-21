@@ -12,7 +12,7 @@
 @class Bash;
 @class ViewController;
 
-@interface FaviView : UITableViewController {
+@interface FaviView : UITableViewController <BashCellDelegate>  {
 	
 	BashComicsAppDelegate *appDelegate;
 	ViewController *viewController;

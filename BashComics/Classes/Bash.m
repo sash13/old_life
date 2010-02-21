@@ -31,7 +31,7 @@ static sqlite3_stmt *detailStmt = nil;
 	
 	BashComicsAppDelegate *appDelegate = (BashComicsAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
-	NSLog(@"add");
+	//NSLog(@"add");
 	if (sqlite3_open([dbPath UTF8String], &database) == SQLITE_OK) {
 		
 		const char *sql = "select bashID, bashdate, bashinfo, bashlink, bashtumb, bashimgfull, bashfav from bash ORDER BY bashID DESC";
@@ -65,7 +65,7 @@ static sqlite3_stmt *detailStmt = nil;
 	
 	BashComicsAppDelegate *appDelegate = (BashComicsAppDelegate *)[[UIApplication sharedApplication] delegate];
 	
-	NSLog(@"add");
+	//NSLog(@"add");
 	if (sqlite3_open([dbPath UTF8String], &database) == SQLITE_OK) {
 		
 		const char *sql = "select bashID, bashdate, bashinfo, bashlink, bashtumb, bashimgfull from bash  Where fav = 'yes' ORDER BY bashID DESC";
@@ -245,7 +245,7 @@ static sqlite3_stmt *detailStmt = nil;
 		
 		sqlite3_bind_int(updateStmt, 7, bashID);
 		
-		NSLog(@"update %@", bashInfo);
+		//NSLog(@"update %@", bashInfo);
 		if(SQLITE_DONE != sqlite3_step(updateStmt))
 			NSAssert1(0, @"Error while updating. '%s'", sqlite3_errmsg(database));
 		
@@ -271,7 +271,8 @@ static sqlite3_stmt *detailStmt = nil;
 	thumbnail = nil;
 	[bashFav release];
 	bashFav = nil;
-	
+	//[isNew release];
+	//isNew = nil;
 	isViewController = NO;
 
 }
@@ -335,11 +336,18 @@ static sqlite3_stmt *detailStmt = nil;
 
 - (void)requestWentWrong:(ASIHTTPRequest *)request
 {
-    NSError *error = [request error];
-    if ([delegate respondsToSelector:@selector(bash:couldNotLoadImageError:)])
+   // NSError *error = [request error];
+   // if ([delegate respondsToSelector:@selector(bash:couldNotLoadImageError:)])
+   // {
+    //    [delegate bash:self couldNotLoadImageError:error];
+   // }
+	UIImage *remoteImage = [[UIImage alloc] initWithContentsOfFile:@"non.png"];
+    self.thumbnail = remoteImage;
+    if ([delegate respondsToSelector:@selector(bash:didLoadThumbnail:)])
     {
-        [delegate bash:self couldNotLoadImageError:error];
+        [delegate bash:self didLoadThumbnail:self.thumbnail];
     }
+    [remoteImage release];
 }
 
 #pragma mark -
@@ -351,7 +359,7 @@ static sqlite3_stmt *detailStmt = nil;
 	NSString *MybashTumb = [listItems lastObject];
 	
 	NSFileManager *fileManager = [NSFileManager defaultManager];
-	NSError *error;
+	//NSError *error;
 	
 	NSString *dbPath = [self yesOrNo:MybashTumb];
 	//NSString *docDir = [self docDirs];
@@ -399,6 +407,7 @@ static sqlite3_stmt *detailStmt = nil;
 	[bashImgFull release];
 	[bashTumb release];
 	[bashFav release];
+	//[isNew release];
 	[super dealloc];
 }
 

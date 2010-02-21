@@ -199,7 +199,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	Bash *bashObj = [appDelegate.favArray objectAtIndex:indexPath.row];
-	NSLog(@"open %@", bashObj.bashInfo);
+	//NSLog(@"open %@", bashObj.bashInfo);
 	
 	viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
 	viewController.item = bashObj;
@@ -227,7 +227,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
 		Bash *bashObj = [appDelegate.favArray objectAtIndex:indexPath.row];
-		NSLog(@"%@", bashObj.bashInfo);
+		//NSLog(@"%@", bashObj.bashInfo);
 		[bashObj setValue:@"no" forKey:@"bashFav"];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
     }   
@@ -243,7 +243,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 		
 
 		Bash *bashObj = [appDelegate.favArray objectAtIndex:indexPath.row];
-		NSLog(@"%@", bashObj.bashInfo);
+		//NSLog(@"%@", bashObj.bashInfo);
 		[bashObj setValue:@"no" forKey:@"bashFav"];
 		
 		//[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];

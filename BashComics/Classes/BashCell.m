@@ -14,22 +14,40 @@
 @synthesize item;
 @synthesize delegate;
 
+/*- (NSString *) yesOrNo:(NSString *)string {
+	
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
+	NSString *documentsDir = [paths objectAtIndex:0];
+	//documentsDir = [documentsDir stringByAppendingPathComponent:@"tumb/"];
+	NSString *newDocumentsDir = [documentsDir stringByAppendingPathComponent:@"files/"];
+	//NSLog(@"%@", item.bashTumb);
+	return [newDocumentsDir stringByAppendingPathComponent:string];
+}*/
+
 - (id)initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)reuseIdentifier 
 {
     if (self = [super initWithFrame:frame reuseIdentifier:reuseIdentifier]) 
     {
         self.backgroundColor = [UIColor blackColor];
         
-        textLabel = [[UILabel alloc] initWithFrame:CGRectMake(50.0, 1.0, 290.0, 20.0)];
+        textLabel = [[UILabel alloc] initWithFrame:CGRectMake(50.0, 1.0, 90.0, 20.0)];
         textLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:18.0];
         textLabel.contentMode = UIViewContentModeScaleToFill;
         [self.contentView addSubview:textLabel];
 		
-		dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(50.0, 21.0, 290.0, 10.0)];
+		dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(50.0, 21.0, 90.0, 10.0)];
         dateLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:9.0];
 		dateLabel.textColor = [UIColor lightGrayColor];
         dateLabel.contentMode = UIViewContentModeScaleToFill;
         [self.contentView addSubview:dateLabel];
+		
+		
+		/*isNewLabel = [[UILabel alloc] initWithFrame:CGRectMake(290.0, 20.0, 70.0, 10.0)];
+        isNewLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:10.0];
+		isNewLabel.textColor = [UIColor redColor];
+        isNewLabel.contentMode = UIViewContentModeScaleToFill;
+        [self.contentView addSubview:isNewLabel];*/
+		
 		
 		photo = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 40.0, 40.0)];
         photo.contentMode = UIViewContentModeScaleAspectFill;
@@ -41,11 +59,27 @@
         scrollingWheel.hidesWhenStopped = YES;
         [scrollingWheel stopAnimating];
         [self.contentView addSubview:scrollingWheel];
-        
-        self.accessoryType = UITableViewCellAccessoryNone;
+		
+		
+		//NSArray *listItems = [item.bashTumb componentsSeparatedByString:@"/"];
+		//NSString *MybashImgFull = [listItems lastObject];
+		//NSLog(@"%@", item.bashTumb);
+		//NSFileManager *fileManager = [NSFileManager defaultManager];
+		//NSError *error;
+		
+		//NSString *dbPath = [self yesOrNo:MybashImgFull];
+		//NSString *docDir = [self docDirs];
+		
+		////NSLog(@"%@", dbPath);
+		//BOOL success = [fileManager fileExistsAtPath:dbPath]; 
+		//if(!success) 
+         //   self.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+		//else
+			self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     return self;
 }
+
 
 #pragma mark -
 #pragma mark Public methods
@@ -63,8 +97,11 @@
         
         if (item != nil)
         {
+			//NSLog(@"%@", item.bashTumb);
             textLabel.text = item.bashInfo;
             dateLabel.text = item.bashDate;
+			//isNewLabel.text = item.isNew;
+			////NSLog(@"%@", item.isNew);
             // This is to avoid the item loading the image
             // when this setter is called; we only want that
             // to happen depending on the scrolling of the table
@@ -108,6 +145,7 @@
 	delegate = nil;
 	[photo release];
 	[dateLabel release];
+	//[isNewLabel release];
     [textLabel release];
     [item setDelegate:nil];
     [item release];
