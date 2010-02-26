@@ -151,13 +151,16 @@
    
 	switch (buttonIndex)
 	{
-		case 0:
+		case 1:
 		{
 			[self add];
 			break;
 		}
-		case 1:
+		case 2:
 		{
+			if ([appDelegate.twitArray count] > 0) {
+				
+			
 			UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Выбрать твиттер клиент"
 															   delegate:self
 													  cancelButtonTitle:@"Закрыть"
@@ -167,6 +170,7 @@
 			//Client *client = [appDelegate.twitArray init];
 			//Client *myObj = [appDelegate.twitArray objectAtIndex:0];
 			////NSLog(@"%@", myObj.names);
+			sheet.actionSheetStyle = self.navigationController.navigationBar.barStyle;
 
 			for (Client *client in appDelegate.twitArray)
 			{
@@ -175,6 +179,7 @@
 			
 			[sheet showInView:self.view];
 			[sheet release];
+			}
 			break;
 		}
 	}
@@ -224,9 +229,16 @@
 	if([item.bashFav isEqualToString:@"yes"]){
 		UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Действие"
 																 delegate:self cancelButtonTitle:@"Закрыть" destructiveButtonTitle:nil
-														otherButtonTitles:@"Удалить из избранного", @"Твитнуть", nil];
+														otherButtonTitles:nil];
+		
+		[actionSheet addButtonWithTitle:@"Удалить из избранного"];
+		if ([appDelegate.twitArray count] > 0) {
+			[actionSheet addButtonWithTitle:@"Твитнуть"];
+		}
+		
+		
 		actionSheet.actionSheetStyle = self.navigationController.navigationBar.barStyle;
-		actionSheet.destructiveButtonIndex = 0;
+		actionSheet.destructiveButtonIndex = 1;
 		[actionSheet showInView:self.view]; // show from our table view (pops up in the middle of the table)
 		[actionSheet release];
 	}
@@ -235,11 +247,17 @@
 		
 	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Действие"
 															 delegate:self cancelButtonTitle:@"Закрыть" destructiveButtonTitle:nil
-													otherButtonTitles:@"Добавить в избранное", @"Твитнуть", nil];
+													otherButtonTitles:nil];
+		
+	[actionSheet addButtonWithTitle:@"Добавить в избранное"];
+	if ([appDelegate.twitArray count] > 0) {
+		[actionSheet addButtonWithTitle:@"Твитнуть"];
+	}
 	actionSheet.actionSheetStyle = self.navigationController.navigationBar.barStyle;
 	[actionSheet showInView:self.view]; // show from our table view (pops up in the middle of the table)
 	[actionSheet release];
 	}
+
 }
 
 -(void)add {

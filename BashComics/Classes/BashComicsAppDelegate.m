@@ -147,13 +147,20 @@
     {
         View = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 480.0)];
         View.opaque = NO;
-        View.backgroundColor = [UIColor darkGrayColor];
+        View.backgroundColor = [UIColor blackColor];
         View.alpha = 0.5;
 		
-        UIActivityIndicatorView *spinningWheel = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(142.0, 222.0, 37.0, 37.0)];
+        UIActivityIndicatorView *spinningWheel = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(90.0, 222.0, 37.0, 37.0)];
         [spinningWheel startAnimating];
         spinningWheel.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
         [View addSubview:spinningWheel];
+		
+		UILabel *label = [[[UILabel alloc] initWithFrame:CGRectMake(140.0, 222.0, 90.0, 37.0)] autorelease];
+		//label.font = [UIFont systemFontOfSize:10];
+		label.backgroundColor = [UIColor clearColor];
+		label.text = @"Загрузка...";
+		label.textColor = [UIColor whiteColor];
+		[View addSubview:label];
         [spinningWheel release];
     }
     
