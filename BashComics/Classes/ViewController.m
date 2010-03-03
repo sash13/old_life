@@ -146,24 +146,33 @@
 - (void)actionSheet:(UIActionSheet *)modalView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
   NSString *buttonTitle = [modalView buttonTitleAtIndex:buttonIndex];
-  if ([buttonTitle isEqualToString:@"Удалить из избранного"] || [buttonTitle isEqualToString:@"Твитнуть"] || [buttonTitle isEqualToString:@"Добавить в избранное"] || [buttonTitle isEqualToString:@"Закрыть"]) {
+  if ([buttonTitle isEqualToString:@"Удалить из избранного"] || [buttonTitle isEqualToString:@"Твитнуть"] || [buttonTitle isEqualToString:@"Добавить в избранное"] || [buttonTitle isEqualToString:@"Закрыть"] || [buttonTitle isEqualToString:@"На bash.org.ru"]) {
 		
    
 	switch (buttonIndex)
 	{
-		case 1:
+		case 0:
 		{
 			[self add];
 			break;
 		}
-		case 2:
+		case 1:
 		{
-			if ([appDelegate.twitArray count] > 0) {
+			
+			if ([buttonTitle isEqualToString:@"На bash.org.ru"])
+			{
+				
+				NSURL *urls = [NSURL URLWithString:item.bashLink];
+				[[UIApplication sharedApplication] openURL:urls]; 
+				
+			}
+			else {
+			//if ([appDelegate.twitArray count] > 0) {
 				
 			
 			UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Выбрать твиттер клиент"
 															   delegate:self
-													  cancelButtonTitle:@"Закрыть"
+													  cancelButtonTitle:nil
 												 destructiveButtonTitle:nil
 													  otherButtonTitles:nil];
 			
@@ -176,9 +185,10 @@
 			{
 				[sheet addButtonWithTitle:client.names];
 			}
-			
+			[sheet addButtonWithTitle:@"Закрыть"];
 			[sheet showInView:self.view];
 			[sheet release];
+			//}
 			}
 			break;
 		}
@@ -228,17 +238,18 @@
 	
 	if([item.bashFav isEqualToString:@"yes"]){
 		UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Действие"
-																 delegate:self cancelButtonTitle:@"Закрыть" destructiveButtonTitle:nil
+																 delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil
 														otherButtonTitles:nil];
 		
 		[actionSheet addButtonWithTitle:@"Удалить из избранного"];
 		if ([appDelegate.twitArray count] > 0) {
 			[actionSheet addButtonWithTitle:@"Твитнуть"];
 		}
-		
+		[actionSheet addButtonWithTitle:@"На bash.org.ru"];
+		[actionSheet addButtonWithTitle:@"Закрыть"];
 		
 		actionSheet.actionSheetStyle = self.navigationController.navigationBar.barStyle;
-		actionSheet.destructiveButtonIndex = 1;
+		actionSheet.destructiveButtonIndex = 0;
 		[actionSheet showInView:self.view]; // show from our table view (pops up in the middle of the table)
 		[actionSheet release];
 	}
@@ -246,13 +257,16 @@
 	else {
 		
 	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Действие"
-															 delegate:self cancelButtonTitle:@"Закрыть" destructiveButtonTitle:nil
+															 delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil
 													otherButtonTitles:nil];
 		
 	[actionSheet addButtonWithTitle:@"Добавить в избранное"];
 	if ([appDelegate.twitArray count] > 0) {
 		[actionSheet addButtonWithTitle:@"Твитнуть"];
 	}
+	[actionSheet addButtonWithTitle:@"На bash.org.ru"];
+	[actionSheet addButtonWithTitle:@"Закрыть"];
+		
 	actionSheet.actionSheetStyle = self.navigationController.navigationBar.barStyle;
 	[actionSheet showInView:self.view]; // show from our table view (pops up in the middle of the table)
 	[actionSheet release];

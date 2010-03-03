@@ -70,6 +70,7 @@
 		D97DBFEC112ED68F00357B97 /* FaviView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaviView.m; sourceTree = "<group>"; };
 		D9A52F17112738DD004EC1F3 /* TapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapDetectingImageView.h; sourceTree = "<group>"; };
 		D9A52F18112738DD004EC1F3 /* TapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapDetectingImageView.m; sourceTree = "<group>"; };
+		D9C04ED1113960AA00C1A173 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		D9DD0CD81131754F003503B6 /* non.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = non.png; sourceTree = "<group>"; };
 		D9DD0CEE113177AB003503B6 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		D9EAB9F7111F3FE20038D9F3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -227,6 +228,7 @@
 				D9EABA0B111F40390038D9F3 /* TFHppleElement.h */,
 				D9EABA0C111F40390038D9F3 /* TFHppleElement.m */,
 				D9EABA06111F40390038D9F3 /* XPath */,
+				D9C04ED1113960AA00C1A173 /* libxml2.dylib */,
 			);
 			name = Hpple;
 			sourceTree = "<group>";
