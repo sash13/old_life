@@ -302,7 +302,7 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>165 199 1459 815 0 0 1680 1028 </string>
+						<string>175 174 1459 815 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -332,7 +332,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D9793F1B113EA209000336A9</string>
+										<string>D9793F2C113EA811000336A9</string>
 										<key>history</key>
 										<array>
 											<string>D9EABA3E111F42370038D9F3</string>
@@ -347,14 +347,12 @@
 											<string>D9DD0C7211316EBA003503B6</string>
 											<string>D9DD0CD011317546003503B6</string>
 											<string>D9DD0D0C113178CD003503B6</string>
-											<string>D9DD0D0D113178CD003503B6</string>
 											<string>D9F1FBDE11385DC6007A496F</string>
 											<string>D9F9571C113C0D1F00CEAFD4</string>
 											<string>D90F8924113E924D005107A9</string>
 											<string>D90F8925113E924D005107A9</string>
 											<string>D90F8926113E924D005107A9</string>
 											<string>D90F892D113E924D005107A9</string>
-											<string>D90F893F113E930A005107A9</string>
 											<string>D90F8954113E98FC005107A9</string>
 											<string>D90F8955113E98FC005107A9</string>
 											<string>D90F8957113E98FC005107A9</string>
@@ -363,7 +361,9 @@
 											<string>D90F8968113E9ACD005107A9</string>
 											<string>D90F8969113E9ACD005107A9</string>
 											<string>D9793ED7113E9BD9000336A9</string>
-											<string>D9793ED8113E9BD9000336A9</string>
+											<string>D9793F26113EA7C9000336A9</string>
+											<string>D9793F27113EA7C9000336A9</string>
+											<string>D9793F28113EA7C9000336A9</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -377,7 +377,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1251, 769}}</string>
 								<key>RubberWindowFrame</key>
-								<string>165 199 1459 815 0 0 1680 1028 </string>
+								<string>175 174 1459 815 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -397,7 +397,7 @@
 								<key>Frame</key>
 								<string>{{0, 774}, {1251, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>165 199 1459 815 0 0 1680 1028 </string>
+								<string>175 174 1459 815 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -569,7 +569,7 @@
 		<string>/Users/sasha/Work/SVN/southpark/trunk/BashComics/BashComics.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>165 199 1459 815 0 0 1680 1028 </string>
+	<string>175 174 1459 815 0 0 1680 1028 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

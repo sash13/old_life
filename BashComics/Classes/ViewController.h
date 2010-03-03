@@ -19,6 +19,7 @@
 	UIScrollView *imageScrollView;
 	BashComicsAppDelegate *appDelegate;
 
+	//UIImageView *photoView;
 	NSArray *_clients;
 
 

@@ -79,6 +79,7 @@
     [imageScrollView setContentSize:[imageView frame].size];
 
     [imageScrollView addSubview:imageView];
+	
     [imageView release];
    // NSLog(@"%f %f", [imageScrollView frame].size.width, [imageView frame].size.width);
     // calculate minimum scale to perfectly fit image width, and begin at that scale

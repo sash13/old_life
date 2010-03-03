@@ -42,9 +42,9 @@
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeExecutable = D9EAB9AE111F3C260038D9F3 /* BashComics */;
-		activeSDKPreference = iphonesimulator3.0;
+		activeSDKPreference = iphoneos3.0;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* BashComics */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* BashComics */,
@@ -143,6 +143,11 @@
 			D9793F15113EA16F000336A9 /* PBXTextBookmark */ = D9793F15113EA16F000336A9 /* PBXTextBookmark */;
 			D9793F18113EA1C7000336A9 /* PBXTextBookmark */ = D9793F18113EA1C7000336A9 /* PBXTextBookmark */;
 			D9793F1B113EA209000336A9 /* PBXTextBookmark */ = D9793F1B113EA209000336A9 /* PBXTextBookmark */;
+			D9793F26113EA7C9000336A9 /* PlistBookmark */ = D9793F26113EA7C9000336A9 /* PlistBookmark */;
+			D9793F27113EA7C9000336A9 /* PBXTextBookmark */ = D9793F27113EA7C9000336A9 /* PBXTextBookmark */;
+			D9793F28113EA7C9000336A9 /* PBXTextBookmark */ = D9793F28113EA7C9000336A9 /* PBXTextBookmark */;
+			D9793F29113EA7C9000336A9 /* PBXTextBookmark */ = D9793F29113EA7C9000336A9 /* PBXTextBookmark */;
+			D9793F2C113EA811000336A9 /* PBXTextBookmark */ = D9793F2C113EA811000336A9 /* PBXTextBookmark */;
 			D9DD0C4811316A1E003503B6 = D9DD0C4811316A1E003503B6 /* PlistBookmark */;
 			D9DD0C6411316E85003503B6 = D9DD0C6411316E85003503B6 /* PBXTextBookmark */;
 			D9DD0C6711316E85003503B6 = D9DD0C6711316E85003503B6 /* PBXTextBookmark */;
@@ -205,7 +210,7 @@
 		fRef = D966C55411259B16007F5D2D /* ViewController.h */;
 		name = "ViewController.h: 23";
 		rLen = 0;
-		rLoc = 456;
+		rLoc = 483;
 		rType = 0;
 		vrLen = 579;
 		vrLoc = 0;
@@ -279,7 +284,7 @@
 		fRef = D966C55511259B16007F5D2D /* ViewController.m */;
 		name = "ViewController.m: 180";
 		rLen = 0;
-		rLoc = 6264;
+		rLoc = 6266;
 		rType = 0;
 		vrLen = 1746;
 		vrLoc = 3025;
@@ -364,16 +369,16 @@
 	};
 	D966C55411259B16007F5D2D /* ViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1190, 712}}";
-			sepNavSelRange = "{456, 0}";
-			sepNavVisRange = "{0, 579}";
+			sepNavIntBoundsRect = "{{0, 0}, {1190, 737}}";
+			sepNavSelRange = "{439, 0}";
+			sepNavVisRange = "{0, 606}";
 		};
 	};
 	D966C55511259B16007F5D2D /* ViewController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1190, 5447}}";
-			sepNavSelRange = "{2464, 0}";
-			sepNavVisRange = "{877, 2389}";
+			sepNavSelRange = "{2746, 0}";
+			sepNavVisRange = "{877, 2391}";
 		};
 	};
 	D9793ED1113E9B6E000336A9 /* PBXTextBookmark */ = {
@@ -401,7 +406,7 @@
 		fRef = D966C55511259B16007F5D2D /* ViewController.m */;
 		name = "ViewController.m: 180";
 		rLen = 0;
-		rLoc = 6264;
+		rLoc = 6266;
 		rType = 0;
 		vrLen = 1747;
 		vrLoc = 3024;
@@ -604,6 +609,58 @@
 		rLoc = 2464;
 		rType = 0;
 		vrLen = 2389;
+		vrLoc = 877;
+	};
+	D9793F26113EA7C9000336A9 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* BashComics-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleVersion,
+		);
+		name = "/Users/sasha/Work/SVN/southpark/trunk/BashComics/BashComics-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	D9793F27113EA7C9000336A9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D966C55411259B16007F5D2D /* ViewController.h */;
+		name = "ViewController.h: 22";
+		rLen = 0;
+		rLoc = 439;
+		rType = 0;
+		vrLen = 606;
+		vrLoc = 0;
+	};
+	D9793F28113EA7C9000336A9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D966C55511259B16007F5D2D /* ViewController.m */;
+		name = "ViewController.m: 81";
+		rLen = 0;
+		rLoc = 2739;
+		rType = 0;
+		vrLen = 2267;
+		vrLoc = 772;
+	};
+	D9793F29113EA7C9000336A9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D966C55511259B16007F5D2D /* ViewController.m */;
+		name = "ViewController.m: 82";
+		rLen = 0;
+		rLoc = 2746;
+		rType = 0;
+		vrLen = 2455;
+		vrLoc = 877;
+	};
+	D9793F2C113EA811000336A9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D966C55511259B16007F5D2D /* ViewController.m */;
+		name = "ViewController.m: 81";
+		rLen = 0;
+		rLoc = 2746;
+		rType = 0;
+		vrLen = 2391;
 		vrLoc = 877;
 	};
 	D97DBFEB112ED68F00357B97 /* FaviView.h */ = {
