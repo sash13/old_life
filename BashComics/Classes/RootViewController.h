@@ -17,6 +17,7 @@
 @interface RootViewController : UITableViewController <ParserDelegate, BashCellDelegate> 
 {
 @private
+	NSInteger ifyes;
     Parser *pars;
 	BashComicsAppDelegate *appDelegate;
 	ViewController *viewController;
@@ -25,5 +26,6 @@
 }
 
 @property (nonatomic, retain) FaviView*  faviView;
+@property (nonatomic, readonly) NSInteger ifyes;
 //@property (nonatomic, retain) UIToolbar	*toolbar;
 @end

@@ -341,7 +341,8 @@ static sqlite3_stmt *detailStmt = nil;
    // {
     //    [delegate bash:self couldNotLoadImageError:error];
    // }
-	UIImage *remoteImage = [[UIImage alloc] initWithContentsOfFile:@"non.png"];
+	NSString *Path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"non.png"];
+	UIImage *remoteImage = [[UIImage alloc] initWithContentsOfFile:Path];
     self.thumbnail = remoteImage;
     if ([delegate respondsToSelector:@selector(bash:didLoadThumbnail:)])
     {

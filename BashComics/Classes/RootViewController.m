@@ -18,7 +18,7 @@
 
 @implementation RootViewController
 
-@synthesize faviView;
+@synthesize faviView, ifyes;
 //@synthesize toolbar;
 
 
@@ -99,6 +99,11 @@
 	[self loadContentForVisibleCells]; 
 	
 
+	if (!ifyes) {
+		[self refresh:0];
+		ifyes = 1;
+	}
+	//[self refresh:0];
 	/*toolbar = [[UIToolbar alloc] init];
 	toolbar.barStyle = UIBarStyleBlackTranslucent;
 

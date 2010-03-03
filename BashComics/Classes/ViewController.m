@@ -47,7 +47,6 @@
 {
 	UIImage *remoteImage = [[UIImage alloc] initWithContentsOfFile:patch];
 	//remoteImage.center=self.view.center;
-
 	// set up main scroll view
     //imageScrollView = [[UIScrollView alloc] initWithFrame:[[self view] bounds]];
 	imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320 , 480)];
@@ -58,18 +57,24 @@
      
     // add touch-sensitive image view to the scroll view
     TapDetectingImageView *imageView = [[TapDetectingImageView alloc] initWithImage:remoteImage];
+	imageView.center = CGPointMake(370.0 , 280.0);
+	//imageView.center=self.view.center;
+	
+	
     [imageView setDelegate:self];
     [imageView setTag:ZOOM_VIEW_TAG];
+	
     [imageScrollView setContentSize:[imageView frame].size];
 
     [imageScrollView addSubview:imageView];
     [imageView release];
-    
+   // NSLog(@"%f %f", [imageScrollView frame].size.width, [imageView frame].size.width);
     // calculate minimum scale to perfectly fit image width, and begin at that scale
     float minimumScale = [imageScrollView frame].size.width  / [imageView frame].size.width;
 	//NSLog(@"%f %f",[imageScrollView frame].size.width, [imageScrollView frame].size.height );
     [imageScrollView setMinimumZoomScale:minimumScale];
     [imageScrollView setZoomScale:minimumScale];
+	
 	[remoteImage release];
 }
 
@@ -166,13 +171,13 @@
 				[[UIApplication sharedApplication] openURL:urls]; 
 				
 			}
-			else {
+			if ([buttonTitle isEqualToString:@"Твитнуть"]) {
 			//if ([appDelegate.twitArray count] > 0) {
 				
 			
 			UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Выбрать твиттер клиент"
 															   delegate:self
-													  cancelButtonTitle:nil
+													  cancelButtonTitle:@"Закрыть"
 												 destructiveButtonTitle:nil
 													  otherButtonTitles:nil];
 			
@@ -185,10 +190,22 @@
 			{
 				[sheet addButtonWithTitle:client.names];
 			}
-			[sheet addButtonWithTitle:@"Закрыть"];
+			//[sheet addButtonWithTitle:@"Закрыть"];
 			[sheet showInView:self.view];
 			[sheet release];
 			//}
+			}
+			break;
+		}
+		case 2:
+		{
+			
+			if ([buttonTitle isEqualToString:@"На bash.org.ru"])
+			{
+				
+				NSURL *urls = [NSURL URLWithString:item.bashLink];
+				[[UIApplication sharedApplication] openURL:urls]; 
+				
 			}
 			break;
 		}
@@ -244,12 +261,18 @@
 		[actionSheet addButtonWithTitle:@"Удалить из избранного"];
 		if ([appDelegate.twitArray count] > 0) {
 			[actionSheet addButtonWithTitle:@"Твитнуть"];
+			actionSheet.cancelButtonIndex = 3;
+		}
+		else {
+			actionSheet.cancelButtonIndex = 2;
 		}
 		[actionSheet addButtonWithTitle:@"На bash.org.ru"];
 		[actionSheet addButtonWithTitle:@"Закрыть"];
 		
 		actionSheet.actionSheetStyle = self.navigationController.navigationBar.barStyle;
 		actionSheet.destructiveButtonIndex = 0;
+		
+		
 		[actionSheet showInView:self.view]; // show from our table view (pops up in the middle of the table)
 		[actionSheet release];
 	}
@@ -263,10 +286,14 @@
 	[actionSheet addButtonWithTitle:@"Добавить в избранное"];
 	if ([appDelegate.twitArray count] > 0) {
 		[actionSheet addButtonWithTitle:@"Твитнуть"];
+		actionSheet.cancelButtonIndex = 3;
 	}
+	else {
+			actionSheet.cancelButtonIndex = 2;
+	}
+
 	[actionSheet addButtonWithTitle:@"На bash.org.ru"];
 	[actionSheet addButtonWithTitle:@"Закрыть"];
-		
 	actionSheet.actionSheetStyle = self.navigationController.navigationBar.barStyle;
 	[actionSheet showInView:self.view]; // show from our table view (pops up in the middle of the table)
 	[actionSheet release];
@@ -361,10 +388,13 @@
     // the zoom rect is in the content view's coordinates. 
     //    At a zoom scale of 1.0, it would be the size of the imageScrollView's bounds.
     //    As the zoom scale decreases, so more content is visible, the size of the rect grows.
+	
     zoomRect.size.height = [imageScrollView frame].size.height / scale;
     zoomRect.size.width  = [imageScrollView frame].size.width  / scale;
+	//NSLog(@"%f %f", zoomRect.size.height, zoomRect.size.width);
    // //NSLog(@"%f", zoomRect.size.height);
     // choose an origin so as to get the right center.
+	//NSLog(@"%f %f", center.x, center.y);
     zoomRect.origin.x    = center.x - (zoomRect.size.width  / 2.0);
     zoomRect.origin.y    = center.y - (zoomRect.size.height / 2.0);
     

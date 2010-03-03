@@ -15,8 +15,30 @@
 
 @synthesize delegate;
 
-
 -(void)myfu
+{
+	
+	NSURL *url = [NSURL URLWithString:@"http://bash.org.ru/comics"];
+    ASIHTTPRequest *request = [[ASIHTTPRequest alloc] initWithURL:url];
+    [request setDelegate:self];
+    [request setDidFinishSelector:@selector(requestDone:)];
+    [request setDidFailSelector:@selector(requestWentWrong:)];
+    NSOperationQueue *queue = [BashComicsAppDelegate sharedAppDelegate].downloadQueue;
+    [queue addOperation:request];
+    [request release]; 
+	
+}
+
+
+- (void)requestWentWrong:(ASIHTTPRequest *)request
+{
+	
+   [delegate update:self myError:@"error"];
+	
+}
+
+//-(void)myfu
+- (void)requestDone:(ASIHTTPRequest *)request
 {
 	BashComicsAppDelegate *appDelegate = (BashComicsAppDelegate *)[[UIApplication sharedApplication] delegate];
 	//Bash *bashObj = [[Bash alloc] initWithPrimaryKey:0];
