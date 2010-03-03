@@ -277,8 +277,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>15</integer>
-									<integer>13</integer>
+									<integer>24</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -303,7 +302,7 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>6 192 1459 815 0 0 1680 1028 </string>
+						<string>165 199 1459 815 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -321,7 +320,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Bash.m</string>
+								<string>ViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,11 +328,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Bash.m</string>
+										<string>ViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D9793ED1113E9B6E000336A9</string>
+										<string>D9793F1B113EA209000336A9</string>
 										<key>history</key>
 										<array>
 											<string>D9EABA3E111F42370038D9F3</string>
@@ -363,8 +362,8 @@
 											<string>D90F8967113E9ACD005107A9</string>
 											<string>D90F8968113E9ACD005107A9</string>
 											<string>D90F8969113E9ACD005107A9</string>
-											<string>D90F896A113E9ACD005107A9</string>
-											<string>D90F896C113E9ACD005107A9</string>
+											<string>D9793ED7113E9BD9000336A9</string>
+											<string>D9793ED8113E9BD9000336A9</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -378,7 +377,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1251, 769}}</string>
 								<key>RubberWindowFrame</key>
-								<string>6 192 1459 815 0 0 1680 1028 </string>
+								<string>165 199 1459 815 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -398,7 +397,7 @@
 								<key>Frame</key>
 								<string>{{0, 774}, {1251, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>6 192 1459 815 0 0 1680 1028 </string>
+								<string>165 199 1459 815 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -562,11 +561,15 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>D9793F05113E9FA0000336A9</string>
+		<string>D9793F06113E9FA0000336A9</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>D9EAB9BD111F3C3B0038D9F3</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/sasha/Work/SVN/southpark/trunk/BashComics/BashComics.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>6 192 1459 815 0 0 1680 1028 </string>
+	<string>165 199 1459 815 0 0 1680 1028 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -765,13 +768,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>D90F88BD113E8264005107A9</string>
+				<string>D9793EDA113E9BD9000336A9</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>D90F88BE113E8264005107A9</string>
-				<string>D90F88BF113E8264005107A9</string>
-				<string>D90F88C0113E8264005107A9</string>
-				<string>D90F88C1113E8264005107A9</string>
-				<string>D90F88C2113E8264005107A9</string>
+				<string>D9793EDB113E9BD9000336A9</string>
+				<string>D9793EDC113E9BD9000336A9</string>
+				<string>D9793EDD113E9BD9000336A9</string>
+				<string>D9793EDE113E9BD9000336A9</string>
+				<string>D9793EDF113E9BD9000336A9</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -927,7 +930,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>D90F88C3113E8264005107A9</string>
+				<string>D9793EE0113E9BD9000336A9</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

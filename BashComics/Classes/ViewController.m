@@ -57,7 +57,19 @@
      
     // add touch-sensitive image view to the scroll view
     TapDetectingImageView *imageView = [[TapDetectingImageView alloc] initWithImage:remoteImage];
-	imageView.center = CGPointMake(370.0 , 280.0);
+	NSLog(@"%f %f", [imageView frame].size.width , [imageView frame].size.height );
+	float eto_ppc = [imageView frame].size.width / [imageView frame].size.height;
+	NSLog(@"%f", eto_ppc);
+	if (eto_ppc > 2.0)
+		imageView.center = CGPointMake(370.0 , 280.0);
+	else if (eto_ppc < 2.0 && eto_ppc > 1.2 )
+		imageView.center = CGPointMake(370.0 , 330.0);
+	else if (eto_ppc < 1.2 && eto_ppc > 1.0 )
+		imageView.center = CGPointMake(370.0 , 360.0);
+	else if (eto_ppc < 0.9)
+		imageView.center = CGPointMake(160.0 , 250.0);
+	else
+		imageView.center = CGPointMake(260.0 , 330.0);
 	//imageView.center=self.view.center;
 	
 	
